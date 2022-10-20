@@ -1,5 +1,3 @@
-tst23
-
 <?php 
-echo phpinfo();
+    echo "test"
 ?>
