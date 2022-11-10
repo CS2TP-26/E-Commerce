@@ -22,7 +22,7 @@
 <body>
     <style>
         body {
-            background-image: url('../assets/images/grayPolygon.png');
+            /* background-image: url('../assets/images/grayPolygon.png'); */
         }
     </style>
 
@@ -33,7 +33,7 @@
         <i class="fas fa-bars"></i>
     </label>
         <!--  add a logo to the navbar-->
-        <img class="icon" src="../assets/images/Icon8.png" alt="logo" class="logo">
+        <!-- <img class="icon" src="../assets/images/Icon8.png" alt="logo" class="logo"> -->
         <label class="logo">Kongolian</label>
         <ul class="ul">
             <li><a href="../index.php">Home</a></li>
