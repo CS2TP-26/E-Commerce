@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+body {
+    /* background-color: #f4f4f4; */
+    font-family: "Play", sans-serif;
+    overflow-y: auto;
+    padding-bottom: 150px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgb(61, 61, 61);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 2em;
+}
+
+.container {
+    width: 100%;
+}
+
+.packages {
+    margin: 20px;
+    width: 300px;
+    padding-bottom: 1.5em;
+    height: 100%;
+    background-color: #3a3b3c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgb(100, 100, 100), 0 15px 12px rgba(100, 100, 100, 0.3);
+    border: 1px solid white;
+    flex-wrap: wrap;
+    color: #f4f4f4;
+}
+
+h1 {
+    padding-top: 10px;
+    font-size: 2.2em;
+}
+
+h2 {
+    padding-top: 10px;
+    font-size: 2em;
+}
+
+.top h1 {
+    font-size: 2.5em;
+    color: #f4f4f4;
+}
+
+.list li {
+    font-size: 20px;
+    list-style: none;
+    border-bottom: 1px solid #f4f4f4;
+    padding-inline-start: 0;
+    border-width: 1px;
+    padding: 10px;
+    /* dont center the text */
+    text-align: left;
+}
+
+.first {
+    margin-top: 40px;
+    border-top: 1px solid #f4f4f4;
+}
+
+.discord li {
+    font-size: 10px;
+}
+
+.list {
+    width: 80%;
+}
+
+.fa-check {
+    color: #219e21;
+    padding-right: 20px;
+}
+
+ol,
+ul {
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+}
+
+.button {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.4em;
+    margin: 15px 15px;
+    border-radius: 50px;
+    color: #f4f4f4;
+    transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.button1 {
+    background-color: #00cc99;
+    box-shadow: 0 0 10px 0 #00cc99 inset, 0 0 20px 2px #00cc99;
+}
+
+.button2 {
+    background-color: #ff007c;
+    box-shadow: 0 0 10px 0 #ff007c inset, 0 0 20px 2px #ff007c;
+}
+
+.package-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-container {
+    /* center the items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button3 {
+    background-color: #8000ff;
+    box-shadow: 0 0 10px 0 #8000ff inset, 0 0 20px 2px #8000ff;
+    /*  make font size responsive */
+    font-size: 1.2em;
+}

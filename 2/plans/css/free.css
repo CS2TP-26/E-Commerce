@@ -1,0 +1,201 @@
+body {
+    z-index: 10;
+    background-color: #202020;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+    font: optional;
+    transition: 2s ease;
+    overflow-x: hidden;
+    overflow: hidden;
+    border: relative;
+}
+
+.search-box {
+    z-index: 0;
+    /* center the search box*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    background-color: #202020;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+}
+
+.search-box form {
+    padding: 10px;
+}
+
+.searcn {
+    width: 50%;
+    height: 10%;
+    padding: 2px;
+    border: none;
+    background: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.search-box form button {
+    height: auto;
+    border: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    background: none;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+
+.search-box .error {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search-box .avalible {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.results {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    background-color: #202020;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    width: 50%;
+}
+
+.button-container .button {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.4em;
+    margin: 15px 15px;
+    border-radius: 50px;
+    color: #f4f4f4;
+    transition: all 0.3s ease 0s;
+    transform: scale(1.2);
+}
+
+.button-container .button:hover {
+    transform: scale(1.2);
+}
+
+.button-container {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* --------------------------------- */
+
+.title {
+    font-size: auto;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    /* text-shadow: 0px 0px 50px #fff; */
+}
+
+.description {
+    font-size: auto;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    /* text-shadow: 0px 0px 50px #fff; */
+}
+
+
+/* when the screen size goes below 550px  */
+
+@media screen and (max-width: 750px) {
+    label {
+        font-size: 0.8em;
+    }
+    .search-box {
+        width: 80%;
+    }
+    .searcn {
+        width: 40%;
+        height: 10px;
+    }
+    button {
+        font-size: 0.5em;
+        /* margin-bottom: 10px; */
+    }
+}
+
+.standard {
+    z-index: 0;
+    /* center the search box*/
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    background-color: #202020;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+}
+
+.btn2 {
+    background-color: #202020;
+    color: #202020;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    transition: 0.5s ease;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #fff;
+    margin-top: 10px;
+}
+
+.btn2:hover {
+    background-color: #fff;
+    color: #202020;
+    border: 1px solid #202020;
+}
+
+.btn2:hover i {
+    color: #202020;
+    transition: 0.5s ease;
+}

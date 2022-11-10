@@ -1,0 +1,187 @@
+/* this is for the scroll bar */
+
+
+/* body {
+    overflow-y: auto;
+    overflow-x: hidden;
+} */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgb(61, 61, 61);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 2em;
+}
+
+
+/* this is for the flex containers */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding-bottom: 20vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.flex-item {
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    flex: 1 1 auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    align-self: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 80%;
+    padding: 10px;
+}
+
+.flex-item p {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.flex-item h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.flex-item h2 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.flex-item h3 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.flex-item:hover {
+    background-color: #fff;
+    color: #202020;
+    border: 1px solid #202020;
+    transition: 0.5s ease;
+    box-shadow: 0 0 25px 0 #fff;
+}
+
+.flex-item:hover h1 {
+    color: #202020;
+    /* add a fade */
+    transition: 0.5s ease;
+}
+
+.flex-item:hover p {
+    color: #202020;
+    transition: 0.5s ease;
+}
+
+.flex-item:hover h2 {
+    color: #202020;
+    transition: 0.5s ease;
+}
+
+.flex-item:hover h3 {
+    color: #202020;
+    transition: 0.5s ease;
+}
+
+
+/* this is for the image items */
+
+.flex-image {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 80%;
+    padding: 10px;
+}
+
+.flex-image {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* center the items */
+    justify-content: center;
+}
+
+.item {
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.item i {
+    font-size: 75px;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.flex-image:hover {
+    background-color: #fff;
+    color: #202020;
+    border: 1px solid #202020;
+    transition: 0.5s ease;
+    box-shadow: 0 0 25px 0 #fff;
+}
+
+.flex-image:hover .item i {
+    color: #202020;
+    transition: 0.5s ease;
+}
+
+@media screen and (max-width: 500px) {
+    .flex-item h1 {
+        font-size: 40px;
+    }
+    .flex-item h2 {
+        font-size: 25px;
+    }
+    .flex-item h3 {
+        font-size: 20px;
+    }
+    .flex-item p {
+        font-size: 20px;
+    }
+    .item i {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .flex-item h1 {
+        font-size: 30px;
+    }
+    .flex-item h2 {
+        font-size: 20px;
+    }
+    .flex-item h3 {
+        font-size: 15px;
+    }
+    .flex-item p {
+        font-size: 15px;
+    }
+    .item i {
+        font-size: 30px;
+    }
+}

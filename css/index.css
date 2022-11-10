@@ -1,0 +1,155 @@
+/* * {} */
+
+body {
+    background-color: #202020;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+    font: optional;
+    transition: 2s ease;
+    overflow-x: hidden;
+    overflow: hidden;
+    border: relative;
+}
+
+.welcome {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.welcome h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.info {
+    color: #fff;
+    text-align: center;
+    position: inherit;
+    bottom: 500\spx;
+    align-items: center;
+    justify-content: center;
+}
+
+.info p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* when the screen size is less than 400 width */
+
+@media screen and (max-width: 400px) {
+    .welcome h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .welcome h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* This is for the buttons */
+
+.btn {
+    background-color: #202020;
+    color: #202020;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn span {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    /* move this to the center of the botton */
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #202020;
+    border: 1px solid #202020;
+}
+
+
+/* if the btn is hovered over change text size of #ico */
+
+.btn:hover i {
+    color: #202020;
+    /* add a fade */
+    transition: 0.5s ease;
+}
+
+.btn:hover span {
+    color: #202020;
+    transition: 0.5s ease;
+}
+
+
+/* this is for the motto */
+
+.motto {
+    color: #fff;
+    text-align: center;
+    /* always stay at the bottom of the page */
+    bottom: 20%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.motto h2 {
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .motto h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .motto h2 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .motto h2 {
+        font-size: 12px;
+    }
+}

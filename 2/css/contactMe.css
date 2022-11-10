@@ -1,0 +1,416 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/grayPolygon.png');
+    background-color: #202020;
+    height: 80vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+    font: optional;
+    transition: 2s ease;
+    overflow-x: hidden;
+    border: relative;
+    /* makes the navigation above */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 0;
+}
+
+.padder {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* This is for the navigation*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgb(61, 61, 61);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 2em;
+}
+
+.toggle .Line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .Line2 {
+    opacity: 0;
+}
+
+.toggle .Line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* This is for the Main Center Stuff*/
+
+h1 {
+    text-align: center;
+    font-weight: Bold;
+    font-size: 40px;
+    color: white;
+}
+
+main {
+    width: 90vh;
+    margin: 0 auto;
+    color: white
+}
+
+.Infomation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 00px;
+}
+
+.contactMe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.End {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.Box1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    background-color: #202020;
+    text-align: center;
+    margin: 20px;
+    transition: 0.3s;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    outline: none;
+    color: white;
+}
+
+.Box2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 350px;
+    border-radius: 4px;
+    background-color: #202020;
+    text-align: center;
+    margin: 20px;
+    transition: 0.3s;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    outline: none;
+    color: white;
+}
+
+.Box3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    background-color: #202020;
+    text-align: center;
+    margin: 20px;
+    transition: 0.3s;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    outline: none;
+    color: white;
+}
+
+.Box1:hover,
+.Box2:hover,
+.Box3:hover {
+    background-color: #202020;
+    box-shadow: 0 0 25px 0 #fff;
+}
+
+.headerText {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 48px;
+    color: white;
+}
+
+.ImageText em {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: white;
+}
+
+.ImageText em a {
+    color: white;
+}
+
+
+/* this is to hide the form shit */
+
+.hideme {
+    display: none;
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.End h4 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+}
+
+.End h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: greenyellow;
+}
+
+.End p {
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+}
+
+.End .button {
+    width: 200px;
+    height: 30px;
+    align-items: center;
+    position: absolute;
+    top: 86.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    outline: none;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* This is for the form shit*/
+
+form {
+    margin: 35px;
+}
+
+.input-field {
+    width: 425px;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    outline: none;
+    background-color: gray;
+    color: white;
+}
+
+.input-field .placeholder {
+    color: white;
+}
+
+.r {
+    display: inline-block;
+}
+
+.query {
+    height: 100px;
+    padding-top: 20px;
+    resize: none;
+    background-color: gray;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+.contact-me .submit {
+    width: 200px;
+    height: 30px;
+    align-items: center;
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    outline: none;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-me .error {
+    margin-top: 20px;
+}
+
+.contact-me .custom {
+    padding-top: 15px;
+}
+
+.Box2 .headerText {
+    font-weight: 500;
+    line-height: 20px;
+    color: white;
+}
+
+
+/* this is for when the user is on mobile */
+
+@media screen and (max-width: 500px) {
+    .Box2 {
+        width: 400px;
+        height: 350px;
+    }
+    .Box2 .input-field {
+        width: 350px;
+        height: 30px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid #fff;
+        border-radius: 14px;
+        outline: none;
+        background-color: gray;
+        color: white;
+    }
+    .Box2 .query {
+        height: 100px;
+        padding-top: 20px;
+        resize: none;
+        background-color: gray;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Box2 {
+        width: 90%;
+        height: 95%;
+    }
+    .Box2 .input-field {
+        width: 95%;
+        height: 30px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid #fff;
+        border-radius: 14px;
+        outline: none;
+        background-color: gray;
+        color: white;
+    }
+    .Box2 .query {
+        width: 95%;
+        height: 100px;
+        padding-top: 20px;
+        resize: none;
+        background-color: gray;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Box2 {
+        width: 90%;
+        height: 350px;
+    }
+    .Box2 .input-field {
+        width: 90%;
+        height: 30px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid #fff;
+        border-radius: 14px;
+        outline: none;
+        background-color: gray;
+        color: white;
+    }
+    .Box2 .query {
+        width: 90%;
+        height: 100px;
+        padding-top: 20px;
+        resize: none;
+        background-color: gray;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .Box2 {
+        width: 90%;
+        height: 350px;
+    }
+    .Box2 .input-field {
+        width: 90%;
+        height: 30px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid #fff;
+        border-radius: 14px;
+        outline: none;
+        background-color: gray;
+        color: white;
+    }
+    .Box2 .query {
+        width: 90%;
+        height: 100px;
+        padding-top: 20px;
+        resize: none;
+        background-color: gray;
+        color: white;
+    }
+    .Box2 .submit {
+        width: 50%;
+    }
+}

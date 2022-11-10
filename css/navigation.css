@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    font-family: montserrat;
+    background-color: #202020;
+}
+
+nav {
+    background: #202020;
+    height: 80px;
+    width: 100%;
+    z-index: 20;
+}
+
+label.logo {
+    color: #fff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+    font-family: 'Acme', sans-serif;
+    /* get rid of underline*/
+    text-decoration: none;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    z-index: 20;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    z-index: 20;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 20;
+}
+
+.ul a.active,
+.ul a:hover {
+    background: #fff;
+    transition: .5s;
+    color: #022f69;
+    z-index: 20;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    z-index: 20;
+}
+
+img.icon {
+    color: #fff;
+    font-size: 35px;
+    line-height: 80px;
+    /* change the image size */
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+    z-index: 20;
+}
+
+.test {
+    padding-right: 10px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: lightgray;
+    margin: 4px;
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+#check {
+    display: none;
+    z-index: 20;
+}
+
+@media (max-width: 1400px) {
+    .test {
+        display: none;
+        font-size: 30px;
+    }
+    .fa-hdd {
+        padding-left: 10px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .checkbtn {
+        display: block;
+        z-index: 20;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #202020;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    .ul a:hover,
+    .ul a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    .test {
+        display: inherit;
+        font-size: 30px;
+        transition: all .5s;
+    }
+    .fa-hdd {
+        padding-left: 10px;
+        transition: all .5s;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    label.logo {
+        font-size: 25px;
+        padding-left: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    img.icon {
+        width: 45px;
+        height: 45px;
+        margin-top: 20px;
+    }
+    .test {
+        display: inherit;
+        font-size: 20px;
+        transition: all .5s;
+    }
+    .fa-hdd {
+        padding-left: 10px;
+        transition: all .5s;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .test {
+        display: none;
+    }
+    .fa-hdd {
+        padding-left: 10px;
+        transition: all .5s;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    label.logo {
+        font-size: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    img.icon {
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+    }
+}
+
+
+/*! for the control panel button */
+
+.btn {
+    background-color: #202020;
+    color: #202020;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn span {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    /* move this to the center of the botton */
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #202020;
+    border: 1px solid #202020;
+}
+
+
+/* if the btn is hovered over change text size of #ico */
+
+.btn:hover i {
+    color: #202020;
+    /* add a fade */
+    transition: 0.5s ease;
+}
+
+.btn:hover span {
+    color: #202020;
+    transition: 0.5s ease;
+}
