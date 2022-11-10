@@ -20,7 +20,11 @@
 
 
 <body>
-    
+    <style>
+        body {
+            background-image: url('../assets/images/grayPolygon.png');
+        }
+    </style>
 
     <!-- background image -->
     <nav>
@@ -30,7 +34,7 @@
     </label>
         <!--  add a logo to the navbar-->
         <img class="icon" src="../assets/images/Icon8.png" alt="logo" class="logo">
-        <label class="logo">Maison De Verce</label>
+        <label class="logo">Kongolian</label>
         <ul class="ul">
             <li><a href="../index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
@@ -43,7 +47,7 @@
 </body>
 
 <?php
-    require_once '../../connection.php';
+    require_once '../connection.php';
     $db = connect();
     $error = "";
 
@@ -101,7 +105,6 @@
                         <br>
                         <div class="form-group"> <a href="registration.php">Signup Here!</a> </div>
                         <br>
-                        asdasdsa
                         <div class="error"> 
                             <label for="Errors" class="errorMsg" style="color: red"> 
                                 <?php echo $error; ?> 
