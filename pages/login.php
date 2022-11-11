@@ -65,12 +65,11 @@
             session_start();
             // get name
             $name = $db->query("SELECT name FROM users WHERE email = '$email'")->fetch_assoc()['name'];
-            $acc_type = $db->query("SELECT acc_type FROM users WHERE email = '$email'")->fetch_assoc()['role'];
+            $acc_type = $db->query("SELECT role FROM users WHERE email = '$email'")->fetch_assoc()['role'];
             $email = $db->query("SELECT email FROM users WHERE email = '$email'")->fetch_assoc()['email'];
             $id = $db->query("SELECT id FROM users WHERE email = '$email'")->fetch_assoc()['id'];
             $creation = $db->query("SELECT id FROM users WHERE email = '$email'")->fetch_assoc()['creation'];
 
-            // echo errors
 
 
 
@@ -80,13 +79,16 @@
             $_SESSION['email'] = $email;
             $_SESSION['id'] = $id;
             $_SESSION['creation'] = $creation;
-            header("Location: /registration.php");
+            // if successful redirect to index.php
+            header("Location: ../index.php");
+            
         }else{
             $error = "Invalid username or password";
         }
 
 
     }
+
 
 
 
