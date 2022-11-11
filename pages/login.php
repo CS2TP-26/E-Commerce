@@ -68,7 +68,7 @@
             $acc_type = $db->query("SELECT role FROM users WHERE email = '$email'")->fetch_assoc()['role'];
             $email = $db->query("SELECT email FROM users WHERE email = '$email'")->fetch_assoc()['email'];
             $id = $db->query("SELECT id FROM users WHERE email = '$email'")->fetch_assoc()['id'];
-            $creation = $db->query("SELECT id FROM users WHERE email = '$email'")->fetch_assoc()['creation'];
+            $creation = $db->query("SELECT creation FROM users WHERE email = '$email'")->fetch_assoc()['creation'];
 
 
 
