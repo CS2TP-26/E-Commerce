@@ -33,8 +33,8 @@
         <i class="fas fa-bars"></i>
     </label>
         <!--  add a logo to the navbar-->
-        <!-- <img class="icon" src="../assets/images/Icon8.png" alt="logo" class="logo"> -->
-        <label class="logo">Kongolian</label>
+         <!-- <img class="icon" src="../assets/images/Icon8.png" alt="logo" class="logo">  --> 
+        <label class="logo">Maison De Verce</label>
         <ul class="ul">
             <li><a href="../index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
@@ -52,7 +52,7 @@
     $error = "";
 
     if(isset($_POST['submit'])){
-        $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
 
 
@@ -60,20 +60,27 @@
         
 
 
-        $passCheck = password_verify($password, $db->query("SELECT password FROM Users WHERE username = '$username'")->fetch_assoc()['password']);
+        $passCheck = password_verify($password, $db->query("SELECT password FROM users WHERE email = '$email'")->fetch_assoc()['password']);
         if($passCheck){
             session_start();
-            $acc_type = $db->query("SELECT acc_type FROM Users WHERE username = '$username'")->fetch_assoc()['acc_type'];
-            $email = $db->query("SELECT email FROM Users WHERE username = '$username'")->fetch_assoc()['email'];
-            $id = $db->query("SELECT id FROM Users WHERE username = '$username'")->fetch_assoc()['id'];
-            $subscription = $db->query("SELECT subscription FROM Users WHERE username = '$username'")->fetch_assoc()['subscription'];
-            $_SESSION['username'] = $username;
+            // get name
+            $name = $db->query("SELECT name FROM users WHERE email = '$email'")->fetch_assoc()['name'];
+            $acc_type = $db->query("SELECT acc_type FROM users WHERE email = '$email'")->fetch_assoc()['role'];
+            $email = $db->query("SELECT email FROM users WHERE email = '$email'")->fetch_assoc()['email'];
+            $id = $db->query("SELECT id FROM users WHERE email = '$email'")->fetch_assoc()['id'];
+            $creation = $db->query("SELECT id FROM users WHERE email = '$email'")->fetch_assoc()['creation'];
+
+            // echo errors
+
+
+
+
+            $_SESSION['name'] = $name;
             $_SESSION['acc_type'] = $acc_type;
             $_SESSION['email'] = $email;
             $_SESSION['id'] = $id;
-            $_SESSION['subscription'] = $subscription;
-            $_SESSION['username'] = $username;
-            header("Location: ../index.php");
+            $_SESSION['creation'] = $creation;
+            header("Location: /registration.php");
         }else{
             $error = "Invalid username or password";
         }
@@ -99,7 +106,7 @@
                 </div>
                 <div class="login-body">
                     <form action="login.php" method="post">
-                        <div class="form-group"> <input type="text" name="username" id="username" class="control" placeholder="Username" required> </div>
+                        <div class="form-group"> <input type="text" name="email" id="email" class="control" placeholder="Email" required> </div>
                         <div class="form-group"> <input type="password" name="password" id="password" class="form-control" placeholder="Password" required> </div>
                         <div class="form-group"> <input type="submit" name="submit" id="submit" value="Login"> </div>
                         <br>
@@ -119,15 +126,12 @@
 
 <footer class="footer">
     <div class="social">
-        <a href="https://github.com/Kongolian" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://discord.gg/cYCsDfyPAv" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://twitter.com/Kongolian_" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://zees.dev/" target="_blank"><i class="fab fa-periscope"></i></a>
-        <a href="https://play.google.com/store/apps/developer?id=Drkongy" target="_blank"><i class="fab fa-google-play"></i></a>
+        <a href="https://github.com/CS2TP-26/E-Commerce" target="_blank"><i class="fab fa-github"></i></a>
+        <!-- Remake the footer -->
     </div>
 
     <p class="copyright">
-        &copy; Copyright 2022 Kongolian
+        &copy; Copyright 2022 Maison De Verce
     </p>
 
 </footer>
