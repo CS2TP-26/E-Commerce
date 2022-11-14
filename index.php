@@ -35,7 +35,7 @@ Maison De Verce
 each watch has it's own page, with a link to the basket, and a link to the checkout
 
 <br>
-<a href="pages/.php">Admin Panel</a> ❌ ❌ Zeeshan - Anish
+<a href="stockade/index.php">Admin Panel / stockade</a> ❌ ❌ Zeeshan - Anish
 <br>
 
 
