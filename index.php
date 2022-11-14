@@ -31,7 +31,9 @@ Maison De Verce
 <br>
 <a href="pages/.php">About</a> ❌ ❌ Zeeshan - Anish
 <br>
-<a href="pages/.php">Watches - Different sub catergories</a> ❌ ❌ Zeeshan - Anish
+<a href="pages/.php">Watches - Different sub catergories</a> ❌ ❌ Zeeshan - Anish <br>
+each watch has it's own page, with a link to the basket, and a link to the checkout
+
 <br>
 <a href="pages/.php">Admin Panel</a> ❌ ❌ Zeeshan - Anish
 <br>
