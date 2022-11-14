@@ -1,0 +1,126 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.box:nth-child(4n) {
+    page-break-after: always;
+}
+
+html {
+    background-color: #18191a;
+}
+
+.home-section>h1 {
+    display: inline-block;
+    color: #11101d;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 18px;
+}
+
+.notifications {
+    margin-left: 100px;
+    margin-top: 16px;
+    transition: all 0.4s ease;
+}
+
+.notifications .notification {
+    margin-top: 8px;
+    width: 720px;
+    height: 64px;
+}
+
+.dashboard {
+    margin-top: 10px;
+    margin-left: 48px;
+}
+
+.dashboard .items {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 16px;
+}
+
+.dashboard .items .info.item {
+    transition: all 0.4s ease;
+    margin-left: 18px;
+    width: 300px;
+    height: 170px;
+    text-align: center;
+    align-items: center;
+    margin: 16px;
+}
+
+.info.item:nth-child(3n) {
+    page-break-after: always;
+}
+
+.info.item .icon {
+    font-size: 38px;
+    margin-left: -210px;
+}
+
+.info.item .icon .ititle {
+    font-size: 26px;
+}
+
+.info.item .icon .text {
+    margin-left: 195px;
+    font-size: 22px;
+}
+
+.info.item .progress {
+    width: 235px;
+    height: 12px;
+    margin-top: 16px;
+    color: #E57268;
+}
+
+.dashboard .board {
+    transition: all 0.4s ease;
+    width: 996px;
+    height: 420px;
+}
+
+.dashboard .server-control {
+    align-items: center;
+}
+
+.dashboard .server-control .button {
+    transition: all 0.4s ease;
+}
+
+.dashboard .board .textarea {
+    transition: all 0.4s ease;
+    margin-top: 16px;
+    height: 200px;
+}
+
+.dashboard h2 {
+    display: inline-block;
+    color: #11101d;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.dashboard h3 {
+    display: inline-block;
+    color: #11101d;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.dashboard h4 {
+    display: inline-block;
+    color: #6c6b7c;
+    font-size: 18px;
+    font-weight: 500;
+}

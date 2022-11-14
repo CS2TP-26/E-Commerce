@@ -1,0 +1,183 @@
+/* modern table */
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* change the scroll bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgb(61, 61, 61);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 2em;
+}
+
+.home .text {
+    /* add some padding to the bottom of it */
+    padding-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    line-height: 1.4;
+    font-weight: normal;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.table thead {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.table thead tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.table thead tr th {
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #000;
+}
+
+.table tbody {
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.table tbody tr td {
+    /* padding: 10px; */
+    color: #fff;
+    padding-left: 10px;
+}
+
+.table tbody tr td:first-child {
+    /* color: #000; */
+    /* inrease font size */
+    font-size: 20px;
+}
+
+.table tbody tr th {
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #00a65a;
+    border-color: #00a65a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.btn-primary a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bx-lock {
+    background-color: #d51515;
+    border-color: #ffffff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sub-label {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.importat {
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.form-check-label {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.form-check-input {
+    /* modern check box */
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .75rem;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form {
+    /* cool border */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #3a3b3c;
+    /* background color */
+    background-color: #3a3b3c;
+}
+
+.true {
+    color: #00a65a;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.false {
+    color: #d51515;
+    font-size: 20px;
+    font-weight: 600;
+}
