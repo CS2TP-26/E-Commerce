@@ -2,3 +2,6 @@ If you get a 404 error, it's probally due to the connection.php pointer, which i
 Just make sure that its ../connection.php instead of ../../connection.php
 
 
+This is a git push and pull test
+
+
