@@ -84,7 +84,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="QueryChecker.php">
+                        <a href="stockade.php">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Stockade</span>
                         </a>
@@ -361,13 +361,30 @@
                     </div>
 
                     <div class="item box" style="height: 100%;">
-                        <div class="icon bx bx-support"></div>
+                        <div class="icon bx bx-user"></div>
                         <div class="info">Visitors</div>
                         <div class="lr-value" style="padding-top: 50px;">
                         <?php
                             require_once '../php_scripts/visitor_counter.php';
                             $visitors = getVisitors();
                            
+                        ?>
+                    
+                        </div>
+                    </div>
+
+                    <div class="item box" style="height: 100%;">
+                        <div class="icon bx bx-basket"></div>
+                        <div class="info">Products No</div>
+                        <div class="lr-value" style="padding-top: 50px;">
+                        <?php
+                            // connect to database
+                            require_once '../connection.php';
+                            $db = connect();
+                            $sql = "SELECT * FROM products";
+                            $result = $db->query($sql);
+                            $count = $result->num_rows;
+                            echo $count;
                         ?>
                     
                         </div>
