@@ -28,11 +28,11 @@
 <!-- start a session -->
 <?php
     session_start();
-    if (!isset($_SESSION['Admin_Username'])) {
+    if ($_SESSION['acc_type'] != 'staff') {
         header("Location: index.php");
     }else{
-        if ($_SESSION['Admin_Role'] == 'Owner' || $_SESSION['Admin_Role'] == 'staff') {
-        ?>
+        if ($_SESSION['acc_type'] == 'admin' || $_SESSION['acc_type'] == 'staff') {
+?>
 
 
 <nav class="sidebar close">
@@ -50,7 +50,7 @@
 
 
                     // if the role is 'Owner'
-                    if($_SESSION['Admin_Role'] == 'Owner'){
+                    if($_SESSION['acc_type'] == 'admin'){
                     ?>
                         <style>
                             .profession{
@@ -65,7 +65,7 @@
 
 
 
-                    <span class="profession"><?php echo $_SESSION['Admin_Username'];?></span>
+                    <span class="profession"><?php echo $_SESSION['name'];?></span>
                 </div>
             </div>
 
@@ -469,65 +469,6 @@
 
 
         </div>
-
-
-                        
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-                    
-
-
-        <!-- Ideas for things that can be on dashboard  -->
-        <!-- Host infomation? -->
-        <!-- Number of users? -->
-        <!-- Number of queries? -->
-        <!-- Number of portfolios -->
-        <!-- total dynamic sites -->
-        <!-- total static sites -->
-
-
-
-    
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </div>

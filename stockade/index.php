@@ -17,8 +17,8 @@
 <!-- make a session -->
 <?php
     session_start();
-    if (isset($_SESSION['Admin_Username'])) {
-        header("Location: ControlPanel.php");
+    if(isset($_SESSION['acc_type']) && $_SESSION['acc_type'] == 'staff'){
+        header('location: ControlPanel.php');
     }
 
 
@@ -29,40 +29,39 @@
     $error = "";
 
     if(isset($_POST['submit'])){
-        $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
 
 
 
         
 
-
-        $passCheck = password_verify($password, $db->query("SELECT password FROM staff WHERE username = '$username'")->fetch_assoc()['password']);
-        if($passCheck){
+        $passCheck = password_verify($password, $db->query("SELECT password FROM users WHERE email = '$email'")->fetch_assoc()['password']);
+        $role = $db->query("SELECT role FROM users WHERE email = '$email'")->fetch_assoc()['role'];
+        // if passCheck is true and role is staff
+        if ($passCheck && $role == "staff") {
             session_start();
-            $role = $db->query("SELECT role FROM staff WHERE username = '$username'")->fetch_assoc()['role'];
-            $email = $db->query("SELECT email FROM staff WHERE username = '$username'")->fetch_assoc()['email'];
-            $id = $db->query("SELECT id FROM staff WHERE username = '$username'")->fetch_assoc()['id'];
-            $description = $db->query("SELECT description FROM staff WHERE username = '$username'")->fetch_assoc()['description'];
-            $_SESSION['Admin_Username'] = $username;
-            $_SESSION['Admin_Role'] = $role;
-            $_SESSION['Admin_Email'] = $email;
-            $_SESSION['Admin_ID'] = $id;
-            $_SESSION['Admin_Description'] = $description;
+            $name = $db->query("SELECT name FROM users WHERE email = '$email'")->fetch_assoc()['name'];
+            $acc_type = $db->query("SELECT role FROM users WHERE email = '$email'")->fetch_assoc()['role'];
+            $email = $db->query("SELECT email FROM users WHERE email = '$email'")->fetch_assoc()['email'];
+            $id = $db->query("SELECT id FROM users WHERE email = '$email'")->fetch_assoc()['id'];
+            $creation = $db->query("SELECT creation FROM users WHERE email = '$email'")->fetch_assoc()['creation'];
+
+
+            $_SESSION['name'] = $name;
+            $_SESSION['acc_type'] = $acc_type;
+            $_SESSION['email'] = $email;
+            $_SESSION['id'] = $id;
+            $_SESSION['creation'] = $creation;
 
 
             header("Location: ControlPanel.php");
-        }else{
-
-            //* extra steps to check if the username is wrong or if the passwords is wrong.
-            // if($db->query("SELECT username FROM staff WHERE username = '$username'")->fetch_assoc()['username'] == null){
-            //     $error = "Username does not exist";
-            // }else{
-            //     $error = "Password is incorrect";
-            // }
-            $error = "Username or Password is incorrect";
-
+        }else if ($passCheck && $role != "staff") {
+            $error = "You are not authorized to access this page";
         }
+        else{
+            $error = "Invalid email or password";
+        } 
 
 
     }
@@ -80,7 +79,7 @@
                 </div>
                 <div class="login-body">
                     <form action="index.php" method="post">
-                        <div class="form-group"> <input type="text" name="username" id="username" class="control" placeholder="Username" required> </div>
+                        <div class="form-group"> <input type="text" name="email" id="email" class="control" placeholder="Email" required> </div>
                         <div class="form-group"> <input type="password" name="password" id="password" class="form-control" placeholder="Password" required> </div>
                         <div class="form-group"> <input type="submit" name="submit" id="submit" value="Login"> </div>
                         <br>
