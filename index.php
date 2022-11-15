@@ -41,7 +41,7 @@ each watch has it's own page, with a link to the basket, and a link to the check
 <br>
 
 <?php
-    // require_once 'php_scripts/visitor_counter.php';
+    require_once 'php_scripts/visitor_counter.php';
     // incrementVisitors();
     // $visitors = getVisitors();
 ?>
