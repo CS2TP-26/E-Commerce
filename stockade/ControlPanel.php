@@ -43,7 +43,7 @@
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name">Kongolian</span>
+                    <span class="name">Maison De Versa</span>
 
                     <?php
 
@@ -86,7 +86,7 @@
                     <li class="nav-link">
                         <a href="QueryChecker.php">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
-                            <span class="text nav-text">Quries</span>
+                            <span class="text nav-text">Stockade</span>
                         </a>
                     </li>
 
@@ -103,14 +103,6 @@
                         <a href="Users.php">
                             <i class='bx bx-user-circle icon'></i>
                             <span class="text nav-text">Users</span>
-                        </a>
-                    </li>
-
-
-                    <li class="nav-link">
-                        <a href="http://webmail.kongolian.tech/">
-                            <i class='bx bx-mail-send icon'></i>
-                            <span class="text nav-text">Mail</span>
                         </a>
                     </li>
 
@@ -369,97 +361,36 @@
                         </div>
                     </div>
 
-                    <div class="item box" style="height: 100%;">
+                    <!-- <div class="item box" style="height: 100%;">
                         <div class="icon bx bxs-user-plus"></div>
                         <div class="info">Subscriptions</div>
                         <div class="lr-value" style="padding-top: 50px;">
                         <?php
                             // connect to database
-                            require_once '../connection.php';
-                            $db = connect();
-                            // search all the Users and check of they have a subscription
-                            $sql = "SELECT * FROM Users";
-                            $result = $db->query($sql);
-                            $count = $result->num_rows;
-                            $subCount = 0;
-                            while($row = $result->fetch_assoc()){
-                                if($row['subscription'] == 1){
-                                    $subCount++;
-                                }
-                            }
-                            echo $subCount;
+                            // require_once '../connection.php';
+                            // $db = connect();
+                            // // search all the Users and check of they have a subscription
+                            // $sql = "SELECT * FROM Users";
+                            // $result = $db->query($sql);
+                            // $count = $result->num_rows;
+                            // $subCount = 0;
+                            // while($row = $result->fetch_assoc()){
+                            //     if($row['subscription'] == 1){
+                            //         $subCount++;
+                            //     }
+                            // }
+                            // echo $subCount;
 
                             
                         ?>
                     
                         </div>
-                    </div>
-
-                    <div class="item box" style="height: 100%;">
-                        <div class="icon bx bx bx-bar-chart"></div>
-                        <div class="info">Static sites</div>
-                        <div class="lr-value" style="padding-top: 50px;">
-                            <!-- count how many folders are in the Portfolio directory -->
-                            <?php
-                                $dir = "../Portfolios/";
-                                // count how much folders there are in the Portfolio directory
-                                $count = count(glob($dir . "/*", GLOB_ONLYDIR));
-                                echo $count;
-
-                            ?>
-                    
-                        </div>
-                    </div>
+                    </div> -->
 
 
-                    <div class="item box" style="height: 100%;">
-                        <div class="icon bx bx-bar-chart-alt-2"></div>
-                        <div class="info">Dynamic Sites</div>
-                        <div class="lr-value" style="padding-top: 50px;">0</div>
-                    </div>
-                    
 
-                    <div class="item box" style="height: 100%;">
-                        <div class="icon bx bx-data"></div>
-                        <div class="info">Total User Storage</div>
-                        <div class="lr-value" style="padding-top: 50px;">
-                        <?php 
-                            $directory = "../Portfolios";
-                            $size = 0;
-                            foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file){
-                                $size+=$file->getSize();
-                            }
 
-                            if($size > 1000000000){
-                                $size = $size / 1000000000;
-                                $size = round($size, 2);
-                                echo $size . " GB";
-                            }
-                            else if($size > 1000000){
-                                $size = $size / 1000000;
-                                $size = round($size, 2);
-                                echo $size . " MB";
-                            }
-                            else if($size > 1000){
-                                $size = $size / 1000;
-                                $size = round($size, 2);
-                                echo $size . " KB";
-                            }
-                            else{
-                                $size = round($size, 2);
-                                echo $size . " bytes";
-                            }
 
-                            
-                            
-                        
-                            // echo 'test';
-                        
-                        ?>
-                            
-                    
-                        </div>
-                    </div>
 
 
 
