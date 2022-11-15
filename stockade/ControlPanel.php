@@ -50,7 +50,7 @@
 
 
                     // if the role is 'Owner'
-                    if($_SESSION['acc_type'] == 'admin'){
+                    if($_SESSION['name'] == 'Zeeshan Mohammed'){
                     ?>
                         <style>
                             .profession{
