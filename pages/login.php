@@ -34,7 +34,7 @@
     </label>
         <!--  add a logo to the navbar-->
          <!-- <img class="icon" src="../assets/images/Icon8.png" alt="logo" class="logo">  --> 
-        <label class="logo">Maison De Verce</label>
+        <label class="logo">Maison De Versa</label>
         <ul class="ul">
             <li><a href="../index.php">Home</a></li>
             <li><a href="about.php">About</a></li>

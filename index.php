@@ -1,5 +1,5 @@
-<h1>Maison De Verce</h1>
-Maison De Verce
+<h1>Maison De Versa</h1>
+Maison De Versa
 <?php 
     session_start();
     echo "Quick check to init the session & PHP <br>";

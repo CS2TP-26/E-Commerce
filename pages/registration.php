@@ -28,7 +28,7 @@
     </label>
         <!--  add a logo to the navbar-->
         <!-- <img class="icon" src="../assets/images/Icon8.png" alt="logo" class="logo"> -->
-        <label class="logo">Maison De Verce</label>
+        <label class="logo">Maison De Versa</label>
 
         <!-- only show this when logged in and you have a portfolio -->
         
