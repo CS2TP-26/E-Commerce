@@ -188,7 +188,7 @@
 
                             $used= shell_exec('df -h | grep /dev/sda1 | awk \'{print $3}\'');
                             $used = intval($used);
-                            $total =  shell_exec('df -h | grep /dev/sda1 | awk \'{print $2}\'');
+                            $total =  shell_exec('df -h | grep /dev/sda1 | awk \'{print $1}\'');
                             // $free = $total - $used;
                             echo $used . "GB / " .  $total .  " GB";
 
