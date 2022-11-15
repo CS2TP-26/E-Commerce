@@ -47,7 +47,6 @@
 
     }
 
-    incrementVisitors();
     echo getVisitors();
 
 
