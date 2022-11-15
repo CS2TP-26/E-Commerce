@@ -19,6 +19,8 @@ Maison De Verce
 <!-- make a red bold h3 tag -->
 <h3 style="color: red; font-weight: bold;">First= backend, second = front end</h3>
 <br>
+<a href="#">Main index page</a> ❌ ❌ Zeeshan - Anish
+<br>
 <a href="pages/login.php">Login</a> ✅ ❌ Zeeshan - Anish
 <br>
 <a href="pages/registration.php">registration</a> ✅ ❌Zeeshan - Anish
