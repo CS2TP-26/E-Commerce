@@ -107,17 +107,16 @@
                     </li>
 
 
-                    <li class="nav-link">
-                        <a href="profile.php">
-                            <i class='bx bx-user-check icon'></i>
-                            <span class="text nav-text">Profile</span>
-                        </a>
-                    </li>
-
                 </ul>   
             </div>
 
             <div class="bottom-content">
+                <li class="">
+                    <a href="../index.php">
+                        <i class='bx bx-arrow-back icon'></i>
+                        <span class="text nav-text">Maison De Versa</span>
+                    </a>
+                </li>
                 <li class="">
                     <a href="logout.php">
                         <i class='bx bx-log-out icon'></i>
