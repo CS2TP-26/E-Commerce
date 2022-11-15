@@ -9,17 +9,20 @@
         $result = $db->query($sql);
 
         if ($result->num_rows > 0) {
-            // output data of each row
             while($row = $result->fetch_assoc()) {
-                if ($row["name"] == "visitors") {
-                    return $row["value"];
+                if ($row["NAME"] == "visitors") {
+                    return $row["VALUE"];
+                    
                 }
             }
         } else {
+            echo '0 results';
+
             return '0';
         }   
 
     }
+
 
 
     function incrementVisitors() {
@@ -30,21 +33,22 @@
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                if ($row["name"] == "visitors") {
-                    $visitors = $row["value"];
+                if ($row["NAME"] == "visitors") {
+                    $visitors = $row["VALUE"];
                     $visitors++;
-                    $sql = "UPDATE stats SET value = '$visitors' WHERE name = 'visitors'";
+                    $sql = "UPDATE stats SET VALUE = '$visitors' WHERE name = 'visitors'";
                     $db->query($sql);
                 }
             }
         } else {
-            $sql = "INSERT INTO stats (name, value) VALUES ('visitors', '1')";
+            $sql = "INSERT INTO stats (NAME, VALUE) VALUES ('visitors', '1')";
             $db->query($sql);
         }   
 
     }
 
-
+    incrementVisitors();
+    echo getVisitors();
 
 
 

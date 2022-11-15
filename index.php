@@ -38,16 +38,17 @@ each watch has it's own page, with a link to the basket, and a link to the check
 
 <br>
 <a href="stockade/index.php">Admin Panel / stockade</a> ❌ ❌ Zeeshan - Anish
+<br><br><br>
 <br>
+<a href="pages/logout.php">Log out of sesssion here!!!</a> 
+
 
 <?php
-    require_once 'php_scripts/visitor_counter.php';
-    // incrementVisitors();
+
+
+
+    // require_once 'php_scripts/visitor_counter.php';
     // $visitors = getVisitors();
 ?>
 
 
-<br><br><br>
-<!-- logout -->
-
-<a href="pages/logout.php">Log out of sesssion here!!!</a> 

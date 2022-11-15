@@ -367,7 +367,6 @@
                         <?php
                             require_once '../php_scripts/visitor_counter.php';
                             $visitors = getVisitors();
-                            echo $visitors;
                            
                         ?>
                     
