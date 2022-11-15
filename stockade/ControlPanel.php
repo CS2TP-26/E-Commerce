@@ -165,7 +165,7 @@
                         <div class="value" id='ram'></div>
                         <?php
                             $ram = shell_exec('free -m | grep Mem | awk \'{print $3}\'');
-                            $ram = ($ram / 7000) * 100;
+                            $ram = ($ram / 1000) * 100;
                             $ram = intval($ram);
                         ?>
                         <progress class="progress" id="pb1" value="<?php echo $ram; ?>" max="100"></progress>
@@ -251,7 +251,7 @@
                             require_once '../connection.php';
                             $db = connect();
                             // get the amount  of users
-                            $sql = "SELECT * FROM Users";
+                            $sql = "SELECT * FROM users";
                             $result = $db->query($sql);
                             $count = $result->num_rows;
                             echo $count;
