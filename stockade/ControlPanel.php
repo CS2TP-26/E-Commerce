@@ -176,7 +176,7 @@
                         <div class="info">HDD</div>
                         <div class="value">
                         <?php
-                        $hdd = shell_exec('df -h | grep /dev/sda2 | awk \'{print $5}\'');
+                        $hdd = shell_exec('df -h | grep /dev/sda1 | awk \'{print $5}\'');
                         $hdd = intval($hdd);
                         echo $hdd . "%";
 
@@ -186,9 +186,9 @@
                         <div class="sm-value">
                         <?php
 
-                            $used= shell_exec('df -h | grep /dev/sda2 | awk \'{print $3}\'');
+                            $used= shell_exec('df -h | grep /dev/sda1 | awk \'{print $3}\'');
                             $used = intval($used);
-                            $total =  64; // shell_exec('df -h | grep /dev/sda2 | awk \'{print $2}\'');
+                            $total =  shell_exec('df -h | grep /dev/sda1 | awk \'{print $2}\'');
                             // $free = $total - $used;
                             echo $used . "GB / " .  $total .  " GB";
 
