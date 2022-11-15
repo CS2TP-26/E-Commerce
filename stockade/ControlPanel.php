@@ -335,7 +335,7 @@
                             // connect to database
                             require_once '../connection.php';
                             $db = connect();
-                            $sql = "SELECT * FROM quries";
+                            $sql = "SELECT * FROM quires";
                             $result = $db->query($sql);
                             $count = $result->num_rows;
                             echo $count;
