@@ -40,7 +40,11 @@ each watch has it's own page, with a link to the basket, and a link to the check
 <a href="stockade/index.php">Admin Panel / stockade</a> ❌ ❌ Zeeshan - Anish
 <br>
 
-
+<?php
+    require_once 'php_scripts/visitor_counter.php';
+    incrementVisitors();
+    echo "Visitors: " . getVisitors();
+?>
 
 
 <br><br><br>

@@ -360,38 +360,19 @@
                         </div>
                     </div>
 
-                    <!-- <div class="item box" style="height: 100%;">
-                        <div class="icon bx bxs-user-plus"></div>
-                        <div class="info">Subscriptions</div>
+                    <div class="item box" style="height: 100%;">
+                        <div class="icon bx bx-support"></div>
+                        <div class="info">Visitors</div>
                         <div class="lr-value" style="padding-top: 50px;">
                         <?php
-                            // connect to database
-                            // require_once '../connection.php';
-                            // $db = connect();
-                            // // search all the Users and check of they have a subscription
-                            // $sql = "SELECT * FROM Users";
-                            // $result = $db->query($sql);
-                            // $count = $result->num_rows;
-                            // $subCount = 0;
-                            // while($row = $result->fetch_assoc()){
-                            //     if($row['subscription'] == 1){
-                            //         $subCount++;
-                            //     }
-                            // }
-                            // echo $subCount;
-
-                            
+                            require_once '../php_scripts/visitor_counter.php';
+                            $visitors = getVisitors();
+                            echo $visitors;
+                           
                         ?>
                     
                         </div>
-                    </div> -->
-
-
-
-
-
-
-
+                    </div>
 
 
             </div>
