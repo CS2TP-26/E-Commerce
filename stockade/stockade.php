@@ -212,7 +212,6 @@
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
                 ?>
-                    <!-- a table where the first row contains the items, the second the data, and the third the edit button -->
                     <table class="table">
                         <thead>
                             <tr>
@@ -264,12 +263,13 @@
 
                                 <!-- <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td> -->
                             </tr>
-                            <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
                 
                         </tbody>
+                    </table>
 
 
-
+                    <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
+                
                     
                 <?php
             }
