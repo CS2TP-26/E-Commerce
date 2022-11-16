@@ -140,7 +140,194 @@
                     <i class='bx bx-data icon'></i>
                     <span class="text">Stockade</span>
                 </div>
+                <?php
+    
+       if(empty($_GET)){ // if edit is false it means that the user did not click on their "more info"
 
+        ?>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>description</th>
+                <th>Cost (£)</th>
+                <th>Stock</th>
+                <th>Sales</th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+
+    <?php
+        require_once '../connection.php';
+        $db = connect();
+        $sql = "SELECT * FROM `products`";
+        $result = $db->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                ?>
+                    <!-- a table that shows all of the quries -->
+
+                        <tbody>
+                            <tr>
+                                <td><?php echo $row['id'];?></td>
+                                <td><?php echo $row['name'];?></td>
+                                <td><?php echo $row['description'];?></td>
+                                <td><?php echo $row['price'];?></td>
+                                <td><?php echo $row['stock'];?></td>
+                                <td><?php echo $row['sales'];?></td>
+
+                                <td>
+                                    <button class="btn btn-primary" type="button"><a href="Users.php?edit=<?php echo $row['id']; ?>">More Info </a></button>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                <?php
+            }
+        }
+
+
+
+    ?>
+
+
+</table>
+
+<!-- refresh button that refreshes the table -->
+<button class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
+
+
+
+<?php
+    } elseif(isset($_GET['edit'])){
+        require_once '../connection.php';
+        $db = connect();
+        $sql = "SELECT * FROM `users` WHERE `email` = '".$_GET['edit']."'";
+        $result = $db->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                ?>
+                    <!-- a table where the first row contains the items, the second the data, and the third the edit button -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Data-Type</th>
+                                <th>Data</th>
+                                <th>Edit</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>User_ID:</th>
+                                <td><?php echo $row['id'];?></td>
+                                <td><i class='bx bx-lock icon'></i></td>
+                            </tr>
+                            <tr>
+                                <th>name:</th>
+                                <td><?php echo $row['name'];?></td>
+                                <td><i class='bx bx-lock icon'></i></td>
+
+                            </tr>
+                            <tr>
+                                <th>Email:</th>
+                                <td><?php echo $row['email'];?></td>
+                                <td><i class='bx bx-lock icon'></i></td>
+
+                            </tr>
+                          
+                            
+                            <tr>
+                                <th>Account Creation:</th>
+                                <td><?php echo $row['creation'];?></td>
+                                <td><i class='bx bx-lock icon'></i></td>
+                            </tr>
+                            <tr>
+                                <th>Account Type:</th>
+                                <td><?php echo $row['role'];?></td>
+                                <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
+                            </tr>
+
+                        </tbody>
+
+
+
+
+                    
+                <?php
+            }
+        }
+    } elseif (isset($_GET['type'])){
+        require_once '../connection.php';
+        $db = connect();
+        $sql = "SELECT * FROM `Users` WHERE `email` = '".$_GET['type']."'";
+        $result = $db->query($sql);
+
+
+        // when the submit button is pressed
+        if(isset($_POST['staff'])){
+            $type = $_POST['type'];
+            $sql = "UPDATE `Users` SET `acc_type` = '$type' WHERE `email` = '".$_GET['type']."'";
+            $result = $db->query($sql);
+            header("Location: Users.php");
+
+            // get subscription information from users 
+            $sql = "SELECT * FROM `Users` WHERE `email` = '".$_GET['type']."'";
+            $result = $db->query($sql);
+            // get subscription
+            if($result->num_rows > 0){
+                while($row = $result->fetch_assoc()){
+                    ?>
+
+                    <?php
+                }
+            }
+
+        }
+
+        
+        ?>
+
+        <div class="form">
+            <label class="sub-label" for="sub">Role:</label>
+
+            <?php
+                require_once '../connection.php';
+                $db = connect();
+                $sql = "SELECT * FROM `users` WHERE `email` = '".$_GET['type']."'";
+                $result = $db->query($sql);
+                if($result->num_rows > 0){
+                    while($row = $result->fetch_assoc()){
+                        ?>
+                        <form action="Users.php?type=<?php echo $row['email']; ?>" method="post">
+
+                            <input type="text" name="type" value="<?php echo $row['role'];?>">
+                            <button type="submit" name="staff" class="btn btn-primary">Submit</button>
+                         </form>
+                        <?php
+                    }
+                }
+
+            ?>
+
+
+        <h2 class="true">customer = Normal User!</h2>
+        <h2 class="false">staff =  Staff Account Permissions!</h2>
+        <br>
+
+        <label for="" class="importat">Doing this will give users access to control panel.</label>
+
+    <?php
+
+    }
+
+
+
+?>
+</div>
 
    
             
