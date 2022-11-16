@@ -8,6 +8,8 @@ $status="";
     $con,
     "SELECT * FROM `products` WHERE `id`='$id'"
     );
+    echo $result;
+
 
 $row = mysqli_fetch_assoc($result);
 
