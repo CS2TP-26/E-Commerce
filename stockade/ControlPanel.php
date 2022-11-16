@@ -326,13 +326,9 @@
                         <div class="icon bx bxs-dollar-circle"></div>
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
-<<<<<<< HEAD
-                        <div class="sm-value"><b>This Month</b></div>
-=======
-                        <div class="sm-value"><b>Net Profit</b></div>
+                        <div class="sm-value"><b>Net Profit £</b></div>
                         <div class="lr-value" style="padding-top: 30px;">£3.69</div>
 
->>>>>>> 4bcd6c28ee3b402a3fbe0c07b4cc0e21a6fba55f
                         <!-- <canvas id="revenue-this-month" width="280" height="190"></canvas> -->
                     </div>
 
@@ -340,13 +336,9 @@
                         <div class="icon bx bxs-dollar-circle"></div>
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
-<<<<<<< HEAD
-                        <div class="sm-value"><b>All Time</b></div>
-=======
                         <div class="sm-value"><b>Costs £</b></div>
                         <div class="lr-value" style="padding-top: 30px;">£3.69</div>
 
->>>>>>> 4bcd6c28ee3b402a3fbe0c07b4cc0e21a6fba55f
                         <!-- <canvas id="revenue-all-time" width="280" height="190"></canvas> -->
                     </div>
 
