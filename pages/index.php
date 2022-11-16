@@ -17,7 +17,7 @@ $price = $row['price'];
 $image = $row['image'];
 
 $cartArray = array(
-	$code=>array(
+	$id=>array(
     'id'=>$id,
 	'name'=>$name,
 	'price'=>$price,
