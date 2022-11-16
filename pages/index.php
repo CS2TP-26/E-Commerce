@@ -12,8 +12,18 @@ $id = 1;
 $sql =  "SELECT * FROM `products` WHERE `id`='$id'";
 $result = $db->query($sql);
 
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $name = $row["name"];
+        $price = $row["price"];
+        $image = $row["image"];
+    }
+}else{
+    echo "No results";
+}
 
-$row = mysqli_fetch_assoc($result);
+
+// $row = mysqli_fetch_assoc($result);
 
 $id = $row['id'];
 $name = $row['name'];
