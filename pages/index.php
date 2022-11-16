@@ -47,3 +47,7 @@ if(empty($_SESSION["basket"])) {
 ?>
 
 <h1>test</h1>
+
+<?php
+echo $status . '<br>' . $cartArray;
+?>
