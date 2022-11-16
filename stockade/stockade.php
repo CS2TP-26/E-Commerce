@@ -247,14 +247,15 @@
                             <tr>
                                 <th>Cost (£):</th>
                                 <td><?php echo $row['price'];?></td>
-                                <td><i class='bx bx-lock icon'></i></td>
+                                <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
+
                             </tr>
                             <tr>
                                 <th>Stock Count:</th>
                                 <td><?php echo $row['stock'];?></td>
-                                <td><i class='bx bx-lock icon'></i></td>
-
                                 <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
+
+
                             </tr>
                             <tr>
                                 <th>Items Sold / Sales</th>
