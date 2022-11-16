@@ -137,8 +137,8 @@
 
                 <!-- Host Machine -->
                 <div class="item-header">
-                    <i class='bx bx-data icon'></i>
-                    <span class="text">Stockade</span>
+                    <i class='bx bx-support icon'></i>
+                    <span class="text">Tickets</span>
                 </div>
 
 
