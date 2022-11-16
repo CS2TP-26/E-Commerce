@@ -207,7 +207,7 @@
     } elseif(isset($_GET['edit'])){
         require_once '../connection.php';
         $db = connect();
-        $sql = "SELECT * FROM `users` WHERE `email` = '".$_GET['edit']."'";
+        $sql = "SELECT * FROM `products` WHERE `ID` = '".$_GET['edit']."'";
         $result = $db->query($sql);
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){
@@ -224,7 +224,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th>User_ID:</th>
+                                <th>Product_ID:</th>
                                 <td><?php echo $row['id'];?></td>
                                 <td><i class='bx bx-lock icon'></i></td>
                             </tr>
@@ -235,22 +235,34 @@
 
                             </tr>
                             <tr>
-                                <th>Email:</th>
-                                <td><?php echo $row['email'];?></td>
+                                <th>description:</th>
+                                <td><?php echo $row['description'];?></td>
                                 <td><i class='bx bx-lock icon'></i></td>
-
                             </tr>
-                          
+                            <tr>
+                                <th>image_Url:</th>
+                                <td><?php echo $row['image'];?></td>
+                                <td><i class='bx bx-lock icon'></i></td>
+                            </tr>
                             
                             <tr>
-                                <th>Account Creation:</th>
-                                <td><?php echo $row['creation'];?></td>
+                                <th>Cost (£):</th>
+                                <td><?php echo $row['price'];?></td>
                                 <td><i class='bx bx-lock icon'></i></td>
                             </tr>
                             <tr>
                                 <th>Account Type:</th>
-                                <td><?php echo $row['role'];?></td>
-                                <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
+                                <td><?php echo $row['stock'];?></td>
+                                <td><i class='bx bx-lock icon'></i></td>
+
+                                <!-- <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td> -->
+                            </tr>
+                            <tr>
+                                <th>Items Sold / Sales</th>
+                                <td><?php echo $row['sales'];?></td>
+                                <td><i class='bx bx-lock icon'></i></td>
+
+                                <!-- <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td> -->
                             </tr>
 
                         </tbody>
