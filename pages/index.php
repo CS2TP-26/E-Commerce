@@ -17,6 +17,10 @@ if ($result->num_rows > 0) {
         $name = $row["name"];
         $price = $row["price"];
         $image = $row["image"];
+        echo $name;
+        echo $price;
+        echo $image;
+        
     }
 }else{
     echo "No results";
@@ -25,10 +29,10 @@ if ($result->num_rows > 0) {
 
 // $row = mysqli_fetch_assoc($result);
 
-$id = $row['id'];
-$name = $row['name'];
-$price = $row['price'];
-$image = $row['image'];
+// $id = $row['id'];
+// $name = $row['name'];
+// $price = $row['price'];
+// $image = $row['image'];
 
 $cartArray = array(
 	$id=>array(
@@ -64,4 +68,7 @@ if(empty($_SESSION["basket"])) {
 
 <?php
 echo $status . '<br>' . $cartArray;
+
+
+
 ?>
