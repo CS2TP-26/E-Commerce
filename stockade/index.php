@@ -10,7 +10,7 @@
     <link rel="icon" href="assets/Icon.png">
     <link rel="stylesheet" href="css/index.css">
 
-    <title>Admin - Login</title>
+    <title>Stockade - Login</title>
 </head>
 <body>
 

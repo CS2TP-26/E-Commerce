@@ -21,7 +21,7 @@
 
 
 
-    <title>Admin - ControlPanel</title>
+    <title>Stockade - ControlPanel</title>
 </head>
 <body>
 
@@ -87,6 +87,13 @@
                         <a href="stockade.php">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Stockade</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="orders.php">
+                            <i class='bx bx-basket icon'></i>
+                            <span class="text nav-text">Orders</span>
                         </a>
                     </li>
 
@@ -273,9 +280,24 @@
                         <!-- this  -->
                     <div class="item box" style="height: 100%;">
                         <div class="icon bx bxs-user-plus"></div>
-                        <div class="info">Weekly</div>
-                        <br>
-                        <canvas id="users-weekly" width="100%" height="40vh"></canvas>
+                        <div class="info">Staff</div>
+                        <div class="lr-value" style="padding-top: 50px;">
+                        <?php
+                            // connect to database
+                            require_once '../connection.php';
+                            $db = connect();
+                            // get the amount  of users that have the staff role
+                            $sql = "SELECT * FROM users WHERE role = 'staff'";
+                            $result = $db->query($sql);
+                            $count = $result->num_rows;
+                            echo $count;
+                        ?>
+                    
+                    
+                    
+                    
+                        </div>
+                        <!-- <canvas id="users-weekly" width="100%" height="40vh"></canvas> -->
                         <!--<progress class="progress" value="76.23" max="100"></progress>-->
                     </div>
 
@@ -296,7 +318,7 @@
                         <div class="icon bx bxs-dollar-circle"></div>
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
-                        <div class="sm-value"><b>Today</b></div>
+                        <div class="sm-value"><b>Net Revenue £</b></div>
                         <div class="lr-value" style="padding-top: 30px;">£3.69</div>
                     </div>
 
@@ -304,7 +326,13 @@
                         <div class="icon bx bxs-dollar-circle"></div>
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
+<<<<<<< HEAD
                         <div class="sm-value"><b>This Month</b></div>
+=======
+                        <div class="sm-value"><b>Net Profit</b></div>
+                        <div class="lr-value" style="padding-top: 30px;">£3.69</div>
+
+>>>>>>> 4bcd6c28ee3b402a3fbe0c07b4cc0e21a6fba55f
                         <!-- <canvas id="revenue-this-month" width="280" height="190"></canvas> -->
                     </div>
 
@@ -312,7 +340,13 @@
                         <div class="icon bx bxs-dollar-circle"></div>
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
+<<<<<<< HEAD
                         <div class="sm-value"><b>All Time</b></div>
+=======
+                        <div class="sm-value"><b>Costs £</b></div>
+                        <div class="lr-value" style="padding-top: 30px;">£3.69</div>
+
+>>>>>>> 4bcd6c28ee3b402a3fbe0c07b4cc0e21a6fba55f
                         <!-- <canvas id="revenue-all-time" width="280" height="190"></canvas> -->
                     </div>
 

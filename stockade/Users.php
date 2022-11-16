@@ -22,7 +22,7 @@
 
 
 
-    <title>Admin - ControlPanel</title>
+    <title>Stockade - ControlPanel</title>
 </head>
 <body>
 
@@ -88,6 +88,13 @@
                         <a href="stockade.php">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Stockade</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-link">
+                        <a href="orders.php">
+                            <i class='bx bx-basket icon'></i>
+                            <span class="text nav-text">Orders</span>
                         </a>
                     </li>
 
