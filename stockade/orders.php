@@ -161,7 +161,7 @@
         <th>USER ID</th>
         <th>PRODUCT ID</th>
         <th>Cost (£)</th>
-        <th>Current Stock</th>
+        <!-- <th>Current Stock</th> -->
         <th>Status</th>
         <th>Edit</th>
 
@@ -184,7 +184,7 @@ if($result->num_rows > 0){
                         <td><?php echo $row['user_ID'];?></td>
                         <td><?php echo $row['product_ID'];?></td>
                         <td><?php echo $row['cost'];?></td>
-                        <td><?php echo $row['stock'];?></td>
+                        <!-- <td><?php echo $row['stock'];?></td> -->
                         <td><?php echo $row['status'];?></td>
 
                         <td>
@@ -213,7 +213,7 @@ if($result->num_rows > 0){
 } elseif(isset($_GET['edit'])){
 require_once '../connection.php';
 $db = connect();
-$sql = "SELECT * FROM `products` WHERE `ID` = '".$_GET['edit']."'";
+$sql = "SELECT * FROM `orders` WHERE `ID` = '".$_GET['edit']."'";
 $result = $db->query($sql);
 if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
