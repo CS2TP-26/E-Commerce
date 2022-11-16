@@ -1,15 +1,16 @@
 <?php
-session_start();
-require_once ('../connection.php');
-$db = connect();
+
+
+
 $status="";
     if (isset($_POST['id']) && $_POST['id']!=""){
+    require_once ('../connection.php');
+    $db = connect();
     $id = $_POST['id'];
-    $result = mysqli_query(
-    $con,
-    "SELECT * FROM `products` WHERE `id`='$id'"
-    );
-    echo $result;
+
+
+$sql =  "SELECT * FROM `products` WHERE `id`='$id'";
+$result = $db->query($sql);
 
 
 $row = mysqli_fetch_assoc($result);
