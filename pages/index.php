@@ -39,8 +39,11 @@ if(empty($_SESSION["basket"])) {
         $cartArray
         );
         $status = "<div class='box'>Watch has been added to your basket!</div>";
+
 	    }
 
 	}
 }
 ?>
+
+<h1>test</h1>
