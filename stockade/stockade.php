@@ -264,11 +264,11 @@
 
                                 <!-- <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td> -->
                             </tr>
-
+                            <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
+                
                         </tbody>
 
 
-                    <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
 
                     
                 <?php
