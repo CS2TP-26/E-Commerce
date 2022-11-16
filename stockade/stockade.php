@@ -182,7 +182,7 @@
                                 <td><?php echo $row['sales'];?></td>
 
                                 <td>
-                                    <button class="btn btn-primary" type="button"><a href="Users.php?edit=<?php echo $row['id']; ?>">More Info </a></button>
+                                    <button class="btn btn-primary" type="button"><a href="stockade.php?edit=<?php echo $row['id']; ?>">More Info </a></button>
                                 </td>
                             </tr>
                         </tbody>
