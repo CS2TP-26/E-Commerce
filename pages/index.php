@@ -3,10 +3,10 @@
 
 
 $status="";
-    if (isset($_POST['id']) && $_POST['id']!=""){
-    require_once ('../connection.php');
-    $db = connect();
-    $id = $_POST['id'];
+if (isset($_POST['id']) && $_POST['id']!=""){
+require_once ('../connection.php');
+$db = connect();
+$id = 1;
 
 
 $sql =  "SELECT * FROM `products` WHERE `id`='$id'";
