@@ -305,7 +305,7 @@
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
                         <div class="sm-value"><b>This Month</b></div>
-                        <canvas id="revenue-this-month" width="280" height="190"></canvas>
+                        <!-- <canvas id="revenue-this-month" width="280" height="190"></canvas> -->
                     </div>
 
                     <div class="item box" style="height: 100%;">
@@ -313,7 +313,7 @@
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
                         <div class="sm-value"><b>All Time</b></div>
-                        <canvas id="revenue-all-time" width="280" height="190"></canvas>
+                        <!-- <canvas id="revenue-all-time" width="280" height="190"></canvas> -->
                     </div>
 
                 </div>
