@@ -12,7 +12,7 @@
 
 
     
-    <title>Admin - QueryChecker</title>
+    <title>Stockade - QueryChecker</title>
 </head>
 <body>
 

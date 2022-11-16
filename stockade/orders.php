@@ -18,7 +18,7 @@
 
 
 
-    <title>Stockade - ControlPanel</title>
+    <title>Stockade - Orders</title>
 </head>
 <body>
 
@@ -86,15 +86,14 @@
                             <span class="text nav-text">Stockade</span>
                         </a>
                     </li>
-
-                    <li class="nav-link">
+                    <li class="nav-link active">
                         <a href="orders.php">
                             <i class='bx bx-basket icon'></i>
                             <span class="text nav-text">Orders</span>
                         </a>
                     </li>
 
-                    <li class="nav-link active">
+                    <li class="nav-link ">
                         <a href="Tickets.php">
                             <i class='bx bx-support icon'></i>
                             <span class="text nav-text">Tickets</span>
@@ -155,7 +154,7 @@
 
             </div>
 
-                    Work in progress
+
 
         </div>
 
