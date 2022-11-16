@@ -143,9 +143,11 @@
 
                 <!-- Host Machine -->
                 <div class="item-header">
-                    <i class='bx bx-support icon'></i>
-                    <span class="text">Tickets</span>
+                    <i class='bx bx-basket icon'></i>
+                    <span class="text">Orders</span>
                 </div>
+
+                
 
 
    
