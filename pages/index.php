@@ -3,7 +3,7 @@
 
 
 $status="";
-if (isset($_POST['id']) && $_POST['id']!=""){
+// if (isset($_POST['id']) && $_POST['id']!=""){
 require_once ('../connection.php');
 $db = connect();
 $id = 1;
@@ -61,7 +61,7 @@ if(empty($_SESSION["basket"])) {
 	    }
 
 	}
-}
+// }
 ?>
 
 <h1>test</h1>
