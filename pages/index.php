@@ -30,7 +30,7 @@ if(empty($_SESSION["basket"])) {
     $status = "<div class='box'>Watch added to your basket!</div>";
     }else{
     $array_keys = array_keys($_SESSION["basket"]);
-    if(in_array($code,$array_keys)) {
+    if(in_array($id,$array_keys)) {
 	$status = "<div class='box' style='color:red;'>
 	This watch is already added to your basket!</div>";	
         } else {
