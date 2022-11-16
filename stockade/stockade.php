@@ -251,7 +251,7 @@
                                 <td><i class='bx bx-lock icon'></i></td>
                             </tr>
                             <tr>
-                                <th>Account Type:</th>
+                                <th>Stock Count:</th>
                                 <td><?php echo $row['stock'];?></td>
                                 <td><i class='bx bx-lock icon'></i></td>
 
@@ -268,7 +268,7 @@
                         </tbody>
 
 
-
+                    <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
 
                     
                 <?php
