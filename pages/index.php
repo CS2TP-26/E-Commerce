@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../connection.php');
+require_once ('../connection.php');
 $status="";
     if (isset($_POST['id']) && $_POST['id']!=""){
     $id = $_POST['id'];
