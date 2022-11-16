@@ -12,11 +12,9 @@
     <link rel="stylesheet" href="./Bulma/bulma.min.css">
     <link href='./BoxIcons/css/boxicons.min.css' rel='stylesheet'>
     <link href='./css/main.css' rel='stylesheet'>
+    <link href='./css/stockade.css' rel='stylesheet'>
 
-    <!-- JS -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js"
-        integrity="sha512-5m2r+g00HDHnhXQDbRLAfZBwPpPCaK+wPLV6lm8VQ+09ilGdHfXV7IVyKPkLOTfi4vTTUVJnz7ELs7cA87/GMA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 
 
