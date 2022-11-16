@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once ('../connection.php');
+$db = connect();
 $status="";
     if (isset($_POST['id']) && $_POST['id']!=""){
     $id = $_POST['id'];
