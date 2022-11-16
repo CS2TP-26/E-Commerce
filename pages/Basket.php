@@ -96,5 +96,6 @@ $total_price += ($product["price"]*$product["quantity"]);
 <div style="clear:both;"></div>
 
 <div class="message_box" style="margin:10px 0px;">
-<?php echo $status . 'Test';  "?>
+<?php echo $status . 'Test';  ?>
 </div> 
+
