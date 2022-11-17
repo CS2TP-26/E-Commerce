@@ -6,7 +6,7 @@
     <!---Fontawesome CDN Link-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <!----Custom CSS Filw Link--->
-    <!-- <link rel="stylesheet" href="../css/products.css"> -->
+    <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/login.css">
 
