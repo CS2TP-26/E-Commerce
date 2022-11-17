@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/products.css">
+    <!-- <link rel="stylesheet" href="../css/products.css"> -->
 
 
 
@@ -64,7 +64,8 @@
         ?>
         <div class="col-md-4">
             <div class="card">
-                <img src="<?php echo $row['image']; ?>" class="card-img-top" alt="...">
+                <img src="<?php echo $row['image']; ?>" class="card-img-top"
+                style="width: 100%; height: 300px; object-fit: cover;" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">
                         <?php echo $row['name']; ?></h5>
