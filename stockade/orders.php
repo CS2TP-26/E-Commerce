@@ -234,27 +234,80 @@ if($result->num_rows > 0){
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
                     <tr>
-                        <th>User_ID:</th>
+                        <th>User ID:</th>
                         <td><?php echo $row['user_ID'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
-
                     </tr>
                     <tr>
-                        <th>Product_ID:</th>
+                        <th>Users Name:</th>
+                        <td><?php 
+                            $sql2 = "SELECT * FROM `users` WHERE `id` = '".$_GET['edit']."'";
+                            $result2 = $db->query($sql2);
+                            if($result2->num_rows > 0){
+                                while($row2 = $result2->fetch_assoc()){
+                                    echo $row2['name'];
+                                }
+                            }
+                        ?></td>
+                        <td><i class='bx bx-lock icon'></i></td>
+                    </tr>
+
+                    <tr>
+                        <th>Users Email:</th>
+                        <td><?php 
+                        $sql2 = "SELECT * FROM `users` WHERE `id` = '".$_GET['edit']."'";
+                        $result2 = $db->query($sql2);
+                        if($result2->num_rows > 0){
+                            while($row2 = $result2->fetch_assoc()){
+                                echo $row2['email'];
+                            }
+                        }
+                        ?></td>
+                        <td><i class='bx bx-lock icon'></i></td>
+                    </tr>
+
+                    <tr>
+                        <th>Product ID:</th>
                         <td><?php echo $row['product_ID'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
+
+                    
+                    <tr>
+                        <th>Product Name:</th>
+                        <td><?php 
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$_GET['edit']."'";
+                        $result3 = $db->query($sql3);
+                        if($result2->num_rows > 0){
+                            while($row2 = $result2->fetch_assoc()){
+                                echo $row2['name'];
+                            }
+                        }
+                        
+                        ?></td>
+                        <td><i class='bx bx-lock icon'></i></td>
+                    </tr>
+
                     <tr>
                         <th>Cost (£):</th>
                         <td><?php echo $row['cost'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
 
-                    <!-- <tr>
+                    <tr>
                         <th>Stock Count:</th>
-                        <td><?php echo $row['stock'];?></td>
+                        <td><?php 
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$_GET['edit']."'";
+                        $result3 = $db->query($sql3);
+                        if($result2->num_rows > 0){
+                            while($row2 = $result2->fetch_assoc()){
+                                echo $row2['stock'];
+                            }
+                        }
+                        
+                        ?></td>
                         <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
-                    </tr> -->
+                    </tr>
 
                     <tr>
                         <th>Status:</th>
