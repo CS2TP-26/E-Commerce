@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/products.css">
+
+
 
     <!-- mobile view -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
