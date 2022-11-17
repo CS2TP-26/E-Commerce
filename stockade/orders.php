@@ -312,7 +312,8 @@ if($result->num_rows > 0){
                         }
                         
                         ?></td>
-                        <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
+                        <td><i class='bx bx-lock icon'></i></td>
+
                     </tr>
 
                     <tr>
