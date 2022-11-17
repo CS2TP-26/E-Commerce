@@ -1,5 +1,8 @@
 <?php
+// start the session and print the results
 session_start();
+echo $_SESSION['test'];
+echo $_SESSION['name'];
 // echo 'test';
 echo $_SESSION['test'];
 echo $_SESSION["basket"];
