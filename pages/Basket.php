@@ -28,7 +28,8 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
 
 <div class="basket">
 <?php
-if(isset($_SESSION["basket"])){
+
+if(!isset($_SESSION["basket"])){
     $total_price = 0;
 ?>	
 <table class="table">

@@ -17,9 +17,9 @@ if ($result->num_rows > 0) {
         $name = $row["name"];
         $price = $row["price"];
         $image = $row["image"];
-        echo $name;
-        echo $price;
-        echo $image;
+        // echo $name;
+        // echo $price;
+        // echo $image;
         
     }
 }else{
