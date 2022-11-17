@@ -45,3 +45,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
+
+.card img {
+    /* image of each product */
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
