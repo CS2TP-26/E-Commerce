@@ -59,7 +59,6 @@ if(!isset($_SESSION["basket"])){
 <?php		
 foreach ($_SESSION["basket"] as $product){
 ?>
-<tr>
 <td>
 <img src='<?php echo $product["image"]; ?>' width="50" height="40" />
 </td>

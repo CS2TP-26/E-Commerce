@@ -26,6 +26,8 @@ if ($result->num_rows > 0) {
     echo "No results";
 }
 
+session_start();
+
 
 // $row = mysqli_fetch_assoc($result);
 
