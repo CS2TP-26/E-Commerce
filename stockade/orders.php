@@ -250,16 +250,16 @@ if($result->num_rows > 0){
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
 
-                    <tr>
+                    <!-- <tr>
                         <th>Stock Count:</th>
                         <td><?php echo $row['stock'];?></td>
                         <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
-                    </tr>
+                    </tr> -->
 
                     <tr>
                         <th>Status:</th>
                         <td><?php echo $row['status'];?></td>
-                        <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
+                        <td><button class="btn btn-primary" type="button"><a href="orders.php?status=<?php echo $row['id']; ?>">Edit   </a></button></td>
 
                     </tr>
 
@@ -272,7 +272,23 @@ if($result->num_rows > 0){
         
             
         <?php
+    } 
+    // if the user is editing the status of the order
+    if(isset($_GET['status'])){
+        ?>
+        <form action="orders.php" method="POST">
+            <div class="form-group
+            <label for="status">Status</label>
+            <input type="text" class="form-control" name="status" id="status" placeholder="Status">
+            <input type="hidden" name="id" value="<?php echo $_GET['status']; ?>">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <?php
     }
+    
+
+
+
 }
 } 
 
