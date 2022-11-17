@@ -19,17 +19,17 @@ Maison De Versa
 <!-- make a red bold h3 tag -->
 <h3 style="color: red; font-weight: bold;">First= backend, second = front end</h3>
 <br>
-<a href="pages/index.php">Main index page</a> ❌ ❌ Zeeshan - Anish
+<a href="pages/index.php">Main index page</a> ❌ ✅ Zeeshan - Anish
 <br>
 <a href="pages/login.php">Login</a> ✅ ❌ Zeeshan - Anish
 <br>
 <a href="pages/registration.php">registration</a> ✅ ❌Zeeshan - Anish
 <br>
-<a href="pages/.php">Basket</a> ❌ ❌ Jac - Anish
+<a href="pages/.php">Basket</a> ✅ ❌ Jac - Anish
 <br>
-<a href="pages/.php">Checkout</a> ❌❌Jac - Anish
+<a href="pages/.php">Checkout</a> 💼 ❌Jac - Anish
 <br>
-<a href="pages/.php">Quries / Support</a> ❌ ❌Zeeshan -Anish
+<a href="pages/.php">Quries / Support</a> ❌ ❌Zeeshan - Anish
 <br>
 <a href="pages/.php">About</a> ❌ ❌ Zeeshan - Anish
 <br>
@@ -37,7 +37,7 @@ Maison De Versa
 each watch has it's own page, with a link to the basket, and a link to the checkout
 
 <br>
-<a href="stockade/index.php">Admin Panel / stockade</a> ❌ ❌ Zeeshan - Anish
+<a href="stockade/index.php">Admin Panel / stockade</a> 💼 ❌ Zeeshan - Anish
 <br><br><br>
 <br>
 <a href="pages/logout.php">Log out of sesssion here!!!</a> 
