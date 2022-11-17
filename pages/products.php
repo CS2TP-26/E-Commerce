@@ -53,6 +53,8 @@
     </div>
     <div class="row">
         <?php
+            require_once '../connection.php';
+            $db = connect();
             $sql = "SELECT * FROM products";
             $result = $db->query($sql);
             while($row = $result->fetch_assoc()){
