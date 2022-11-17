@@ -188,7 +188,7 @@ if($result->num_rows > 0){
                         <td><?php echo $row['status'];?></td>
 
                         <td>
-                            <button class="btn btn-primary" type="button"><a href="stockade.php?edit=<?php echo $row['ID']; ?>">More Info </a></button>
+                            <button class="btn btn-primary" type="button"><a href="orders.php?edit=<?php echo $row['ID']; ?>">More Info </a></button>
                         </td>
                     </tr>
                 </tbody>
@@ -229,47 +229,40 @@ if($result->num_rows > 0){
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Product_ID:</th>
+                        <th>Order ID:</th>
                         <td><?php echo $row['id'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
                     <tr>
-                        <th>name:</th>
+                        <th>User_ID:</th>
                         <td><?php echo $row['name'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
 
                     </tr>
                     <tr>
-                        <th>description:</th>
+                        <th>Product_ID:</th>
                         <td><?php echo $row['description'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
                     <tr>
-                        <th>image_Url:</th>
+                        <th>Cost (£):</th>
                         <td><?php echo $row['image'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
-                    
-                    <tr>
-                        <th>Cost (£):</th>
-                        <td><?php echo $row['price'];?></td>
-                        <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
 
-                    </tr>
                     <tr>
                         <th>Stock Count:</th>
                         <td><?php echo $row['stock'];?></td>
                         <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
-
-
                     </tr>
+
                     <tr>
-                        <th>Items Sold / Sales</th>
-                        <td><?php echo $row['sales'];?></td>
-                        <td><i class='bx bx-lock icon'></i></td>
+                        <th>Status:</th>
+                        <td><?php echo $row['price'];?></td>
+                        <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
 
-                        <!-- <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td> -->
                     </tr>
+
         
                 </tbody>
             </table>
@@ -281,69 +274,7 @@ if($result->num_rows > 0){
         <?php
     }
 }
-} elseif (isset($_GET['type'])){
-require_once '../connection.php';
-$db = connect();
-$sql = "SELECT * FROM `Users` WHERE `email` = '".$_GET['type']."'";
-$result = $db->query($sql);
-
-
-// when the submit button is pressed
-if(isset($_POST['staff'])){
-    $type = $_POST['type'];
-    $sql = "UPDATE `Users` SET `acc_type` = '$type' WHERE `email` = '".$_GET['type']."'";
-    $result = $db->query($sql);
-    header("Location: Users.php");
-
-    // get subscription information from users 
-    $sql = "SELECT * FROM `Users` WHERE `email` = '".$_GET['type']."'";
-    $result = $db->query($sql);
-    // get subscription
-    if($result->num_rows > 0){
-        while($row = $result->fetch_assoc()){
-            ?>
-
-            <?php
-        }
-    }
-
-}
-
-
-?>
-
-<div class="form">
-    <label class="sub-label" for="sub">Role:</label>
-
-    <?php
-        require_once '../connection.php';
-        $db = connect();
-        $sql = "SELECT * FROM `users` WHERE `email` = '".$_GET['type']."'";
-        $result = $db->query($sql);
-        if($result->num_rows > 0){
-            while($row = $result->fetch_assoc()){
-                ?>
-                <form action="Users.php?type=<?php echo $row['email']; ?>" method="post">
-
-                    <input type="text" name="type" value="<?php echo $row['role'];?>">
-                    <button type="submit" name="staff" class="btn btn-primary">Submit</button>
-                 </form>
-                <?php
-            }
-        }
-
-    ?>
-
-
-<h2 class="true">customer = Normal User!</h2>
-<h2 class="false">staff =  Staff Account Permissions!</h2>
-<br>
-
-<label for="" class="importat">Doing this will give users access to control panel.</label>
-
-<?php
-
-}
+} 
 
 
 
