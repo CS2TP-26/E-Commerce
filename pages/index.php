@@ -68,12 +68,12 @@ if(empty($_SESSION["basket"])) {
 
 <?php
 echo $_SESSION["basket"];
-$_SESSION['name'] = $name;
+// $_SESSION['name'] = $name;
 
 // split the basket array to inidividual arrays
 $basket = $_SESSION["basket"];
-// $_SESSION["basket"] = array_values($basket);
-// $basket = array_values($basket);
+$_SESSION["basket"] = array_values($basket);
+$basket = array_values($basket);
 echo $basket[0]['name'];
 echo $basket[0]['price'];
 echo $basket[0]['image'];
