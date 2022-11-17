@@ -31,7 +31,7 @@ Maison De Versa
 <br>
 <a href="pages/.php">Quries / Support</a> ❌ ❌Zeeshan - Anish
 <br>
-<a href="pages/.php">About</a> ❌ ❌ Zeeshan - Anish
+<a href="pages/.php">About</a> 💼  Anish
 <br>
 <a href="pages/.php">Watches - Different sub catergories</a> ❌ ❌ Zeeshan - Anish <br>
 each watch has it's own page, with a link to the basket, and a link to the checkout
