@@ -76,6 +76,8 @@
                         <?php echo $row['price']; ?>
                     </p>
                     <a href="product.php?id=<?php echo $row['id']; ?>" class="btn-test">View</a>
+                    <!-- add to basket -->
+                    <a href="products.php?action=add&id=<?php echo $row['id']; ?>" class="btn-test">Add to basket</a>
                 </div>
             </div>
         </div>
