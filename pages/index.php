@@ -70,10 +70,6 @@ if(empty($_SESSION["basket"])) {
 
 <?php
 echo $_SESSION["basket"];
-// $_SESSION['name'] = $name;
-$_SESSION['test'] = 'test';
-
-// split the basket array to inidividual arrays
 $basket = $_SESSION["basket"];
 $_SESSION["basket"] = array_values($basket);
 $basket = array_values($basket);

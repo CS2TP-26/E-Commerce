@@ -1,19 +1,6 @@
 <?php
-// start the session and print the results
 session_start();
-echo $_SESSION['test'];
-echo $_SESSION['name'];
-// echo 'test';
-echo $_SESSION['test'];
-echo $_SESSION["basket"];
-// split the basket array to inidividual arrays
-$basket = $_SESSION["basket"];
-$basket = array_values($basket);
-echo $basket[0]['name'];
-echo $basket[0]['price'];
-echo $basket[0]['image'];
-echo $basket[0]['quantity'];
-echo $basket[0]['id'];
+
 $status="";
 	if (isset($_POST['action']) && $_POST['action']=="remove"){
 		if(!empty($_SESSION["basket"])) {
@@ -44,7 +31,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
 <div class="basket">
 <?php
 
-if(!isset($_SESSION["basket"])){
+if(isset($_SESSION["basket"])){
     $total_price = 0;
 ?>	
 <table class="table">
