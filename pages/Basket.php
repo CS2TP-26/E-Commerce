@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+echo 'test';
 echo $_SESSION["basket"];
 // split the basket array to inidividual arrays
 $basket = $_SESSION["basket"];
