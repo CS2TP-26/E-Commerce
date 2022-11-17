@@ -68,6 +68,14 @@ if(empty($_SESSION["basket"])) {
 
 <?php
 echo $_SESSION["basket"];
+// split the basket array to inidividual arrays
+$basket = $_SESSION["basket"];
+$basket = array_values($basket);
+echo $basket[0]['name'];
+echo $basket[0]['price'];
+echo $basket[0]['image'];
+echo $basket[0]['quantity'];
+echo $basket[0]['id'];
 
 echo $status . '<br>' . $cartArray;
 
