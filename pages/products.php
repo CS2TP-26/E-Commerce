@@ -61,7 +61,7 @@
         ?>
         <div class="col-md-4">
             <div class="card">
-                <img src="../assets/images/<?php echo $row['image']; ?>" class="card-img-top" alt="...">
+                <img src="<?php echo $row['image']; ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">
                         <?php echo $row['name']; ?></h5>
