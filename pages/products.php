@@ -75,7 +75,7 @@
                     <p class="card-text">
                         <?php echo $row['price']; ?>
                     </p>
-                    <a href="product.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">View</a>
+                    <a href="product.php?id=<?php echo $row['id']; ?>" class="btn-test">View</a>
                 </div>
             </div>
         </div>
