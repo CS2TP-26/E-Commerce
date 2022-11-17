@@ -230,23 +230,23 @@ if($result->num_rows > 0){
                 <tbody>
                     <tr>
                         <th>Order ID:</th>
-                        <td><?php echo $row['id'];?></td>
+                        <td><?php echo $row['ID'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
                     <tr>
                         <th>User_ID:</th>
-                        <td><?php echo $row['name'];?></td>
+                        <td><?php echo $row['user_ID'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
 
                     </tr>
                     <tr>
                         <th>Product_ID:</th>
-                        <td><?php echo $row['description'];?></td>
+                        <td><?php echo $row['product_ID'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
                     <tr>
                         <th>Cost (£):</th>
-                        <td><?php echo $row['image'];?></td>
+                        <td><?php echo $row['cost'];?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
 
@@ -258,7 +258,7 @@ if($result->num_rows > 0){
 
                     <tr>
                         <th>Status:</th>
-                        <td><?php echo $row['price'];?></td>
+                        <td><?php echo $row['status'];?></td>
                         <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
 
                     </tr>
