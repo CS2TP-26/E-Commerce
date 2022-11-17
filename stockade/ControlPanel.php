@@ -416,6 +416,23 @@
                         </div>
                     </div>
 
+                    <div class="item box" style="height: 100%;">
+                        <div class="icon bx bx-basket"></div>
+                        <div class="info">Order No</div>
+                        <div class="lr-value" style="padding-top: 50px;">
+                        <?php
+                            // connect to database
+                            require_once '../connection.php';
+                            $db = connect();
+                            $sql = "SELECT * FROM orders";
+                            $result = $db->query($sql);
+                            $count = $result->num_rows;
+                            echo $count;
+                        ?>
+                    
+                        </div>
+                    </div>
+
 
             </div>
 
