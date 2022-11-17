@@ -235,13 +235,16 @@ if($result->num_rows > 0){
                     </tr>
                     <tr>
                         <th>User ID:</th>
-                        <td><?php echo $row['user_ID'];?></td>
+                        <td><?php
+                        $user_id = $row['user_ID'];
+                        echo $row['user_ID'];
+                        ?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
                     <tr>
                         <th>Users Name:</th>
                         <td><?php 
-                            $sql2 = "SELECT * FROM `users` WHERE `id` = '".$_GET['edit']."'";
+                            $sql2 = "SELECT * FROM `users` WHERE `id` = '".$user_id."'";
                             $result2 = $db->query($sql2);
                             if($result2->num_rows > 0){
                                 while($row2 = $result2->fetch_assoc()){
@@ -255,7 +258,7 @@ if($result->num_rows > 0){
                     <tr>
                         <th>Users Email:</th>
                         <td><?php 
-                        $sql2 = "SELECT * FROM `users` WHERE `id` = '".$_GET['edit']."'";
+                        $sql2 = "SELECT * FROM `users` WHERE `id` = '".$user_id."'";
                         $result2 = $db->query($sql2);
                         if($result2->num_rows > 0){
                             while($row2 = $result2->fetch_assoc()){
@@ -268,7 +271,10 @@ if($result->num_rows > 0){
 
                     <tr>
                         <th>Product ID:</th>
-                        <td><?php echo $row['product_ID'];?></td>
+                        <td><?php 
+                        $product_id = $row['product_ID'];
+                        echo $row['product_ID'];
+                        ?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
 
@@ -276,11 +282,11 @@ if($result->num_rows > 0){
                     <tr>
                         <th>Product Name:</th>
                         <td><?php 
-                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$_GET['edit']."'";
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$product_id."'";
                         $result3 = $db->query($sql3);
-                        if($result2->num_rows > 0){
-                            while($row2 = $result2->fetch_assoc()){
-                                echo $row2['name'];
+                        if($result3->num_rows > 0){
+                            while($row3 = $result3->fetch_assoc()){
+                                echo $row3['name'];
                             }
                         }
                         
@@ -299,9 +305,9 @@ if($result->num_rows > 0){
                         <td><?php 
                         $sql3 = "SELECT * FROM `products` WHERE `id` = '".$_GET['edit']."'";
                         $result3 = $db->query($sql3);
-                        if($result2->num_rows > 0){
-                            while($row2 = $result2->fetch_assoc()){
-                                echo $row2['stock'];
+                        if($result3->num_rows > 0){
+                            while($row3 = $result3->fetch_assoc()){
+                                echo $row3['stock'];
                             }
                         }
                         
