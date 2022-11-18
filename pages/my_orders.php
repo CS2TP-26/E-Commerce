@@ -8,7 +8,6 @@
     <!----Custom CSS Filw Link--->
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/login.css">
 
 
 
@@ -50,7 +49,7 @@
             echo $user_id;
             require_once '../connection.php';
             $db = connect();
-            $sql = "SELECT * FROM orders WHERE user_id = $user_id";
+            $sql = "SELECT * FROM orders WHERE user_ID = $user_id";
             $result = $db->query($sql);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
