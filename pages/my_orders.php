@@ -45,7 +45,7 @@
         <?php
             session_start();
             $user_id = $_SESSION['id'];
-            echo $user_id;
+            echo "User ID: ". $user_id . "<br>";
             require_once '../connection.php';
             $db = connect();
             $sql = "SELECT * FROM `orders` WHERE `user_ID` = '".$user_id."'";
@@ -53,7 +53,6 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $product_id = $row['product_ID'];
-                    // get the product name from product table
                     $sql2 = "SELECT * FROM 'products' WHERE 'id' = '".$product_id."'";
                     $result2 = $db->query($sql2);
                     if ($result2->num_rows > 0) {
