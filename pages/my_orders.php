@@ -53,7 +53,7 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $product_id = $row['product_ID'];
-                    $id = 1;
+                    $status = $row["status"];
                     require_once '../connection.php';
                     $db = connect();
                     $sql =  "SELECT * FROM `products` WHERE `id`='$product_id'";
@@ -66,7 +66,6 @@
                             $product_price = $row["price"];
                             $product_image = $row["image"];
                             $product_description = $row["description"];
-                            $status = $row["status"];
 
 
                             echo "ID: " . $product_id . "<br>";
