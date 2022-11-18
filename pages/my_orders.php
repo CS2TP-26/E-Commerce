@@ -47,45 +47,50 @@
 
 </body>
 
-<!-- list of products  from database-->
+<!-- show the current orders placed for the specific user -->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Products</h1>
+            <h1 class="text-center">My Orders</h1>
         </div>
     </div>
     <div class="row">
         <?php
             require_once '../connection.php';
             $db = connect();
-            $sql = "SELECT * FROM products";
-            $result = $db->query($sql);
-            while($row = $result->fetch_assoc()){
-        ?>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="<?php echo $row['image']; ?>" class="card-img-top"
-                style="width: 100%; height: 100px; object-fit: cover;" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <?php echo $row['name']; ?></h5>
-                    <p class="card-text">
-                        <?php echo $row['description']; ?>
-                    </p>
-                    <p class="card-text">
-                        <?php echo $row['price']; ?>
-                    </p>
-                    <a href="products.php?id=<?php echo $row['id']; ?>" class="btn-test">View</a>
-                    <!-- add to basket -->
-                    <a href="products.php?action=add&id=<?php echo $row['id']; ?>" class="btn-test">Add to basket</a>
-                </div>
-            </div>
-        </div>
-        <?php
+            $sql = "SELECT * FROM orders WHERE user_id = :user_id";
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(':user_id', $_SESSION['user_id']);
+            $stmt->execute();
+            $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($orders as $order) {
+                $sql = "SELECT * FROM order_items WHERE order_id = :order_id";
+                $stmt = $db->prepare($sql);
+                $stmt->bindParam(':order_id', $order['id']);
+                $stmt->execute();
+                $order_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $total = 0;
+                foreach ($order_items as $order_item) {
+                    $sql = "SELECT * FROM products WHERE id = :product_id";
+                    $stmt = $db->prepare($sql);
+                    $stmt->bindParam(':product_id', $order_item['product_id']);
+                    $stmt->execute();
+                    $product = $stmt->fetch(PDO::FETCH_ASSOC);
+                    $total += $product['price'] * $order_item['quantity'];
+                }
+                echo "<div class='col-md-4'>";
+                echo "<div class='card'>";
+                echo "<div class='card-body'>";
+                echo "<h5 class='card-title'>Order ID: " . $order['id'] . "</h5>";
+                echo "<h6 class='card-subtitle mb-2 text-muted'>Total: $" . $total . "</h6>";
+                echo "<p class='card-text'>Date: " . $order['date'] . "</p>";
+                echo "<a href='order_details.php?id=" . $order['id'] . "' class='card-link'>View Details</a>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
             }
         ?>
     </div>
-</div>
 
 
 
