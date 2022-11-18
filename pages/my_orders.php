@@ -68,14 +68,14 @@
 
 
                         }
-                        echo "ID: " . $product_id . "<br>";
-                        echo "Product Name: " . $product_name . "<br>";
-                        echo "Product Image: " . $product_image . "<br>";
-                        echo "Product Description: " . $product_description . "<br>";
-                        echo "Product Price: " . $product_price . "<br>";
-                        echo "Order Status: " . $status . "<br>";
-                    }
 
+                    }
+                    echo "ID: " . $product_id . "<br>";
+                    echo "Product Name: " . $product_name . "<br>";
+                    echo "Product Image: " . $product_image . "<br>";
+                    echo "Product Description: " . $product_description . "<br>";
+                    echo "Product Price: " . $product_price . "<br>";
+                    echo "Order Status: " . $status . "<br>";
 
 
 
