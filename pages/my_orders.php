@@ -56,15 +56,21 @@
     </div>
     <div class="row">
         <?php
+            // start the session
+            session_start();
+            // get the user id
+            $user_id = $_SESSION['id'];
+
+            
             require_once '../connection.php';
             $db = connect();
             $sql = "SELECT * FROM orders WHERE user_id = :user_id";
             $stmt = $db->prepare($sql);
-            $stmt->bindParam(':user_id', $_SESSION['user_id']);
+            $stmt->bindParam(':user_id', $_SESSION['id']);
             $stmt->execute();
             $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach ($orders as $order) {
-                $sql = "SELECT * FROM order_items WHERE order_id = :order_id";
+                $sql = "SELECT * FROM orders WHERE order_id = :order_id";
                 $stmt = $db->prepare($sql);
                 $stmt->bindParam(':order_id', $order['id']);
                 $stmt->execute();
@@ -91,6 +97,9 @@
             }
         ?>
     </div>
+
+
+
 
 
 
