@@ -175,6 +175,8 @@ $sql = "SELECT * FROM `orders`";
 $result = $db->query($sql);
 if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
+        $product_id = $row['product_ID'];
+
         ?>
             <!-- a table that shows all of the quries -->
 
@@ -184,7 +186,7 @@ if($result->num_rows > 0){
                         <td><?php echo $row['user_ID'];?></td>
                         <td><?php echo $row['product_ID'];?></td>
                         <td><?php 
-                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$row['product_ID'];"'";
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$product_id."'";
                         $result3 = $db->query($sql3);
                         if($result3->num_rows > 0){
                             while($row3 = $result3->fetch_assoc()){
