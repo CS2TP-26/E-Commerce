@@ -56,45 +56,43 @@
     </div>
     <div class="row">
         <?php
-            // start the session
             session_start();
-            // get the user id
             $user_id = $_SESSION['id'];
-
-            
             require_once '../connection.php';
             $db = connect();
-            $sql = "SELECT * FROM orders WHERE user_id = :user_id";
-            $stmt = $db->prepare($sql);
-            $stmt->bindParam(':user_id', $_SESSION['id']);
-            $stmt->execute();
-            $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            foreach ($orders as $order) {
-                $sql = "SELECT * FROM orders WHERE order_id = :order_id";
-                $stmt = $db->prepare($sql);
-                $stmt->bindParam(':order_id', $order['id']);
-                $stmt->execute();
-                $order_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                $total = 0;
-                foreach ($order_items as $order_item) {
-                    $sql = "SELECT * FROM products WHERE id = :product_id";
-                    $stmt = $db->prepare($sql);
-                    $stmt->bindParam(':product_id', $order_item['product_id']);
-                    $stmt->execute();
-                    $product = $stmt->fetch(PDO::FETCH_ASSOC);
-                    $total += $product['price'] * $order_item['quantity'];
+            $sql = "SELECT * FROM orders WHERE user_id = $user_id";
+            $result = $db->query($sql);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $product_id = $row['product_id'];
+                    // get the product name from product table
+                    $sql = "SELECT * FROM products WHERE id = $product_id";
+                    $result2 = $db->query($sql);
+                    if ($result2->num_rows > 0) {
+                        while ($row2 = $result2->fetch_assoc()) {
+                            $product_name = $row2['name'];
+                            $product_image = $row2['image'];
+                            $product_description = $row2['description'];
+                            $product_price = $row2['cost'];
+                            $status = $row['status'];
+
+                        } 
+                    }
+
+                    echo "ID: " . $product_id . " - " . $row["name"] . "<br>";
+                    echo "Product Name: " . $product_name . "<br>";
+                    echo "Product Image: " . $product_image . "<br>";
+                    echo "Product Description: " . $product_description . "<br>";
+                    echo "Product Price: " . $product_price . "<br>";
+                    echo "Order Date: " . $row["order_date"] . "<br>";
+                    echo "Order Status: " . $status . "<br>";
+
+
+
                 }
-                echo "<div class='col-md-4'>";
-                echo "<div class='card'>";
-                echo "<div class='card-body'>";
-                echo "<h5 class='card-title'>Order ID: " . $order['id'] . "</h5>";
-                echo "<h6 class='card-subtitle mb-2 text-muted'>Total: $" . $total . "</h6>";
-                echo "<p class='card-text'>Date: " . $order['date'] . "</p>";
-                echo "<a href='order_details.php?id=" . $order['id'] . "' class='card-link'>View Details</a>";
-                echo "</div>";
-                echo "</div>";
-                echo "</div>";
             }
+  
+
         ?>
     </div>
 
