@@ -9,34 +9,23 @@
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/login.css">
-    <!-- <link rel="stylesheet" href="../css/products.css"> -->
 
 
 
-    <!-- mobile view -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Website Icon -->
-    <!-- <link rel="icon" href="../assets/images/Icon8.png"> -->
 
 </head>
 
 
 
 <body>
-    <style>
-        body {
-            /* background-image: url('../assets/images/grayPolygon.png'); */
-        }
-    </style>
 
-    <!-- background image -->
+
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
     </label>
-        <!--  add a logo to the navbar-->
-         <!-- <img class="icon" src="../assets/images/Icon8.png" alt="logo" class="logo">  --> 
         <label class="logo">Maison De Versa</label>
         <ul class="ul">
             <li><a href="../index.php">Home</a></li>
