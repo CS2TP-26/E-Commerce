@@ -183,8 +183,16 @@ if($result->num_rows > 0){
                         <td><?php echo $row['ID'];?></td>
                         <td><?php echo $row['user_ID'];?></td>
                         <td><?php echo $row['product_ID'];?></td>
-                        <td><?php echo $row['cost'];?></td>
-                        <!-- <td><?php echo $row['stock'];?></td> -->
+                        <td><?php 
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$product_id."'";
+                        $result3 = $db->query($sql3);
+                        if($result3->num_rows > 0){
+                            while($row3 = $result3->fetch_assoc()){
+                                echo $row3['price'];
+                            }
+                        }
+                        
+                        ?></td>
                         <td><?php echo $row['status'];?></td>
 
                         <td>
@@ -296,7 +304,16 @@ if($result->num_rows > 0){
 
                     <tr>
                         <th>Cost (£):</th>
-                        <td><?php echo $row['cost'];?></td>
+                        <td><?php 
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$product_id."'";
+                        $result3 = $db->query($sql3);
+                        if($result3->num_rows > 0){
+                            while($row3 = $result3->fetch_assoc()){
+                                echo $row3['price'];
+                            }
+                        }
+                        
+                        ?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>
 
