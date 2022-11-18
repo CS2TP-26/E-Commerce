@@ -60,12 +60,12 @@
                     $result2 = $db->query($sql2);
                     
                     if ($result2->num_rows > 0) {
-                        while($row = $result->fetch_assoc()) {
+                        while($row2 = $result2->fetch_assoc()) {
 
-                            $product_name = $row["name"];
-                            $product_price = $row["price"];
-                            $product_image = $row["image"];
-                            $product_description = $row["description"];
+                            $product_name = $row2["name"];
+                            $product_price = $row2["price"];
+                            $product_image = $row2["image"];
+                            $product_description = $row2["description"];
 
 
                             echo "ID: " . $product_id . "<br>";
