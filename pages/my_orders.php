@@ -74,6 +74,8 @@
                             echo "Product Description: " . $product_description . "<br>";
                             echo "Product Price: " . $product_price . "<br>";
                             echo "Order Status: " . $status . "<br>";
+                            echo "<br><br><br>";
+
 
                             
                         }
