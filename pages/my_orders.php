@@ -52,7 +52,7 @@
             $result = $db->query($sql);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $product_id = $row['product_id'];
+                    $product_id = $row['product_ID'];
                     // get the product name from product table
                     $sql2 = "SELECT * FROM 'products' WHERE 'id' = '".$product_id."'";
                     $result2 = $db->query($sql2);
