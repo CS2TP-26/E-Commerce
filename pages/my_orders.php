@@ -55,7 +55,7 @@
                     $product_id = $row['product_ID'];
                     require_once '../connection.php';
                     $db = connect();
-                    $sql2 = "SELECT * FROM 'products'"; // WHERE 'product_ID' = '".$product_id."'";
+                    $sql2 = "SELECT * FROM 'products' WHERE 'product_ID' = '1'";
                     $result2 = $db->query($sql2);
                     if ($result2->num_rows > 0) {
                         while ($row2 = $result2->fetch_assoc()) {
