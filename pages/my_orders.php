@@ -36,7 +36,6 @@
 </body>
 
         <h1 class="text-center">My Orders</h1>
-        <h1 class="">THIS IS A TEST</h1>
 
         <h1>
 
@@ -51,7 +50,7 @@
             $db = connect();
             $sql = "SELECT * FROM orders WHERE 'user_ID' = $user_id";
             $result = $db->query($sql);
-            if ($result->num_rows > 0) {
+            if ($result->num_rows > -1) {
                 while ($row = $result->fetch_assoc()) {
                     $product_id = $row['product_id'];
                     // get the product name from product table
