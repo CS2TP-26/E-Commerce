@@ -58,6 +58,7 @@
         <?php
             session_start();
             $user_id = $_SESSION['id'];
+            echo $user_id;
             require_once '../connection.php';
             $db = connect();
             $sql = "SELECT * FROM orders WHERE user_id = $user_id";
