@@ -53,29 +53,31 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $product_id = $row['product_ID'];
+                    $id = 1;
                     require_once '../connection.php';
                     $db = connect();
-                    $sql2 = "SELECT * FROM 'products' WHERE 'product_ID' = '1'";
-                    $result2 = $db->query($sql2);
-                    if ($result2->num_rows > 0) {
-                        while ($row2 = $result2->fetch_assoc()) {
-                            $product_name = $row2['name'];
-                            $product_image = $row2['image'];
-                            $product_description = $row2['description'];
-                            $product_price = $row2['cost'];
-                            $status = $row2['status'];
-
-
-
+                    $sql =  "SELECT * FROM `products` WHERE `id`='$id'";
+                    $result = $db->query($sql);
+                    
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            $name = $row["name"];
+                            $price = $row["price"];
+                            $image = $row["image"];
+                            echo $name;
+                            echo $price;
+                            echo $image;
+                            
                         }
-
+                    }else{
+                        echo "No results";
                     }
-                    echo "ID: " . $product_id . "<br>";
-                    echo "Product Name: " . $product_name . "<br>";
-                    echo "Product Image: " . $product_image . "<br>";
-                    echo "Product Description: " . $product_description . "<br>";
-                    echo "Product Price: " . $product_price . "<br>";
-                    echo "Order Status: " . $status . "<br>";
+                    // echo "ID: " . $product_id . "<br>";
+                    // echo "Product Name: " . $product_name . "<br>";
+                    // echo "Product Image: " . $product_image . "<br>";
+                    // echo "Product Description: " . $product_description . "<br>";
+                    // echo "Product Price: " . $product_price . "<br>";
+                    // echo "Order Status: " . $status . "<br>";
 
 
 
