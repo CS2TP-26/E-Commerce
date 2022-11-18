@@ -47,14 +47,7 @@
 
 </body>
 
-<!-- show the current orders placed for the specific user -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">My Orders</h1>
-        </div>
-    </div>
-    <div class="row">
+        <h1 class="text-center">My Orders</h1>
         <?php
             session_start();
             $user_id = $_SESSION['id'];
