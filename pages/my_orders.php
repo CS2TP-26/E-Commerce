@@ -56,12 +56,12 @@
                     $sql2 = "SELECT * FROM 'products' WHERE 'id' = '".$product_id."'";
                     $result2 = $db->query($sql2);
                     if ($result2->num_rows > 0) {
-                        while ($row2 = $result2->fetch_assoc()) {
-                            $product_name = $row2['name'];
-                            $product_image = $row2['image'];
-                            $product_description = $row2['description'];
-                            $product_price = $row2['cost'];
-                            $status = $row2['status'];
+                        while ($row = $result2->fetch_assoc()) {
+                            $product_name = $row['name'];
+                            $product_image = $row['image'];
+                            $product_description = $row['description'];
+                            $product_price = $row['cost'];
+                            $status = $row['status'];
 
                         } 
                     }
@@ -71,7 +71,6 @@
                     echo "Product Image: " . $product_image . "<br>";
                     echo "Product Description: " . $product_description . "<br>";
                     echo "Product Price: " . $product_price . "<br>";
-                    // echo "Order Date: " . $row["order_date"] . "<br>";
                     echo "Order Status: " . $status . "<br>";
 
 
