@@ -184,7 +184,7 @@ if($result->num_rows > 0){
                         <td><?php echo $row['user_ID'];?></td>
                         <td><?php echo $row['product_ID'];?></td>
                         <td><?php 
-                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$row['product_ID'];?>."'";
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$row['product_ID'];"'";
                         $result3 = $db->query($sql3);
                         if($result3->num_rows > 0){
                             while($row3 = $result3->fetch_assoc()){
