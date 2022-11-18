@@ -48,14 +48,14 @@
             echo $user_id;
             require_once '../connection.php';
             $db = connect();
-            $sql = "SELECT * FROM orders WHERE 'user_ID' = $user_id";
+            $sql = "SELECT * FROM `orders` WHERE `user_ID` = '".$user_id."'";
             $result = $db->query($sql);
-            if ($result->num_rows > -1) {
+            if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $product_id = $row['product_id'];
                     // get the product name from product table
-                    $sql = "SELECT * FROM products WHERE 'id' = $product_id";
-                    $result2 = $db->query($sql);
+                    $sql2 = "SELECT * FROM 'products' WHERE 'id' = '".$product_id."'";
+                    $result2 = $db->query($sql2);
                     if ($result2->num_rows > 0) {
                         while ($row2 = $result2->fetch_assoc()) {
                             $product_name = $row2['name'];
