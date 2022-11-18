@@ -56,28 +56,32 @@
                     $id = 1;
                     require_once '../connection.php';
                     $db = connect();
-                    $sql =  "SELECT * FROM `products` WHERE `id`='$id'";
+                    $sql =  "SELECT * FROM `products` WHERE `id`='$product_id'";
                     $result = $db->query($sql);
                     
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            $name = $row["name"];
-                            $price = $row["price"];
-                            $image = $row["image"];
-                            echo $name;
-                            echo $price;
-                            echo $image;
+
+                            $product_name = $row["name"];
+                            $product_price = $row["price"];
+                            $product_image = $row["image"];
+                            $product_description = $row["description"];
+                            $status = $row["status"];
+
+
+                            echo "ID: " . $product_id . "<br>";
+                            echo "Product Name: " . $product_name . "<br>";
+                            echo "Product Image: " . $product_image . "<br>";
+                            echo "Product Description: " . $product_description . "<br>";
+                            echo "Product Price: " . $product_price . "<br>";
+                            echo "Order Status: " . $status . "<br>";
+
                             
                         }
                     }else{
                         echo "No results";
                     }
-                    // echo "ID: " . $product_id . "<br>";
-                    // echo "Product Name: " . $product_name . "<br>";
-                    // echo "Product Image: " . $product_image . "<br>";
-                    // echo "Product Description: " . $product_description . "<br>";
-                    // echo "Product Price: " . $product_price . "<br>";
-                    // echo "Order Status: " . $status . "<br>";
+
 
 
 
