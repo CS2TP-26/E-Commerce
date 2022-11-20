@@ -36,7 +36,7 @@ session_start();
 // $price = $row['price'];
 // $image = $row['image'];
 
-$cartArray = array(
+$basketArray = array(
 	$id=>array(
     'id'=>$id,
 	'name'=>$name,
@@ -46,7 +46,7 @@ $cartArray = array(
 );
 
 if(empty($_SESSION["basket"])) {
-    $_SESSION["basket"] = $cartArray;
+    $_SESSION["basket"] = $basketArray;
     $status = "<div class='box'>Watch added to your basket!</div>";
     }else{
     $array_keys = array_keys($_SESSION["basket"]);
@@ -56,7 +56,7 @@ if(empty($_SESSION["basket"])) {
         } else {
         $_SESSION["basket"] = array_merge(
         $_SESSION["basket"],
-        $cartArray
+        $basketArray
         );
         $status = "<div class='box'>Watch has been added to your basket!</div>";
 
@@ -79,7 +79,7 @@ echo $basket[0]['image'];
 echo $basket[0]['quantity'];
 echo $basket[0]['id'];
 
-echo $status . '<br>' . $cartArray;
+echo $status . '<br>' . $basketArray;
 
 
 
