@@ -8,7 +8,7 @@ $status="";
       			if($_POST["id"] == $key){
       unset($_SESSION["basket"][$key]);
       $status = "<div class='box' style='color:red;'>
-      Product is removed from your cart!</div>";
+      Product is removed from your basket!</div>";
       		}
       if(empty($_SESSION["basket"]))
       unset($_SESSION["basket"]);
@@ -90,7 +90,7 @@ $total_price += ($product["price"]*$product["quantity"]);
 </table>		
   <?php
 }else{
-	echo "<h3>Your cart is empty!</h3>";
+	echo "<h3>Your basket is empty!</h3>";
 	}
 ?>
 </div>
