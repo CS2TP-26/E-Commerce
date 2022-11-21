@@ -37,9 +37,9 @@ if(isset($_SESSION["basket"])){
 <table class="table">
 <tbody>
 <tr>
-<td></td>
-<td>Name</td>
-<td>Price (£)</td>
+<!-- <td></td> -->
+<td>Name           </td>
+<td>Price (£)            </td>
 <td>Total</td>
 </tr>	
 <?php		
