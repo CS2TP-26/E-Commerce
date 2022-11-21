@@ -1,4 +1,3 @@
->
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +7,6 @@
   <h2>Details</h2>
   <form method = "post" action="checkout.php">
   <div>Details</div>
-Test
      <label>email</label>
     <input id = "textbox" type="email" name="email" required><br><br>
     <label>Name on card</label>
