@@ -73,8 +73,8 @@ value="5">5</option>
 </select> -->
 </form>
 </td>
-<td><?php echo "$".$product["price"]; ?></td>
-<td><?php echo "$".$product["price"]*$product["quantity"]; ?></td>
+<td><?php echo "£".$product["price"]; ?></td>
+<td><?php echo "£".$product["price"]*$product["quantity"]; ?></td>
 </tr>
 <?php
 $total_price += ($product["price"]*$product["quantity"]);
@@ -82,7 +82,7 @@ $total_price += ($product["price"]*$product["quantity"]);
 ?>
 <tr>
 <td colspan="5" align="right">
-<strong>TOTAL: <?php echo "$".$total_price; ?></strong>
+<strong>TOTAL: <?php echo "£".$total_price; ?></strong>
 </td>
 </tr>
 </tbody>
