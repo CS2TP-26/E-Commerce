@@ -60,17 +60,7 @@ foreach ($_SESSION["basket"] as $product){
 <form method='post' action=''>
 <input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
 <input type='hidden' name='action' value="change" />
-<select name='quantity' class='quantity' onChange="this.form.submit()">
-<option <?php if($product["quantity"]==1) echo "selected";?>
-value="1">1</option>
-<option <?php if($product["quantity"]==2) echo "selected";?>
-value="2">2</option>
-<option <?php if($product["quantity"]==3) echo "selected";?>
-value="3">3</option>
-<option <?php if($product["quantity"]==4) echo "selected";?>
-value="4">4</option>
-<option <?php if($product["quantity"]==5) echo "selected";?>
-value="5">5</option>
+
 </select>
 </form>
 </td>
