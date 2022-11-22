@@ -90,7 +90,7 @@
         <?php
             }
         } else if ($row['id'] == $_GET['view']){ // if edit is true it means that the user clicked on their "view" button
-            echo "test for viewing items";
+            // echo "test for viewing items";
         } else if ($row['id'] == $_GET['add']){ // if edit is true it means that the user clicked on their "add to basekt" button
             echo "test for basket add";
         }
