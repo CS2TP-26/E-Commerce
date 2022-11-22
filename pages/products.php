@@ -121,6 +121,7 @@
         <?php
         
         } elseif(isset($_GET['add'])){ // if edit is true it means that the user clicked on their "add to basekt" button
+            $id = $_GET['add'];
             require_once ('../connection.php');
             $db = connect();
             $sql =  "SELECT * FROM `products` WHERE `id`='$id'";
