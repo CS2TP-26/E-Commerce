@@ -101,7 +101,7 @@
         <div class="col-md-4">
             <div class="card">
                 <img src="<?php echo $row['image']; ?>" class="card-img-top"
-                style="width: 100%; height: 100px; object-fit: cover;" alt="...">
+                style="width: auto; height: 250px; object-fit: scale-down;" alt="...">
                 <div class="card-body">
                     <h5 class="card-title
                     ">
