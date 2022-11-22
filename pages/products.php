@@ -70,7 +70,7 @@
         <div class="col-md-4">
             <div class="card">
                 <img src="<?php echo $row['image']; ?>" class="card-img-top"
-                style="width: 100%; height: 100px; object-fit: cover;" alt="...">
+                style="width: 100%; height: 100px; object-fit: scale-down;" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">
                         <?php echo $row['name']; ?></h5>
@@ -130,6 +130,17 @@
 
     </div>
 </div>
+
+
+<!-- view basket btn -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary" type="button"><a href="basket.php">View Basket </a></button>
+        </div>
+    </div>
+</div>
+
 
 
 
