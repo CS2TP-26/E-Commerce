@@ -121,7 +121,51 @@
         <?php
         
         } elseif(isset($_GET['add'])){ // if edit is true it means that the user clicked on their "add to basekt" button
-            echo "test for basket add";
+            require_once ('../connection.php');
+            $db = connect();
+            $sql =  "SELECT * FROM `products` WHERE `id`='$id'";
+            $result = $db->query($sql);
+
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $name = $row["name"];
+                    $price = $row["price"];
+                    $image = $row["image"];
+                }
+            }else{
+                echo "No results";
+            }
+
+            session_start();
+
+            $basketArray = array(
+                $id=>array(
+                'id'=>$id,
+                'name'=>$name,
+                'price'=>$price,
+                'quantity'=>1,
+                'image'=>$image)
+            );
+
+            if(empty($_SESSION["basket"])) {
+                $_SESSION["basket"] = $basketArray;
+                $status = "<div class='box'>Watch added to your basket!</div>";
+                }else{
+                $array_keys = array_keys($_SESSION["basket"]);
+                if(in_array($id,$array_keys)) {
+                $status = "<div class='box' style='color:red;'>
+                This watch is already added to your basket!</div>";	
+                    } else {
+                    $_SESSION["basket"] = array_merge(
+                    $_SESSION["basket"],
+                    $basketArray
+                    );
+                    $status = "<div class='box'>Watch has been added to your basket!</div>";
+
+                    }
+
+                }
+            echo "Item added to basket";
         }
 
         ?>
@@ -133,6 +177,7 @@
 
 
 <!-- view basket btn -->
+<!-- make it at the bottom of the page -->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -140,6 +185,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 
