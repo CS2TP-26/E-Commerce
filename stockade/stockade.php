@@ -254,13 +254,13 @@
                             <tr>
                                 <th>Cost (£):</th>
                                 <td><?php echo $row['price'];?></td>
-                                <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
+                                <td><button class="btn btn-primary" type="button"><a href="Users.php?cost=<?php echo $row['id']; ?>">Edit   </a></button></td>
 
                             </tr>
                             <tr>
                                 <th>Stock Count:</th>
                                 <td><?php echo $row['stock'];?></td>
-                                <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td>
+                                <td><button class="btn btn-primary" type="button"><a href="Users.php?stock=<?php echo $row['id']; ?>">Edit   </a></button></td>
 
 
                             </tr>
@@ -269,7 +269,6 @@
                                 <td><?php echo $row['sales'];?></td>
                                 <td><i class='bx bx-lock icon'></i></td>
 
-                                <!-- <td><button class="btn btn-primary" type="button"><a href="Users.php?type=<?php echo $row['email']; ?>">Edit   </a></button></td> -->
                             </tr>
                 
                         </tbody>
@@ -282,7 +281,7 @@
                 <?php
             }
         }
-    } elseif (isset($_GET['type'])){
+    } elseif (isset($_GET['cost'])){
         require_once '../connection.php';
         $db = connect();
         $sql = "SELECT * FROM `Users` WHERE `email` = '".$_GET['type']."'";
@@ -336,11 +335,7 @@
             ?>
 
 
-        <h2 class="true">customer = Normal User!</h2>
-        <h2 class="false">staff =  Staff Account Permissions!</h2>
-        <br>
 
-        <label for="" class="importat">Doing this will give users access to control panel.</label>
 
     <?php
 
