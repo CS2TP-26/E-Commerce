@@ -205,7 +205,8 @@
 
 </table>
 
-<!-- refresh button that refreshes the table -->
+<button class="btn btn-primary" type="button"><a href="stockade.php?add=true">Add Product</a></button>
+<br>
 <button class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
 
 
@@ -238,7 +239,6 @@
                                 <th>name:</th>
                                 <td><?php echo $row['name'];?></td>
                                 <td><i class='bx bx-lock icon'></i></td>
-
                             </tr>
                             <tr>
                                 <th>description:</th>
@@ -370,6 +370,67 @@
             }
         }
         
+        // if get is = add
+    } elseif (isset($_GET['add'])){
+        require_once '../connection.php';
+        $db = connect();
+        ?>
+        <div class="form">
+            <form action="stockade.php?add" method="POST">
+                <div class="form-group">
+                    <label class="sub-label" for="name">Name: </label>
+                    <input class="sub-input" type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label class="sub-label" for="description">Description: </label>
+                    <input class="sub-input" type="text" class="form-control" name="description" id="description" placeholder="Enter Description">
+                </div>
+                <!-- image url -->
+                <div class="form-group">
+                    <label class="sub-label" for="image">Image URL: </label>
+                    <input class="sub-input" type="text" class="form-control" name="image" id="image" placeholder="Enter Image URL">
+                </div>
+
+                <div class="form-group">
+                    <label class="sub-label" for="cost">Cost (£): </label>
+                    <input class="sub-input" type="text" class="form-control" name="cost" id="cost" placeholder="Enter Cost">
+                </div>
+                <div class="form-group">
+                    <label class="sub-label" for="stock">Stock: </label>
+                    <input class="sub-input" type="text" class="form-control" name="stock" id="stock" placeholder="Enter Stock">
+                </div>
+                <button type="submit" class="btn btn-primary" name="add">Add</button>
+            </form>
+            <!-- <button class="btn btn-primary" onclick="window.location.reload()">Refresh</button> -->
+            <!-- <label class="alert">Refresh the page so you can see cost update</label> -->
+            <!-- <br> -->
+            <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
+        </div>
+        <?php
+        if(isset($_POST['add'])){
+            $name = $_POST['name'];
+            $description = $_POST['description'];
+            $image = $_POST['image'];
+            $cost = $_POST['cost'];
+            $stock = $_POST['stock'];
+            $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$image', '$cost', '$stock')";
+            $result = $db->query($sql);
+            if($result){
+                ?>
+                <div class="alert alert-success" role="alert">
+                    Product Added!
+                </div>
+                <?php
+            } else {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    Error! Product Not Added!
+                </div>
+                <?php
+            }
+        }
+
+
 
 
     } else {
