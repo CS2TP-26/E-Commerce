@@ -183,7 +183,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <button class="btn btn-primary" type="button"><a href="basket.php">View Basket </a></button>
+            <button class="btn btn-primary" type="button"><a href="Basket.php">View Basket </a></button>
         </div>
     </div>
 </div>
