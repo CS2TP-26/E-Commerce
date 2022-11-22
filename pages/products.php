@@ -47,6 +47,11 @@
 
 </body>
 
+<?php
+    
+    if(empty($_GET)){ // if edit is false it means that the user did not click on their "more info"
+
+     ?>
 <!-- list of products  from database-->
 <div class="container">
     <div class="row">
@@ -75,15 +80,25 @@
                     <p class="card-text">
                         <?php echo $row['price']; ?>
                     </p>
-                    <a href="products.php?id=<?php echo $row['id']; ?>" class="btn-test">View</a>
-                    <!-- add to basket -->
-                    <a href="products.php?action=add&id=<?php echo $row['id']; ?>" class="btn-test">Add to basket</a>
+                    <button class="btn btn-primary" type="button"><a href="products.php?view=<?php echo $row['id']; ?>">View </a></button>
+
+                    <button class="btn btn-primary" type="button"><a href="products.php?add=<?php echo $row['id']; ?>">Add to Basket </a></button>
+
                 </div>
             </div>
         </div>
         <?php
             }
+        } else if ($row['id'] == $_GET['view']){ // if edit is true it means that the user clicked on their "view" button
+            echo "test for viewing items";
+        } else if ($row['id'] == $_GET['add']){ // if edit is true it means that the user clicked on their "add to basekt" button
+            echo "test for basket add";
+        }
+
         ?>
+
+
+
     </div>
 </div>
 

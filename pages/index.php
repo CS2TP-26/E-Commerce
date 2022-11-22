@@ -3,12 +3,11 @@
 
 
 $status="";
-// if (isset($_POST['id']) && $_POST['id']!=""){
+
+// $id = 1;
+
 require_once ('../connection.php');
 $db = connect();
-$id = 1;
-
-
 $sql =  "SELECT * FROM `products` WHERE `id`='$id'";
 $result = $db->query($sql);
 
@@ -17,24 +16,12 @@ if ($result->num_rows > 0) {
         $name = $row["name"];
         $price = $row["price"];
         $image = $row["image"];
-        // echo $name;
-        // echo $price;
-        // echo $image;
-        
     }
 }else{
     echo "No results";
 }
 
 session_start();
-
-
-// $row = mysqli_fetch_assoc($result);
-
-// $id = $row['id'];
-// $name = $row['name'];
-// $price = $row['price'];
-// $image = $row['image'];
 
 $basketArray = array(
 	$id=>array(
@@ -63,10 +50,8 @@ if(empty($_SESSION["basket"])) {
 	    }
 
 	}
-// }
 ?>
 
-<h1>test</h1>
 
 <?php
 echo $_SESSION["basket"];
