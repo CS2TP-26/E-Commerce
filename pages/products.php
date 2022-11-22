@@ -166,8 +166,10 @@
 
                 }
             echo "Item added to basket";
+        ?>
+        <button class="btn btn-primary" type="button"><a href="products.php">Back </a></button>
+        <?php
         }
-
         ?>
 
 
