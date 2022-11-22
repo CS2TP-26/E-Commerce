@@ -254,13 +254,13 @@
                             <tr>
                                 <th>Cost (£):</th>
                                 <td><?php echo $row['price'];?></td>
-                                <td><button class="btn btn-primary" type="button"><a href="Users.php?cost=<?php echo $row['id']; ?>">Edit   </a></button></td>
+                                <td><button class="btn btn-primary" type="button"><a href="stockade.php?cost=<?php echo $row['id']; ?>">Edit   </a></button></td>
 
                             </tr>
                             <tr>
                                 <th>Stock Count:</th>
                                 <td><?php echo $row['stock'];?></td>
-                                <td><button class="btn btn-primary" type="button"><a href="Users.php?stock=<?php echo $row['id']; ?>">Edit   </a></button></td>
+                                <td><button class="btn btn-primary" type="button"><a href="stockade.php?stock=<?php echo $row['id']; ?>">Edit   </a></button></td>
 
 
                             </tr>
@@ -284,79 +284,104 @@
     } elseif (isset($_GET['cost'])){
         require_once '../connection.php';
         $db = connect();
-        $sql = "SELECT * FROM `Users` WHERE `email` = '".$_GET['type']."'";
+        $sql = "SELECT * FROM `products` WHERE `id` = '".$_GET['cost']."'";
         $result = $db->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                ?>
+                <div class="form">
+                    <form action="stockade.php?cost=<?php echo $row['id']; ?>" method="POST">
+                        <div class="form-group">
+                            <label class="sub-label" for="cost">Cost (£): </label>
+                            <input class="sub-input" type="text" class="form-control" name="cost" id="cost" value="<?php echo $row['price']; ?>">
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="update">Update</button>
+                    </form>
+                    <button class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
+                    <label class="alert">Refresh the page so you can see cost update</label>
+                    <br>
+                    <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
+                </div>
 
-
-        // when the submit button is pressed
-        if(isset($_POST['staff'])){
-            $type = $_POST['type'];
-            $sql = "UPDATE `Users` SET `acc_type` = '$type' WHERE `email` = '".$_GET['type']."'";
-            $result = $db->query($sql);
-            header("Location: Users.php");
-
-            // get subscription information from users 
-            $sql = "SELECT * FROM `Users` WHERE `email` = '".$_GET['type']."'";
-            $result = $db->query($sql);
-            // get subscription
-            if($result->num_rows > 0){
-                while($row = $result->fetch_assoc()){
-                    ?>
-
-                    <?php
-                }
+                <?php
             }
-
+        }
+        if(isset($_POST['update'])){
+            $cost = $_POST['cost'];
+            $sql = "UPDATE `products` SET `price` = '$cost' WHERE `id` = '".$_GET['cost']."'";
+            $result = $db->query($sql);
+            if($result){
+                ?>
+                <div class="alert alert-success" role="alert">
+                    Product Updated!
+                </div>
+                <?php
+            } else {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    Error! Cost Not Updated!
+                </div>
+                <?php
+            }
         }
 
+
+    } elseif (isset($_GET['stock'])){
+        require_once '../connection.php';
+        $db = connect();
+        $sql = "SELECT * FROM `products` WHERE `id` = '".$_GET['stock']."'";
+        $result = $db->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                ?>
+                <div class="form">
+                    <form action="stockade.php?stock=<?php echo $row['id']; ?>" method="POST">
+                        <div class="form-group">
+                            <label class="sub-label" for="stock">stock: </label>
+                            <input class="sub-input" type="text" class="form-control" name="stock" id="stock" value="<?php echo $row['stock']; ?>">
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="update2">Update</button>
+                    </form>
+                    <button class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
+                    <label class="alert">Refresh the page so you can see cost update</label>
+                    <br>
+                    <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
+                </div>
+
+                <?php
+            }
+        }
+        if(isset($_POST['update2'])){
+            $stock = $_POST['stock'];
+            $sql = "UPDATE `products` SET `stock` = '$stock' WHERE `id` = '".$_GET['stock']."'";
+            $result = $db->query($sql);
+            if($result){
+                ?>
+                <div class="alert alert-success" role="alert">
+                    stock Updated!
+                </div>
+                <?php
+            } else {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    Error! stock Not Updated!
+                </div>
+                <?php
+            }
+        }
         
-        ?>
-
-        <div class="form">
-            <label class="sub-label" for="sub">Role:</label>
-
-            <?php
-                require_once '../connection.php';
-                $db = connect();
-                $sql = "SELECT * FROM `users` WHERE `email` = '".$_GET['type']."'";
-                $result = $db->query($sql);
-                if($result->num_rows > 0){
-                    while($row = $result->fetch_assoc()){
-                        ?>
-                        <form action="Users.php?type=<?php echo $row['email']; ?>" method="post">
-
-                            <input type="text" name="type" value="<?php echo $row['role'];?>">
-                            <button type="submit" name="staff" class="btn btn-primary">Submit</button>
-                         </form>
-                        <?php
-                    }
-                }
-
-            ?>
 
 
-
-
-    <?php
-
+    } else {
+        header("Location: stockade.php");
     }
 
 
 
 ?>
 </div>
-
-   
-            
-
-
             </div>
-
-
-
         </div>
-
-
         </div>
     </section>
 

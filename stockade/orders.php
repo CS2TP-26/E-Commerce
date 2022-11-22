@@ -358,19 +358,56 @@ if($result->num_rows > 0){
 
 
 }
-} 
+} elseif(isset($_GET['status'])){
+    require_once '../connection.php';
+        $db = connect();
+        $sql = "SELECT * FROM `orders` WHERE `ID` = '".$_GET['status']."'";
+        $result = $db->query($sql);
+        if($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                ?>
+                <div class="form">
+                    <form action="orders.php?status=<?php echo $row['ID']; ?>" method="POST">
+                        <div class="form-group">
+                            <label class="sub-label" for="status">status: </label>
+                            <input class="sub-input" type="text" class="form-control" name="status" id="status" value="<?php echo $row['status']; ?>">
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="update2">Update</button>
+                    </form>
+                    <button class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
+                    <label class="alert">Refresh the page so you can see cost update</label>
+                    <br>
+                    <button class="btn btn-primary" type="button"><a href="orders.php">Back</a></button>
+                </div>
+
+                <?php
+            }
+        }
+        if(isset($_POST['update2'])){
+            $status = $_POST['status'];
+            $sql = "UPDATE `orders` SET `status` = '$status' WHERE `ID` = '".$_GET['status']."'";
+            $result = $db->query($sql);
+            if($result){
+                ?>
+                <div class="alert alert-success" role="alert">
+                    status Updated!
+                </div>
+                <?php
+            } else {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    Error! status Not Updated!
+                </div>
+                <?php
+            }
+        }
+
+    }
 
 
 
 ?>
 </div>
-                
-
-
-   
-            
-
-
             </div>
 
 

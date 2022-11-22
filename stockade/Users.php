@@ -322,6 +322,7 @@
         <h2 class="true">customer = Normal User!</h2>
         <h2 class="false">staff =  Staff Account Permissions!</h2>
         <br>
+        </div>
 
         <label for="" class="importat">Doing this will give users access to control panel.</label>
 
