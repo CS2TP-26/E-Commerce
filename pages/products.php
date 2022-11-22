@@ -113,6 +113,8 @@
                         <?php echo "£" . $row['price']; ?>
                     </p>
                     <button class="btn btn-primary" type="button"><a href="products.php?add=<?php echo $row['id']; ?>">Add to Basket </a></button>
+                    <!-- back button -->
+                    <button class="btn btn-primary" type="button"><a href="products.php">Back </a></button>
                 </div>
             </div>
         </div>
