@@ -1,41 +1,29 @@
 <?php
 session_start();
 
+$status="";
+$id = $_POST['id'];
 
-$status="test123";
 if (isset($_POST['action']) && $_POST['action']=="remove"){
-	// $id = $_POST['id'];
-	// echo $id;
-	// if (count($_SESSION["basket"]) <= 1) {
-	// 	unset($_SESSION["basket"]);
-	// } 
-	// foreach($_SESSION["basket"] as $k => $v) {
-	// 	if($id == $k){
-	// 		unset($$_SESSION["basket"][$k]);
-	// 		$status = "<div class='box' style='color:red;'>
-	// 		Product is removed from your basket!</div>";
-	// 	}
-	// 	if(empty($_SESSION["basket"])){
-	// 		unset($_SESSION["basket"]);
-	// 	}
-	// }
-	// echo "Item removed from basket";
-	// echo $_SESSION["basket"];
-	// echo $status;
-
-	// -----
 	$id = $_POST['id'];
-	// remove the product with the id from the basket array
-	unset($_SESSION['basket'][$id]);
-	$status = "Product is removed from your basket!";
-	// unset($_SESSION["basket"][$id]);
-	$status = "<div class='box' style='color:red;'>
-	Product is removed from your basket!</div>";
-
-	if(empty($_SESSION["basket"])){
-		unset($_SESSION["basket"]);
+	if(!empty($_SESSION["basket"])) {
+		foreach($_SESSION["basket"] as $key => $value) {
+			if($_SESSION["basket"][$key]['id'] == $id){
+				unset($_SESSION["basket"][$key]);
+				$status = "<div class='box' style
+				='color:red;'>
+				Product is removed from your basket!</div>";
+			}
+			if(empty($_SESSION["basket"]))
+				unset($_SESSION["basket"]);
+		}
 	}
 }
+
+	
+
+
+
 ?>
 
 
@@ -62,7 +50,7 @@ foreach ($_SESSION["basket"] as $product){
 <td><?php echo $product["name"]; ?><br />
 <form method='post' action=''>
 <input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
-<input type='hidden' name='action' value="<?php echo $product["id"]; ?>" />
+<input type='hidden' name='action' value="remove" />
 <button type='submit' class='remove'>Remove Item</button>
 </form>
 </td>
@@ -99,4 +87,4 @@ $total_price += ($product["price"]*$product["quantity"]);
 </div> 
 
 
-<h1><?php echo "hello " . $basket; ?></h1>
+<h3><?php echo $status; ?></h3>
