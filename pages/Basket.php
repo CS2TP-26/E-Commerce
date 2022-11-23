@@ -3,18 +3,31 @@ session_start();
 
 $status="";
 if (isset($_POST['action']) && $_POST['action']=="remove"){
-	// remove the item selected from basket
+	$product_ID = $product["id"];
+	// remove the product with product id from the basket
 	if(!empty($_SESSION["basket"])) {
 		foreach($_SESSION["basket"] as $key => $value) {
-			 if($_POST["id"] == $key){
-				 unset($_SESSION["basket"][$key]);
-				 $status = "<div class='box' style='color:red;'>Product is removed from your basket!</div>";
+			if($_SESSION["basket"][$key]['product_ID'] == $product_ID){
+				unset($_SESSION["basket"][$key]);
+				$status = "<div class='box' style='color:red;'>
+				Product is removed from your basket!</div>";
 			}
- if(empty($_SESSION["basket"])){
-	unset($_SESSION["basket"]);
- }
-	   }		
-   }
+			if(empty($_SESSION["basket"]))
+				unset($_SESSION["basket"]);
+		}
+	}
+
+// 	if(!empty($_SESSION["basket"])) {
+// 		foreach($_SESSION["basket"] as $key => $value) {
+// 			 if($_POST["id"] == $key){
+// 				 unset($_SESSION["basket"][$key]);
+// 				 $status = "<div class='box' style='color:red;'>Product is removed from your basket!</div>";
+// 			}
+//  if(empty($_SESSION["basket"])){
+// 	unset($_SESSION["basket"]);
+//  }
+// 	   }		
+//    }
 }
 ?>
 
