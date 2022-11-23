@@ -7,10 +7,13 @@ if (isset($_POST['action']) && $_POST['action']=="remove"){
 	$basketArray = $_SESSION["basket"];
 	foreach($basketArray as $k => $v) {
 		if($id == $k)
-			unset($basketArray[$k]);				
+			unset($basketArray[$k]);
+			if (count($_SESSION["basket"]) <= 1) {
+				unset($_SESSION["basket"]);
+			}			
 		if(empty($basketArray))
 			unset($basketArray);
-		$_SESSION["basket"] = $basketArray;
+
 	}
 	echo "Item removed from basket";
 }
