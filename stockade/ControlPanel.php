@@ -306,6 +306,36 @@
 
                 </div>
 
+                <?php
+                    $revenue = 0;
+                    $profit = 0;
+                    $costs = 0;
+                    require_once '../connection.php';
+                    $db = connect();
+                    $sql = "SELECT * FROM `orders`";
+                    $result = $db->query($sql);
+                    $count = $result->num_rows;
+                    if($count > 0){
+                        while($row = $result->fetch_assoc()){
+                            $product_id = $row['product_ID'];
+                            $db2 = connect();
+                            $sql2 = "SELECT * FROM `products` WHERE `id` = '".$product_id."'";
+                            $result2 = $db2->query($sql2);
+                            $count2 = $result2->num_rows;
+                            if($count2 > 0){
+                                while($row2 = $result2->fetch_assoc()){
+                                    $revenue += $row2['price'];
+                                }
+                            }
+                        }
+                    }
+                    $costs = $revenue * 0.4;
+                    $profit = $revenue - $costs;
+                    
+
+
+                ?>
+
                 <!-- Revenue Section -->
                 <div class="item-header">
                     <i class='bx bx-pound icon'></i>
@@ -319,7 +349,7 @@
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
                         <div class="sm-value"><b>Net Revenue £</b></div>
-                        <div class="lr-value" style="padding-top: 30px;">£3.69</div>
+                        <div class="lr-value" style="padding-top: 30px;"><?php echo "£" . $revenue ?></div>
                     </div>
 
                     <div class="item box" style="height: 100%;">
@@ -327,7 +357,7 @@
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
                         <div class="sm-value"><b>Net Profit £</b></div>
-                        <div class="lr-value" style="padding-top: 30px;">£3.69</div>
+                        <div class="lr-value" style="padding-top: 30px;"><?php echo "£" . $profit ?></div>
 
                         <!-- <canvas id="revenue-this-month" width="280" height="190"></canvas> -->
                     </div>
@@ -337,7 +367,7 @@
                         <div class="info" style="font-size: 22px; font-style: italic;">Revenue</div>
                         <div class="value" style="color: rgb(0,0,0,0)">100%</div>
                         <div class="sm-value"><b>Costs £</b></div>
-                        <div class="lr-value" style="padding-top: 30px;">£3.69</div>
+                        <div class="lr-value" style="padding-top: 30px;"><?php echo "£" . $costs ?></div>
 
                         <!-- <canvas id="revenue-all-time" width="280" height="190"></canvas> -->
                     </div>
