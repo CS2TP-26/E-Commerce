@@ -88,3 +88,20 @@ $total_price += ($product["price"]*$product["quantity"]);
 
 
 <h3><?php echo $status; ?></h3>
+
+
+<?php
+if(isset($_SESSION["basket"])){
+?>
+<!-- button to go to checkout page -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-primary" type="button"><a href="checkout.php">Checkout </a></button>
+		</div>
+	</div>
+</div>
+
+<?php
+}
+?>
