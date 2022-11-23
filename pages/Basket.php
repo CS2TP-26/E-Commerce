@@ -47,7 +47,7 @@ foreach ($_SESSION["basket"] as $product){
 <td><?php echo $product["name"]; ?><br />
 <form method='post' action=''>
 <input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
-<input type='hidden' name='action' value="remove" />
+<input type='hidden' name='action' value="<?php echo $product["id"]; ?>" />
 <button type='submit' class='remove'>Remove Item</button>
 </form>
 </td>
