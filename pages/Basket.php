@@ -13,18 +13,10 @@ if (isset($_POST['action']) && $_POST['action']=="remove"){
 	if(empty($_SESSION["basket"])){
 		unset($_SESSION["basket"]);
 	}
-	
-// 	if(!empty($_SESSION["basket"])) {
-// 		foreach($_SESSION["basket"] as $key => $value) {
-// 			 if($_POST["id"] == $key){
-// 				 unset($_SESSION["basket"][$key]);
-// 				 $status = "<div class='box' style='color:red;'>Product is removed from your basket!</div>";
-// 			}
-//  if(empty($_SESSION["basket"])){
-// 	unset($_SESSION["basket"]);
-//  }
-// 	   }		
-//    }
+
+
+
+
 }
 ?>
 
@@ -89,4 +81,4 @@ $total_price += ($product["price"]*$product["quantity"]);
 </div> 
 
 
-<h1><?php echo $status; ?></h1>
+<h1><?php echo $basket; ?></h1>
