@@ -5,21 +5,19 @@ $status="";
 if (isset($_POST['action']) && $_POST['action']=="remove"){
 	$id = $_POST['id'];
 	$basketArray = $_SESSION["basket"];
+	if (count($_SESSION["basket"]) <= 1) {
+		unset($_SESSION["basket"]);
+	}	
 	foreach($basketArray as $k => $v) {
 		if($id == $k){
 			unset($basketArray[$k]);
 			$_SESSION["basket"] = $basketArray;
 			$status = "<div class='box' style='color:red;'>
 			Product is removed from your basket!</div>";
-			if (count($_SESSION["basket"]) <= 1) {
-				unset($_SESSION["basket"]);
-			}	
 		}
-					
 		if(empty($basketArray)){
 			unset($_SESSION["basket"]);
 		}
-
 	}
 	echo "Item removed from basket";
 }
