@@ -21,7 +21,7 @@
     session_start();
 
     if (!isset($_SESSION['Admin_Username'])) {
-        header("Location: index.php");
+        header("Location: ../index.php");
     }else{
         // if the role is 'Owner' 
         if ($_SESSION['Admin_Role'] == 'Owner' || $_SESSION['Admin_Role'] == 'staff') {

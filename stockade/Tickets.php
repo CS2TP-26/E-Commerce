@@ -26,7 +26,7 @@
 <?php
     session_start();
     if ($_SESSION['acc_type'] != 'staff') {
-        header("Location: index.php");
+        header("Location: ../index.php");
     }else{
         if ($_SESSION['acc_type'] == 'admin' || $_SESSION['acc_type'] == 'staff') {
 ?>
