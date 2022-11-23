@@ -5,17 +5,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    /* roboto condensed font */
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 :root {
     /* ===== Colors ===== */
-    --body-color: #18191a;
-    --sidebar-color: #202020;
-    --primary-color: #3a3b3c;
-    --primary-color-light: #3a3b3c;
-    --toggle-color: #fff;
-    --text-color: #ccc;
+    --body-color: #6b756b;
+    --sidebar-color: #83958c;
+    --primary-color: #686868;
+    --primary-color-light: #6b756b;
+    --toggle-color: #686868;
+    --text-color: #fff;
+
+    /* #6b756b */
+    /* #686868 */
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
