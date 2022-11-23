@@ -141,7 +141,7 @@
 
             $basketArray = array(
                 $id=>array(
-                'id'=>$id,
+                'p_id'=>$p_id,
                 'name'=>$name,
                 'price'=>$price,
                 'quantity'=>1,

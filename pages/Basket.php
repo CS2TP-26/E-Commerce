@@ -4,13 +4,13 @@ session_start();
 $status="";
 if (isset($_POST['action']) && $_POST['action']=="remove"){
 	$id = $_POST['id'];
-	// remove the product with the id from the basket array
-	// unset all data in that part of array
 	unset($_SESSION["basket"][$id]);
+
 	$status = "<div class='box' style='color:red;'>
 	Product is removed from your basket!</div>";
 
 	if(empty($_SESSION["basket"])){
+		// delete entire basket array
 		unset($_SESSION["basket"]);
 	}
 
@@ -43,14 +43,14 @@ foreach ($_SESSION["basket"] as $product){
 </td>
 <td><?php echo $product["name"]; ?><br />
 <form method='post' action=''>
-<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
+<input type='hidden' name='id' value="<?php echo $product["p_id"]; ?>" />
 <input type='hidden' name='action' value="remove" />
 <button type='submit' class='remove'>Remove Item</button>
 </form>
 </td>
 <td>
 <form method='post' action=''>
-<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
+<input type='hidden' name='id' value="<?php echo $product["p_id"]; ?>" />
 <input type='hidden' name='action' value="change" />
 </form>
 </td>
@@ -81,4 +81,4 @@ $total_price += ($product["price"]*$product["quantity"]);
 </div> 
 
 
-<h1><?php echo $basket; ?></h1>
+<h1><?php echo "hello " . $basket; ?></h1>
