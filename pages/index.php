@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 
 
@@ -32,24 +32,24 @@ $basketArray = array(
 	'image'=>$image)
 );
 
-if(empty($_SESSION["basket"])) {
-    $_SESSION["basket"] = $basketArray;
-    $status = "<div class='box'>Watch added to your basket!</div>";
-    }else{
-    $array_keys = array_keys($_SESSION["basket"]);
-    if(in_array($id,$array_keys)) {
-	$status = "<div class='box' style='color:red;'>
-	This watch is already added to your basket!</div>";	
-        } else {
-        $_SESSION["basket"] = array_merge(
-        $_SESSION["basket"],
-        $basketArray
-        );
-        $status = "<div class='box'>Watch has been added to your basket!</div>";
+// if(empty($_SESSION["basket"])) {
+//     $_SESSION["basket"] = $basketArray;
+//     $status = "<div class='box'>Watch added to your basket!</div>";
+//     }else{
+//     $array_keys = array_keys($_SESSION["basket"]);
+//     if(in_array($id,$array_keys)) {
+// 	$status = "<div class='box' style='color:red;'>
+// 	This watch is already added to your basket!</div>";	
+//         } else {
+//         $_SESSION["basket"] = array_merge(
+//         $_SESSION["basket"],
+//         $basketArray
+//         );
+//         $status = "<div class='box'>Watch has been added to your basket!</div>";
 
-	    }
+// 	    }
 
-	}
+// 	}
 ?>
 
 
@@ -69,4 +69,6 @@ echo $status . '<br>' . $basketArray;
 
 
 
-?>
+?> -->
+
+this is just a placeholder
