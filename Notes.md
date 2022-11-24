@@ -21,4 +21,8 @@ through online payment systems)
 
 Customers must be able to view their past orders, and see their status
 
+Make sure that when someone goes to the basket it redirects them to the login page to make sure that they are logged in before they actually buy anything.
+
+/login.php?redirect=checkout.php <- Something like this
+
 
