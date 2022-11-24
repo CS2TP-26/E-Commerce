@@ -69,16 +69,18 @@
             $creation = $db->query("SELECT creation FROM users WHERE email = '$email'")->fetch_assoc()['creation'];
 
 
-
-
-
             $_SESSION['name'] = $name;
             $_SESSION['acc_type'] = $acc_type;
             $_SESSION['email'] = $email;
             $_SESSION['id'] = $id;
             $_SESSION['creation'] = $creation;
-            // if successful redirect to index.php
-            header("Location: ../index.php");
+
+
+            if($acc_type == 'staff'){
+                header("Location: ../stockade/ControlPanel.php");
+            }else{
+                header("Location: ../index.php");
+            }
             
         }else{
             $error = "Invalid username or password";

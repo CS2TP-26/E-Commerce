@@ -30,7 +30,7 @@
 <?php
     session_start();
     if ($_SESSION['acc_type'] != 'staff') {
-        header("Location: index.php");
+        header("Location: ../index.php");
     }else{
         if ($_SESSION['acc_type'] == 'admin' || $_SESSION['acc_type'] == 'staff') {
 ?>
@@ -273,25 +273,7 @@
 
 
         // when the submit button is pressed
-        if(isset($_POST['staff'])){
-            $type = $_POST['type'];
-            $sql = "UPDATE `Users` SET `acc_type` = '$type' WHERE `email` = '".$_GET['type']."'";
-            $result = $db->query($sql);
-            header("Location: Users.php");
-
-            // get subscription information from users 
-            $sql = "SELECT * FROM `Users` WHERE `email` = '".$_GET['type']."'";
-            $result = $db->query($sql);
-            // get subscription
-            if($result->num_rows > 0){
-                while($row = $result->fetch_assoc()){
-                    ?>
-
-                    <?php
-                }
-            }
-
-        }
+        
 
         
         ?>
@@ -316,15 +298,39 @@
                     }
                 }
 
+
+
+                if(isset($_POST['staff'])){
+                    $type = $_POST['type'];
+                    $sql = "UPDATE `users` SET `role` = '$type' WHERE `email` = '".$_GET['type']."'";
+                    $result = $db->query($sql);
+                    if($result){
+                        ?>
+                        <div class="alert true" role="alert">
+                            User Updated!
+                        </div>
+                        <?php
+                    } else {
+                        ?>
+                        <div class="alert false" role="alert">
+                            Error! User Not Updated!
+                            <?php echo $db->error; ?>
+                        </div>
+                        <?php
+                    }
+        
+                }
+
             ?>
 
-
-        <h2 class="true">customer = Normal User!</h2>
-        <h2 class="false">staff =  Staff Account Permissions!</h2>
-        <br>
+            <!-- refresh button -->
+            <button class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
+            <h2 class="true">customer = Normal User!</h2>
+            <h2 class="false">staff =  Staff Account Permissions!</h2>
+            <label for="" class="false">Doing this will give users access to control panel.</label>    
+            <br>
         </div>
 
-        <label for="" class="importat">Doing this will give users access to control panel.</label>
 
     <?php
 
