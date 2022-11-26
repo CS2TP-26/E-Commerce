@@ -86,7 +86,7 @@ if (isset($_POST['submitted'])){
 	<input type="reset" value="clear"/>
 	<input type="hidden" name="submitted" value="true"/>
   </form>  
-  <p> Already a user? <a href="index.php">Log in</a>  </p>
+  
 
 </body>
 </html>
