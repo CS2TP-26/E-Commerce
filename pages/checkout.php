@@ -16,7 +16,7 @@ if (isset($_POST['Checkout'])) {
     echo $item['id'];
     
   
-    // To know what's in $item
+    // To know what's in $product
     echo '<pre>'; var_dump($product);
   
 
