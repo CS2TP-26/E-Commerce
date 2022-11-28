@@ -14,7 +14,7 @@ if (isset($_POST['Checkout'])) {
 
    foreach($basketArray as $product) {
     echo $item['id'];
-    echo $item['id'];
+    
   
     // To know what's in $item
     echo '<pre>'; var_dump($product);
