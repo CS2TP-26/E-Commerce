@@ -7,10 +7,8 @@ $db = connect();
 
 
 if (isset($_POST['Checkout'])) {
-  // loop through the basket array and get each product id
-  
   $sql = "INSERT INTO orders (user_ID, product_ID) VALUES ('$_SESSION['id']', '$product["id"]')";
-  $result = mysqli_query($db, $sql);
+   $result = mysqli_query($db, $sql);
 
 }
 
