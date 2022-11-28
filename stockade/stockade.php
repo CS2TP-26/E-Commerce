@@ -250,6 +250,16 @@
                                 <td><?php echo $row['image'];?></td>
                                 <td><i class='bx bx-lock icon'></i></td>
                             </tr>
+
+                            <tr>
+                                <th>image:</th>
+                                <td><img class="edit-img" src="<?php echo $row['image'];?>" alt="..."></td>
+                                <!-- show image -->
+                                
+                                <td><i class='bx bx-lock icon'></i></td>
+                            </tr>
+
+                            
                             
                             <tr>
                                 <th>Cost (£):</th>
@@ -387,8 +397,11 @@
                 </div>
                 <!-- image url -->
                 <div class="form-group">
-                    <label class="sub-label" for="image">Image URL: </label>
-                    <input class="sub-input" type="text" class="form-control" name="image" id="image" placeholder="Enter Image URL">
+                    <label class="sub-label" for="image">Image: </label>
+                    <!-- <input class="sub-input" type="text" class="form-control" name="image" id="image" placeholder="Enter Image URL"> -->
+                    <!-- make sure only images can be uploaded -->
+                    
+                    <input class="sub-input" type="file" class="form-control" accept="image/*" name="image" id="image" placeholder="Enter Image URL">
                 </div>
 
                 <div class="form-group">
@@ -413,6 +426,35 @@
             $image = $_POST['image'];
             $cost = $_POST['cost'];
             $stock = $_POST['stock'];
+
+            // upload image
+            $target_dir = "../Assets/Watches/";
+            $target_file = $target_dir . basename($_FILES["image"]["name"]);
+            $uploadOk = 1;
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            // Check if image file is a actual image or fake image
+            if(isset($_POST["add"])) {
+                $check = getimagesize($_FILES["image"]["tmp_name"]);
+                if($check !== false) {
+                    echo "File is an image - " . $check["mime"] . ".";
+                    ?>
+                <div class="alert alert-success" role="alert">
+                    Product Added!
+                </div>
+                <?php
+                    $uploadOk = 1;
+                } else {
+                    echo "File is not an image.";
+                    $uploadOk = 0;
+                }
+            }
+            // Check if file already exists
+            if (file_exists($target_file)) {
+                echo "Sorry, file already exists.";
+                $uploadOk = 0;
+            }
+            
+
             $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$image', '$cost', '$stock')";
             $result = $db->query($sql);
             if($result){

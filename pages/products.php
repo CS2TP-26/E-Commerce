@@ -162,9 +162,7 @@
                     $basketArray
                     );
                     $status = "<div class='box'>Watch has been added to your basket!</div>";
-
                     }
-
                 }
             echo "Item added to basket";
         ?>

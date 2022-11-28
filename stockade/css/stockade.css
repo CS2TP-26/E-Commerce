@@ -209,3 +209,10 @@ body {
     font-size: 20px;
     font-weight: 600;
 }
+
+.edit-img {
+    width: auto;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
