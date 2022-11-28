@@ -97,12 +97,12 @@
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <!-- <li class="nav-link">
                         <a href="Tickets.php">
                             <i class='bx bx-support icon'></i>
                             <span class="text nav-text">Tickets</span>
                         </a>
-                    </li>
+                    </li> -->
 
 
 

@@ -19,7 +19,10 @@
     session_start();
     if(isset($_SESSION['acc_type']) && $_SESSION['acc_type'] == 'staff'){
         header('location: ControlPanel.php');
+    } else {
+        header('location: ../pages/login.php');
     }
+
 
 
 ?>
