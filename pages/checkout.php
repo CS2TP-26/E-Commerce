@@ -7,7 +7,7 @@ $db = connect();
 
 
 if (isset($_POST['Checkout'])) {
-  $sql = "INSERT INTO orders (user_ID, product_ID) VALUES ('$_SESSION['id']', '$basketarray["id"]')";
+  $sql = "INSERT INTO orders (user_ID, product_ID) VALUES ('$_SESSION['id']', '$basketArray["id"]')";
    $result = mysqli_query($db, $sql);
 
 }
