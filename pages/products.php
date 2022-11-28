@@ -23,9 +23,7 @@
 
 <body>
     <style>
-        body {
-            /* background-image: url('../assets/images/grayPolygon.png'); */
-        }
+        
     </style>
 
     <!-- background image -->
@@ -166,9 +164,9 @@ if (empty($_GET)) { // if edit is false it means that the user did not click on 
             echo "Item added to basket";
         ?>
             <button class="btn btn-primary" type="button"><a href="products.php">Back </a></button>
-        <?php
-        }
-        ?>
+        <!-- <?php
+        // }
+        ?> -->
 
 
 

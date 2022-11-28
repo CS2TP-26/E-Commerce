@@ -4,35 +4,37 @@ session_start();
 require_once '../connection.php';
 $db = connect();
 
-
-
-
-
-if (isset($_POST['Checkout'])) {
-  $sql = "INSERT INTO orders (user_ID, product_ID) VALUES ('$_SESSION['id']', '$product["id"]')";
-   $result = mysqli_query($db, $sql);
-
-   foreach($basketArray as $product) {
-    echo $item['id'];
-    
-  
-    // To know what's in $product
-
-
-
-    echo '<pre>'; var_dump($product);
-  
-
-}
-$order_ID =  "SELECT id FROM `orders`";
-  echo "Your order ID is [$order_ID]"
-
-if(empty($_SESSION["basket"]))
-  echo "Your basket is empty!";
-
+// if user is not logged in they will be redirected to the login page
+if (!isset($_SESSION['id'])) {
+  header('Location: login.php');
 }
 
-     
+// if the checkout button is pressed
+if (isset($_POST['checkout'])) {
+    $user_id = $_SESSION['id'];
+    $basket = $_SESSION['basket'];
+    $basket_length = count($basket);
+    $status = "Pending";
+
+    if ($basket_length = 0){
+        echo "Your basket is empty";
+    } else {
+      for ($i = 0; $i < $basket_length; $i++) {
+        $product_id = $basket[$i]['id'];
+        $sql = "INSERT INTO `orders` (`user_ID`, `product_ID`, `status`) VALUES ('$user_id', '$product_id', '$status')";
+        $result = $db->query($sql);
+        echo "Order placed";
+    }
+    unset($_SESSION['basket']);
+    // header('Location: orders.php');
+    }
+
+
+}
+
+
+
+
 
 ?>
 
@@ -47,7 +49,9 @@ if(empty($_SESSION["basket"]))
 <body>
   <h2>Contents of basket</h2>
   <div>
+    <?php
      echo $_SESSION["basket"];
+    ?>
   </div>
   <h3>Details</h3>
   <form method = "post" action="checkout.php">

@@ -92,6 +92,7 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 
 <?php
 if (isset($_SESSION["basket"])) {
+	
 ?>
 	<!-- button to go to checkout page -->
 	<div class="container">
