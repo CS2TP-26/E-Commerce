@@ -17,10 +17,15 @@ if (isset($_POST['Checkout'])) {
     
   
     // To know what's in $product
+
+
+
     echo '<pre>'; var_dump($product);
   
 
 }
+$order_ID =  "SELECT id FROM `orders`";
+  echo "Your order ID is [$order_ID]"
 
 if(empty($_SESSION["basket"]))
   echo "Your basket is empty!";
