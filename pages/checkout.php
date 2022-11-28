@@ -6,9 +6,24 @@ $db = connect();
 
 
 
+
+
 if (isset($_POST['Checkout'])) {
   $sql = "INSERT INTO orders (user_ID, product_ID) VALUES ('$_SESSION['id']', '$basketArray["id"]')";
    $result = mysqli_query($db, $sql);
+
+   foreach($basketArray as $product) {
+    echo $item['id'];
+    echo $item['id'];
+  
+    // To know what's in $item
+    echo '<pre>'; var_dump($product);
+  
+
+}
+
+if(empty($_SESSION["basket"]))
+  echo "Your basket is empty!";
 
 }
 
