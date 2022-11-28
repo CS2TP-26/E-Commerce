@@ -80,22 +80,22 @@
 		<div class="social">
 			<p>Follow Us:</p>
 			<div class="facebook">
-				<a href="https://www.facebook.com/">
+				<a href="https://www.facebook.com/" target="_blank">
 					<i class='bx bxl-facebook  bx-sm'></i>
 				</a>
 			</div>
 			<div class="twitter">
-				<a href="https://www.twitter.com/">
+				<a href="https://www.twitter.com/" target="_blank">
 					<i class='bx bxl-twitter bx-sm'></i>
 				</a>
 			</div>
 			<div class="tiktok">
-				<a href="https://www.tiktok.com/">
+				<a href="https://www.tiktok.com/" target="_blank">
 					<i class='bx bxl-tiktok bx-sm'></i>
 				</a>
 			</div>
 			<div class="instagram">
-				<a href="https://www.instagram.com/">
+				<a href="https://www.instagram.com/" target="_blank">
 					<i class='bx bxl-instagram bx-sm'></i>
 				</a>
 			</div>
