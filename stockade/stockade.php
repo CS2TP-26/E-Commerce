@@ -503,17 +503,17 @@ function uploadImage($image)
         $uploadOk = 0;
     }
     // Allow certain file formats
-    if (
-        $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-        && $imageFileType != "gif"
-    ) {
-        ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed."; ?>
-            </div>
-        <?php
-        $uploadOk = 0;
-    }
+    // if (
+    //     $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    //     && $imageFileType != "gif"
+    // ) {
+         ?>
+    <!-- //         <div class="alert alert-danger" role="alert">
+    //             <?php echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed."; ?>
+    //         </div> -->
+         <?php
+    //     $uploadOk = 0;
+    // }
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
         ?>
