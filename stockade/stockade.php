@@ -542,11 +542,11 @@ function uploadImage($image)
                 <!-- display the image -->
             
                 <?php 
-                $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image["name"]); 
+                $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image["tmp_name"]); 
                 
-                    echo $img_url;
+                    echo "<br>" . $img_url;
                 ?>
-                <img src="<?php echo $target_file; ?>" alt="">
+                <!-- <img src="<?php echo $target_file; ?>" alt=""> -->
             </div>
         <?php
         }
