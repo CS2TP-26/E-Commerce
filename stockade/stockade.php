@@ -386,8 +386,10 @@
                 </div>
                 <!-- image url -->
                 <div class="form-group">
-                    <label class="sub-label" for="image">Image URL: </label>
-                    <input class="sub-input" type="text" class="form-control" name="image" id="image" placeholder="Enter Image URL">
+                    <label class="sub-label" for="image">Image: </label>
+                    <!-- upload image -->
+                    <input class="sub-input" type="file" class="form-control" name="image" id="image" placeholder="Enter Image URL">
+                    <!-- <input class="sub-input" type="text" class="form-control" name="image" id="image" placeholder="Enter Image URL"> -->
                 </div>
 
                 <div class="form-group">
