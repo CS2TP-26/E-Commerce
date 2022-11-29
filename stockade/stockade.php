@@ -228,34 +228,42 @@
                                                     <th>Data</th>
                                                     <th>Edit</th>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Product_ID:</th>
-                                <td><?php echo $row['id'];?></td>
-                                <td><i class='bx bx-lock icon'></i></td>
-                            </tr>
-                            <tr>
-                                <th>name:</th>
-                                <td><?php echo $row['name'];?></td>
-                                <td><i class='bx bx-lock icon'></i></td>
-                            </tr>
-                            <tr>
-                                <th>description:</th>
-                                <td><?php echo $row['description'];?></td>
-                                <td><i class='bx bx-lock icon'></i></td>
-                            </tr>
-                            <tr>
-                                <th>image_Url:</th>
-                                <td><?php echo $row['image'];?></td>
-                                <td><i class='bx bx-lock icon'></i></td>
-                            </tr>
-                            
-                            <tr>
-                                <th>Cost (£):</th>
-                                <td><?php echo $row['price'];?></td>
-                                <td><button class="btn btn-primary" type="button"><a href="stockade.php?cost=<?php echo $row['id']; ?>">Edit   </a></button></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Product_ID:</th>
+                                                    <td><?php echo $row['id']; ?></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>name:</th>
+                                                    <td><?php echo $row['name']; ?></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>description:</th>
+                                                    <td><?php echo $row['description']; ?></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>image_Url:</th>
+                                                    <td><?php echo $row['image']; ?></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Image:</th>
+                                                    <td>
+                                                        <img src="<?php echo $row['image']; ?>" alt="image" width="200" height="auto">
+                                                    <td>
+                                                    <i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Cost (£):</th>
+                                                    <td><?php echo $row['price']; ?></td>
+                                                    <td><button class="btn btn-primary" type="button"><a href="stockade.php?cost=<?php echo $row['id']; ?>">Edit </a></button></td>
 
                                                 </tr>
                                                 <tr>
@@ -347,94 +355,98 @@
                                             <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
                                         </div>
 
-                <?php
-            }
-        }
-        if(isset($_POST['update2'])){
-            $stock = $_POST['stock'];
-            $sql = "UPDATE `products` SET `stock` = '$stock' WHERE `id` = '".$_GET['stock']."'";
-            $result = $db->query($sql);
-            if($result){
-                ?>
-                <div class="alert alert-success" role="alert">
-                    stock Updated!
-                </div>
-                <?php
-            } else {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                    Error! stock Not Updated!
-                </div>
-                <?php
-            }
-        }
-        
-        // if get is = add
-    } elseif (isset($_GET['add'])){
-        require_once '../connection.php';
-        $db = connect();
-        ?>
-        <div class="form">
-            <form action="stockade.php?add" method="POST">
-                <div class="form-group">
-                    <label class="sub-label" for="name">Name: </label>
-                    <input class="sub-input" type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
-                </div>
-                <div class="form-group">
-                    <label class="sub-label" for="description">Description: </label>
-                    <input class="sub-input" type="text" class="form-control" name="description" id="description" placeholder="Enter Description">
-                </div>
-                <!-- image url -->
-                <div class="form-group">
-                    <label class="sub-label" for="image">Image: </label>
-                    <!-- upload image -->
-                    <input class="sub-input" type="file" class="form-control" name="image" id="image" placeholder="Enter Image URL">
-                    <!-- <input class="sub-input" type="text" class="form-control" name="image" id="image" placeholder="Enter Image URL"> -->
-                </div>
+                                    <?php
+                                    }
+                                }
+                                if (isset($_POST['update2'])) {
+                                    $stock = $_POST['stock'];
+                                    $sql = "UPDATE `products` SET `stock` = '$stock' WHERE `id` = '" . $_GET['stock'] . "'";
+                                    $result = $db->query($sql);
+                                    if ($result) {
+                                    ?>
+                                        <div class="alert alert-success" role="alert">
+                                            stock Updated!
+                                        </div>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Error! stock Not Updated!
+                                        </div>
+                                <?php
+                                    }
+                                }
 
-                <div class="form-group">
-                    <label class="sub-label" for="cost">Cost (£): </label>
-                    <input class="sub-input" type="text" class="form-control" name="cost" id="cost" placeholder="Enter Cost">
-                </div>
-                <div class="form-group">
-                    <label class="sub-label" for="stock">Stock: </label>
-                    <input class="sub-input" type="text" class="form-control" name="stock" id="stock" placeholder="Enter Stock">
-                </div>
-                <button type="submit" class="btn btn-primary" name="add">Add</button>
-            </form>
-           
-            <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
-        </div>
-        <?php
-        if(isset($_POST['add'])){
-            $name = $_POST['name'];
-            $description = $_POST['description'];
-            $image = $_POST['image'];
-            $cost = $_POST['cost'];
-            $stock = $_POST['stock'];
-            $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$image', '$cost', '$stock')";
-            $result = $db->query($sql);
-            if($result){
-                ?>
-                <div class="alert alert-success" role="alert">
-                    Product Added!
-                </div>
-                <?php
-            } else {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                    Error! Product Not Added!
-                </div>
-                <?php
-            }
-        }
+                                // if get is = add
+                            } elseif (isset($_GET['add'])) {
+                                require_once '../connection.php';
+                                $db = connect();
+                                ?>
+                                <div class="form">
+                                    <form action="stockade.php?add" method="POST">
+                                        <div class="form-group">
+                                            <label class="sub-label" for="name">Name: </label>
+                                            <input class="sub-input" type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sub-label" for="description">Description: </label>
+                                            <input class="sub-input" type="text" class="form-control" name="description" id="description" placeholder="Enter Description">
+                                        </div>
+                                        <!-- image url -->
+                                        <div class="form-group">
+                                            <label class="sub-label" for="image">Image: </label>
+                                            <!-- upload image -->
+                                            <input class="sub-input" type="file" accept="image/*" class="form-control" name="image" id="image" placeholder="Enter Image URL">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="sub-label" for="cost">Cost (£): </label>
+                                            <input class="sub-input" type="text" class="form-control" name="cost" id="cost" placeholder="Enter Cost">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sub-label" for="stock">Stock: </label>
+                                            <input class="sub-input" type="text" class="form-control" name="stock" id="stock" placeholder="Enter Stock">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" name="add">Add</button>
+                                    </form>
+
+                                    <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
+                                </div>
+                                <?php
+                                if (isset($_POST['add'])) {
+                                    $name = $_POST['name'];
+                                    $description = $_POST['description'];
+                                    $image = $_POST['image'];
+
+
+                                    // upload image
+                                    $target_dir = "../Assets/watches/";
+                                    
 
 
 
 
-    } else {
-        header("Location: stockade.php");
-    }
+                                    $cost = $_POST['cost'];
+                                    $stock = $_POST['stock'];
+                                    $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$image', '$cost', '$stock')";
+                                    $result = $db->query($sql);
+                                    if ($result) {
+                                ?>
+                                        <div class="alert alert-success" role="alert">
+                                            Product Added!
+                                        </div>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Error! Product Not Added!
+                                        </div>
+                            <?php
+                                    }
+                                }
+                            } else {
+                                header("Location: stockade.php");
+                            }
 
 
 
