@@ -484,6 +484,7 @@
                                     ?>
                                         <div class="alert alert-danger" role="alert">
                                             Error! Product Not Added!
+                                            <?php echo $db->error; ?>
                                         </div>
                             <?php
                                     }
