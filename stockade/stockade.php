@@ -392,7 +392,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="sub-label" for="image">Image: </label>
-                                            <input class="sub-input" type="file" accept="image/*" class="form-control" name="image" id="image" placeholder="Enter Image URL">
+                                            <input class="sub-input" type="file" accept="image/*" class="form-control" name="prod_img" id="prod_img" placeholder="Enter Image URL">
                                         </div>
 
                                         <div class="form-group">
@@ -418,9 +418,11 @@
                                     $stock = $_POST['stock'];
                                     
                                     // get the image 
-                                    $image = $_FILES['image']['name'];
-                                    $target = "../images/".basename($image);
-                                    move_uploaded_file($_FILES['image']['tmp_name'], $target);
+                                    $image = $_FILES['prod_img']['name'];
+                                    $target = "../Assets/".basename($image);
+                                    move_uploaded_file($_FILES['prod_img']['tmp_name'], $target);
+
+                                    
 
                                     
 
