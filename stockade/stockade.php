@@ -477,7 +477,7 @@ function uploadImage($image)
     if (!is_dir($target_dir)) {
         mkdir($target_dir, 0777, true);
     }
-    $target_file = $target_dir . basename($image["name"]);
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $uploadOk = 1;
     // Check if image file is a actual image or fake image
     if (isset($_POST["submit"])) {
@@ -526,7 +526,7 @@ function uploadImage($image)
         <?php
         // if everything is ok, try to upload file
     } else {
-        if (move_uploaded_file($image, $target_file)) {
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
             ?>
             <div class="alert alert-success" role="alert">
                 <?php echo "The file " . htmlspecialchars(basename($image["name"])) . " has been uploaded."; ?>
