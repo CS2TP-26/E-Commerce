@@ -44,7 +44,7 @@
 					<img src="<?php echo $row['image']; ?>" width="100" height="100" alt="" />
 					<h2><?php echo $row['name']; ?></h2>
 					<p><?php echo "£" . $row['price']; ?></p>
-					<button type="submit" formaction="product.php">View Product</button>
+					<a href="products.php?id=<?php echo $row['id']; ?>">View Product</a>
 				</div>
 			<?php
 			}
@@ -61,9 +61,57 @@
 		<div class="topPicks">
 			<h1>Our top picks</h1>
 
+			<div class="products">
+
+				<?php
+				require_once '../connection.php';
+				$db = connect();
+				$sql = "SELECT * FROM products";
+				$result = $db->query($sql);
+				while ($row = $result->fetch_assoc()) {
+					if ($row['id'] == 3 || $row['id'] == 5 || $row['id'] == 9 || $row['id'] == 12) {
+				?>
+						<div class="product">
+							<img src="<?php echo $row['image']; ?>" width="100" height="100" alt="" />
+							<h2><?php echo $row['name']; ?></h2>
+							<p><?php echo "£" . $row['price']; ?></p>
+							<a href="products.php?id=<?php echo $row['id']; ?>">View Product</a>
+						</div>
+				<?php
+					}
+				}
+				?>
+
+			</div>
+
+
+
 		</div>
 		<div class="preOwned">
 			<h1>Our limited Pre-Owned Watches</h1>
+
+			<div class="products">
+
+				<?php
+				require_once '../connection.php';
+				$db = connect();
+				$sql = "SELECT * FROM products";
+				$result = $db->query($sql);
+				while ($row = $result->fetch_assoc()) {
+					if ($row['id'] == 1 || $row['id'] == 2 || $row['id'] == 4 || $row['id'] == 8) {
+				?>
+						<div class="product">
+							<img src="<?php echo $row['image']; ?>" width="100" height="100" alt="" />
+							<h2><?php echo $row['name']; ?></h2>
+							<p><?php echo "£" . $row['price']; ?></p>
+							<a href="products.php?id=<?php echo $row['id']; ?>">View Product</a>
+						</div>
+				<?php
+					}
+				}
+				?>
+
+			</div>
 
 		</div>
 		<div class="creditBanner">
@@ -71,9 +119,37 @@
 			<p>Shop watches from £14.07 per month*. 0% finance is available on all purchases over £99.</p>
 		</div>
 		<div class="highlights">
+			<div class="highlight1">
+				<div class="item1">
+					<p>Free delivery</p>
+				
+				</div>
+				<div class="item1">
+					<p>Interest Free Credit</p>
+				
+				</div>
+				<div class="item1">
+					<p>Click & Collect</p>
+				
+				</div>
+			</div>
+
+			<div class="highlight2">
+			<div class="item2">
+					<p>50+ <br> UK stores</p>
+				
+				</div>
+				<div class="item2">
+					<p>International Delivery</p>
+				
+				</div>
+			</div>
 
 
 		</div>
+
+
+
 		<div class="shopBottomNav">
 			<img src="img/logo no bg-01.png" width="200" height="200" alt="" />
 			<hr>
