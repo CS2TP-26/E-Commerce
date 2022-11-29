@@ -29,7 +29,7 @@
 		<h1>Recieve and extra special <b><i>free gift</i></b> with your luxury watch!</h1>
 		<p><i>With watch purchases £2,000 or more, choose between the new free leather valet tray or the watch box to store up to five watches. And with watch purchases between £1,000 and £1,999, you’ll receive a free watch roll. Just consider it a gift from us to you.</i></p>
 	</div>
-	<div class="products">
+	<div class="products_section">
 		<h1>Shop All Watches</h1>
 		<div class="products">
 
