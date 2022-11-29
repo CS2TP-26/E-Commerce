@@ -246,14 +246,50 @@
                                                     <td><i class='bx bx-lock icon'></i></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>image_Url:</th>
+                                                    <th>Image Icon Url:</th>
                                                     <td><?php echo $row['image']; ?></td>
                                                     <td><i class='bx bx-lock icon'></i></td>
                                                 </tr>
 
                                                 <tr>
-                                                    <th>Image:</th>
+                                                    <th>Image 1 Url:</th>
+                                                    <td><?php echo $row['img1']; ?></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Image 2 Url:</th>
+                                                    <td><?php echo $row['img2']; ?></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Image 3 Url:</th>
+                                                    <td><?php echo $row['img3']; ?></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Image Icon:</th>
                                                     <td><img class= "edit-img" src = "<?php echo $row['image']; ?>" alt = "..."/></img></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Image 1:</th>
+                                                    <td><img class= "edit-img" src = "<?php echo $row['img1']; ?>" alt = "..."/></img></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Image 2:</th>
+                                                    <td><img class= "edit-img" src = "<?php echo $row['img2']; ?>" alt = "..."/></img></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Image 3:</th>
+                                                    <td><img class= "edit-img" src = "<?php echo $row['img3']; ?>" alt = "..."/></img></td>
                                                     <td><i class='bx bx-lock icon'></i></td>
                                                 </tr>
 
