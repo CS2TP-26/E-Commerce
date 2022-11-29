@@ -209,8 +209,8 @@ body {
 }
 
 .edit-img {
-    width: auto;
-    height: 200px;
+    width: 200px;
+    height: auto;
     object-fit: cover;
-    /* border-radius: 5px; */
+    border-radius: 5px;
 }
