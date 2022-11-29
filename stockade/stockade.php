@@ -412,7 +412,7 @@
                                 if (isset($_POST['add'])) {
                                     $name = $_POST['name'];
                                     $description = $_POST['description'];
-                                    $image = $_POST['image'];
+                                    // $image = $_POST['image'];
                                     $cost = $_POST['cost'];
                                     $stock = $_POST['stock'];
 
