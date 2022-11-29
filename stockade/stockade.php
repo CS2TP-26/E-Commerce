@@ -443,8 +443,9 @@
                                             ?>
                                             <!-- <img src="<?php echo $target_file; ?>" alt=""> -->
                                         </div>
-                                        <?php
 
+                                        <?php
+                                    }
                                     if ($uploadOk == 1) {
                                         $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$img_url', '$cost', '$stock')";
                                         $result = $db->query($sql);
