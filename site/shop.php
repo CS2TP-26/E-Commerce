@@ -29,88 +29,89 @@
 	</div>
 	<div class="products">
 		<h1>Shop All Watches</h1>
-		<?php
 
+		<?php
 		require_once '../connection.php';
 		$db = connect();
-		$id = $_GET['view'];
-		$sql = "SELECT * FROM products WHERE id = $id";
+		$sql = "SELECT * FROM products";
 		$result = $db->query($sql);
-		$row = $result->fetch_assoc();
+		while ($row = $result->fetch_assoc()) {
 		?>
-		<div class="col-md-4">
-			<div class="card">
-				<img src="<?php echo $row['image']; ?>" class="card-img-top" style="width: auto; height: 250px; object-fit: scale-down;" alt="...">
-				<div class="card-body">
-					<h5 class="card-title
-                    ">
-						<?php echo $row['name']; ?></h5>
-					<p class="card-text">
-						<?php echo $row['description']; ?>
-					</p>
-					<p class="card-text">
-						<?php echo "£" . $row['price']; ?>
-					</p>
-					<button class="btn btn-primary" type="button"><a href="products.php?add=<?php echo $row['id']; ?>">Add to Basket </a></button>
-					<!-- back button -->
-					<button class="btn btn-primary" type="button"><a href="products.php">Back </a></button>
+			<div class="col-md-4">
+				<div class="card">
+					<img src="<?php echo $row['image']; ?>" class="card-img-top" style="width: 100%; height: 100px; object-fit: scale-down;" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">
+							<?php echo $row['name']; ?></h5>
+						<p class="card-text">
+							<?php echo $row['description']; ?>
+						</p>
+						<p class="card-text">
+							<?php echo "£" . $row['price']; ?>
+						</p>
+						<button class="btn btn-primary" type="button"><a href="products.php?view=<?php echo $row['id']; ?>">View </a></button>
+
+						<button class="btn btn-primary" type="button"><a href="products.php?add=<?php echo $row['id']; ?>">Add to Basket </a></button>
+
+					</div>
+				</div>
+			</div>
+		<?php
+		}
+		?>
+		<div class="topPicks">
+			<h1>Our top picks</h1>
+
+		</div>
+		<div class="preOwned">
+			<h1>Our limited Pre-Owned Watches</h1>
+
+		</div>
+		<div class="creditBanner">
+			<h1>Spread the cost with up to 4 years interest free credit* Subject to T&Cs</h1>
+			<p>Shop watches from £14.07 per month*. 0% finance is available on all purchases over £99.</p>
+		</div>
+		<div class="highlights">
+
+
+		</div>
+		<div class="shopBottomNav">
+			<img src="img/logo no bg-01.png" width="200" height="200" alt="" />
+			<hr>
+			</hr>
+			<div class="copyright">
+				<p>© Mason De Versa LTD, 2022</p>
+			</div>
+			<a class="shopLink" href="shop.php">Shop</a>
+			<a class="aboutLink" href="about.php">About</a>
+			<a class="contactLink" href="contact.php">Contact</a>
+			<form>
+				<button type="submit" formaction="login.php">Login</button>
+			</form>
+			<div class="social">
+				<p>Follow Us:</p>
+				<div class="facebook">
+					<a href="https://www.facebook.com/" target="_blank">
+						<i class='bx bxl-facebook  bx-sm'></i>
+					</a>
+				</div>
+				<div class="twitter">
+					<a href="https://www.twitter.com/" target="_blank">
+						<i class='bx bxl-twitter bx-sm'></i>
+					</a>
+				</div>
+				<div class="tiktok">
+					<a href="https://www.tiktok.com/" target="_blank">
+						<i class='bx bxl-tiktok bx-sm'></i>
+					</a>
+				</div>
+				<div class="instagram">
+					<a href="https://www.instagram.com/" target="_blank">
+						<i class='bx bxl-instagram bx-sm'></i>
+					</a>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="topPicks">
-		<h1>Our top picks</h1>
-
-	</div>
-	<div class="preOwned">
-		<h1>Our limited Pre-Owned Watches</h1>
-
-	</div>
-	<div class="creditBanner">
-		<h1>Spread the cost with up to 4 years interest free credit* Subject to T&Cs</h1>
-		<p>Shop watches from £14.07 per month*. 0% finance is available on all purchases over £99.</p>
-	</div>
-	<div class="highlights">
-
-
-	</div>
-	<div class="shopBottomNav">
-		<img src="img/logo no bg-01.png" width="200" height="200" alt="" />
-		<hr>
-		</hr>
-		<div class="copyright">
-			<p>© Mason De Versa LTD, 2022</p>
-		</div>
-		<a class="shopLink" href="shop.php">Shop</a>
-		<a class="aboutLink" href="about.php">About</a>
-		<a class="contactLink" href="contact.php">Contact</a>
-		<form>
-			<button type="submit" formaction="login.php">Login</button>
-		</form>
-		<div class="social">
-			<p>Follow Us:</p>
-			<div class="facebook">
-				<a href="https://www.facebook.com/" target="_blank">
-					<i class='bx bxl-facebook  bx-sm'></i>
-				</a>
-			</div>
-			<div class="twitter">
-				<a href="https://www.twitter.com/" target="_blank">
-					<i class='bx bxl-twitter bx-sm'></i>
-				</a>
-			</div>
-			<div class="tiktok">
-				<a href="https://www.tiktok.com/" target="_blank">
-					<i class='bx bxl-tiktok bx-sm'></i>
-				</a>
-			</div>
-			<div class="instagram">
-				<a href="https://www.instagram.com/" target="_blank">
-					<i class='bx bxl-instagram bx-sm'></i>
-				</a>
-			</div>
-		</div>
-	</div>
 </body>
 
 </html>
