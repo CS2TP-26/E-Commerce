@@ -421,6 +421,9 @@
                                     // call the image upload function
                                     // $img_url = uploadImage($image);
 
+                                    $target_dir = "../Assets/Watches/";
+                                    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+
                                     if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                                         ?>
                                         <div class="alert alert-success" role="alert">
@@ -496,6 +499,7 @@ function uploadImage($image)
 {
 
     $target_dir = "../Assets/Watches/";
+
 
     // check if target dir is valid
 
