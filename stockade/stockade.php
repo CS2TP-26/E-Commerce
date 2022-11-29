@@ -271,25 +271,25 @@
 
                                                 <tr>
                                                     <th>Image Icon:</th>
-                                                    <td><img class= "edit-img" src = "<?php echo $row['image']; ?>" alt = "..."/></img></td>
+                                                    <td><img class="edit-img" src="<?php echo $row['image']; ?>" alt="..." /></img></td>
                                                     <td><i class='bx bx-lock icon'></i></td>
                                                 </tr>
 
                                                 <tr>
                                                     <th>Image 1:</th>
-                                                    <td><img class= "edit-img" src = "<?php echo $row['img1']; ?>" alt = "..."/></img></td>
+                                                    <td><img class="edit-img" src="<?php echo $row['img1']; ?>" alt="..." /></img></td>
                                                     <td><i class='bx bx-lock icon'></i></td>
                                                 </tr>
 
                                                 <tr>
                                                     <th>Image 2:</th>
-                                                    <td><img class= "edit-img" src = "<?php echo $row['img2']; ?>" alt = "..."/></img></td>
+                                                    <td><img class="edit-img" src="<?php echo $row['img2']; ?>" alt="..." /></img></td>
                                                     <td><i class='bx bx-lock icon'></i></td>
                                                 </tr>
 
                                                 <tr>
                                                     <th>Image 3:</th>
-                                                    <td><img class= "edit-img" src = "<?php echo $row['img3']; ?>" alt = "..."/></img></td>
+                                                    <td><img class="edit-img" src="<?php echo $row['img3']; ?>" alt="..." /></img></td>
                                                     <td><i class='bx bx-lock icon'></i></td>
                                                 </tr>
 
@@ -426,8 +426,23 @@
                                             <input class="sub-input" type="text" class="form-control" name="description" id="description" placeholder="Enter Description">
                                         </div>
                                         <div class="form-group">
-                                            <label class="sub-label" for="image">Image: </label>
+                                            <label class="sub-label" for="image">Image Icon: </label>
                                             <input class="sub-input" type="text" class="form-control" name="image" id="image" placeholder="Enter Image URL">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="sub-label" for="image">Image 1: </label>
+                                            <input class="sub-input" type="text" class="form-control" name="img1" id="img1" placeholder="Enter Image URL">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="sub-label" for="image">Image 2: </label>
+                                            <input class="sub-input" type="text" class="form-control" name="img2" id="img2" placeholder="Enter Image URL">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="sub-label" for="image">Image 3: </label>
+                                            <input class="sub-input" type="text" class="form-control" name="img3" id="img3" placeholder="Enter Image URL">
                                         </div>
 
                                         <div class="form-group">
@@ -449,28 +464,28 @@
                                     $name = $_POST['name'];
                                     $description = $_POST['description'];
                                     $image = $_POST['image'];
+                                    $img1 = $_POST['img1'];
+                                    $img2 = $_POST['img2'];
+                                    $img3 = $_POST['img3'];
                                     $cost = $_POST['cost'];
                                     $stock = $_POST['stock'];
-                                    
+
                                     // get the image 
-                                    
-                                    if ($uploadOk == 1) {
-                                        $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$image', '$cost', '$stock')";
-                                        $result = $db->query($sql);
-                                        if ($result) {
+
+                                    $sql = "INSERT INTO `products` (`name`, `description`, `image`, `img1`,` img2`, `img3`, `price`, `stock`) VALUES ('$name', '$description', '$image', '$img1', '$img2', '$img3', '$cost', '$stock')";
+                                    $result = $db->query($sql);
+                                    if ($result) {
                                 ?>
-                                            <div class="alert alert-success" role="alert">
-                                                Product Added!
-                                                <!-- <a href="../Assets/Watches/">Back</a> -->
-                                            </div>
-                                        <?php
-                                        } else {
-                                        ?>
-                                            <div class="alert alert-danger" role="alert">
-                                                Error! Product Not Added!
-                                            </div>
+                                        <div class="alert alert-success" role="alert">
+                                            Product Added!
+                                        </div>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Error! Product Not Added!
+                                        </div>
                             <?php
-                                        }
                                     }
                                 }
                             } else {
@@ -516,71 +531,71 @@ function uploadImage($image)
     // Check if image file is a actual image or fake image
     $check = getimagesize($image["tmp_name"]);
     if ($check !== false) {
-        ?>
+?>
         <div class="alert alert-success" role="alert">
             <?php echo "File is an image - " . $check["mime"] . "."; ?>
         </div>
-        <?php
-        
+    <?php
+
         $uploadOk = 1;
     } else {
-        ?>
+    ?>
         <div class="alert alert-danger" role="alert">
             <?php echo "File is not an image."; ?>
         </div>
-        <?php
+    <?php
         $uploadOk = 0;
     }
     // Check if file already exists
     if (file_exists($target_file)) {
-        ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo "Sorry, file already exists."; ?>
-            </div>
-        <?php
+    ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo "Sorry, file already exists."; ?>
+        </div>
+    <?php
         $uploadOk = 0;
     }
     // Check file size
     if ($image["size"] > 500000000) {
-        ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo "Sorry, your file is too large."; ?>
-            </div>
-        <?php
+    ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo "Sorry, your file is too large."; ?>
+        </div>
+    <?php
         $uploadOk = 0;
     }
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
-        ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo "ERROR 1: Sorry, your file was not uploaded."; ?>
-            </div>
+    ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo "ERROR 1: Sorry, your file was not uploaded."; ?>
+        </div>
         <?php
         // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-            ?>
+        ?>
             <div class="alert alert-success" role="alert">
                 <?php echo "The file " . htmlspecialchars(basename($image["name"])) . " has been uploaded."; ?>
             </div>
-            <?php
+        <?php
             // get full image url
             $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image["name"]);
             return $img_url;
         } else {
-            ?>
+        ?>
             <div class="alert alert-danger" role="alert">
                 <?php echo "ERROR 2: Sorry, your file was not uploaded."; ?>
                 <!-- display the image -->
-            
-                <?php 
-                $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image); 
-                
-                    echo "<br>" . $img_url;
+
+                <?php
+                $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image);
+
+                echo "<br>" . $img_url;
                 ?>
                 <!-- <img src="<?php echo $target_file; ?>" alt=""> -->
             </div>
-        <?php
+<?php
         }
     }
 }
