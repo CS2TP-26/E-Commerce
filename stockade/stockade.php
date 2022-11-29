@@ -161,7 +161,7 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Name</th>
-                                            <th>description</th>
+                                            <!-- <th>description</th> -->
                                             <th>Cost (£)</th>
                                             <th>Stock</th>
                                             <th>Sales</th>
@@ -184,7 +184,6 @@
                                                 <tr>
                                                     <td><?php echo $row['id']; ?></td>
                                                     <td><?php echo $row['name']; ?></td>
-                                                    <td><?php echo $row['description']; ?></td>
                                                     <td><?php echo $row['price']; ?></td>
                                                     <td><?php echo $row['stock']; ?></td>
                                                     <td><?php echo $row['sales']; ?></td>
