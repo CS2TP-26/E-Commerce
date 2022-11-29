@@ -407,6 +407,7 @@
                                     </form>
 
                                     <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
+                                    <?php echo getcwd(); ?>
                                 </div>
                                 <?php
                                 if (isset($_POST['add'])) {
