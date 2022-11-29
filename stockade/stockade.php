@@ -253,6 +253,12 @@
                                                 </tr>
 
                                                 <tr>
+                                                    <th>Image:</th>
+                                                    <td><img src = "<?php echo $row['image']; ?>" alt = "..."/></img><td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+
+                                                <tr>
                                                     <th>Cost (£):</th>
                                                     <td><?php echo $row['price']; ?></td>
                                                     <td><button class="btn btn-primary" type="button"><a href="stockade.php?cost=<?php echo $row['id']; ?>">Edit </a></button></td>
