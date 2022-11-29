@@ -4,10 +4,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* add padding around everything */
     padding: 1rem;
-    /* padding to the top */
-    padding-top: 2rem;
+    padding-top: 100px;
 }
 
 .product {
@@ -44,5 +42,4 @@
     padding: 0.5em 1em;
     font-size: 1em;
     margin-top: 1em;
-    /* make the button always at the bottom of the product div */
 }
