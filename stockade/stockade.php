@@ -416,7 +416,7 @@
                                     $cost = $_POST['cost'];
                                     $stock = $_POST['stock'];
 
-                                    echo $image;
+                                    
 
                                     // call the image upload function
                                     $img_url = uploadImage($image);
@@ -542,7 +542,7 @@ function uploadImage($image)
                 <!-- display the image -->
             
                 <?php 
-                $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image["tmp_name"]); 
+                $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image); 
                 
                     echo "<br>" . $img_url;
                 ?>
