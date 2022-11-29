@@ -526,7 +526,7 @@ function uploadImage($image)
         <?php
         // if everything is ok, try to upload file
     } else {
-        if (move_uploaded_file($image["tmp_name"], $target_file)) {
+        if (move_uploaded_file($image, $target_file)) {
             ?>
             <div class="alert alert-success" role="alert">
                 <?php echo "The file " . htmlspecialchars(basename($image["name"])) . " has been uploaded."; ?>
