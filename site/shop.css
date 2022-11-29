@@ -1,0 +1,42 @@
+/* make the products be displayed in rows */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.product{
+    width: 20%;
+    margin-bottom: 2em;
+    border: 1px solid #fff;
+    padding: 1em;
+}
+
+.product img{
+    width: 100%;
+    height: auto;
+}
+
+.product h2{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.product p{
+    margin: 0;
+    font-size: 1em;
+}
+
+.product button{
+    background-color: #158355;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    margin-top: 1em;
+    /* make the button always at the bottom of the product div */
+
+    
+
+}

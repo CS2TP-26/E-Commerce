@@ -472,7 +472,7 @@
 
                                     // get the image 
 
-                                    $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`, `img1`,` img2`, `img3`) VALUES ('$name', '$description', '$image', '$cost', '$stock', '$img1', '$img2', '$img3')";
+                                    $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`, `img1`,`img2`, `img3`) VALUES ('$name', '$description', '$image', '$cost', '$stock', '$img1', '$img2', '$img3')";
                                     $result = $db->query($sql);
                                     if ($result) {
                                 ?>

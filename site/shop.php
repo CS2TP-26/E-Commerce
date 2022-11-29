@@ -3,6 +3,8 @@
 
 <head>
 	<link rel='stylesheet' type='text/css' href='styles.css' />
+	<link rel='stylesheet' type='text/css' href='shop.css' />
+
 	<link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<meta charset="utf-8">
@@ -39,7 +41,7 @@
 			while ($row = $result->fetch_assoc()) {
 			?>
 				<div class="product">
-					<img src="<?php echo $row['image']; ?>" width="200" height="200" alt="" />
+					<img src="<?php echo $row['image']; ?>" width="100" height="100" alt="" />
 					<h2><?php echo $row['name']; ?></h2>
 					<p><?php echo "£" . $row['price']; ?></p>
 					<button type="submit" formaction="product.php">View Product</button>
