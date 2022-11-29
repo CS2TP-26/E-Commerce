@@ -419,7 +419,30 @@
                                     
 
                                     // call the image upload function
-                                    $img_url = uploadImage($image);
+                                    // $img_url = uploadImage($image);
+
+                                    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                                        ?>
+                                        <div class="alert alert-success" role="alert">
+                                            <?php echo "The file " . htmlspecialchars(basename($image["name"])) . " has been uploaded."; ?>
+                                        </div>
+                                        <?php
+                                        // get full image url
+                                        $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image["name"]);
+                                        return $img_url;
+                                    } else {
+                                        ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <?php echo "ERROR 2: Sorry, your file was not uploaded."; ?>
+                                            <!-- display the image -->
+                                        
+                                            <?php 
+                                            $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image); 
+                                            
+                                                echo "<br>" . $img_url;
+                                            ?>
+                                            <!-- <img src="<?php echo $target_file; ?>" alt=""> -->
+                                        </div>
 
                                     if ($uploadOk == 1) {
                                         $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$img_url', '$cost', '$stock')";
