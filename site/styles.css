@@ -323,9 +323,8 @@ p {
 
 .findOutMore h1 {
     position: absolute;
-    /* left: 13.75%;
-    right: 13.75%; */
-    margin: 0 auto;
+    left: 13.75%;
+    right: 13.75%;
     top: 16.26%;
     bottom: 73.98%;
     text-align: center;
@@ -555,10 +554,9 @@ p {
 
 .shopHero h1 {
     position: absolute;
-    /* width: 537px; */
+    width: 537px;
     height: 104px;
-    /* left: 80px; */
-    margin: 0 auto;
+    left: 80px;
     top: 123px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -595,9 +593,11 @@ p {
 }
 
 .products h1 {
-    margin: 0 auto;
-    /* make it always centered */
     position: absolute;
+    width: 409px;
+    height: 59px;
+    left: 756px;
+    top: 50px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
