@@ -29,23 +29,33 @@
 	</div>
 	<div class="products">
 		<h1>Shop All Watches</h1>
+		<div class="products">
 
-		<?php
-		require_once '../connection.php';
-		$db = connect();
-		$sql = "SELECT * FROM products";
-		$result = $db->query($sql);
-		while ($row = $result->fetch_assoc()) {
-		?>
-			<div class="product">
-				<img src="<?php echo $row['image']; ?>" width="200" height="200" alt="" />
-				<h2><?php echo $row['name']; ?></h2>
-				<p><?php echo "£" . $row['price']; ?></p>
-				<button type="submit" formaction="product.php">View Product</button>
-			</div>
-		<?php
-		}
-		?>
+			<?php
+			require_once '../connection.php';
+			$db = connect();
+			$sql = "SELECT * FROM products";
+			$result = $db->query($sql);
+			while ($row = $result->fetch_assoc()) {
+			?>
+				<div class="product">
+					<img src="<?php echo $row['image']; ?>" width="200" height="200" alt="" />
+					<h2><?php echo $row['name']; ?></h2>
+					<p><?php echo "£" . $row['price']; ?></p>
+					<button type="submit" formaction="product.php">View Product</button>
+				</div>
+			<?php
+			}
+			?>
+
+		</div>
+
+
+
+
+
+
+		<!-- sort this later -->
 		<div class="topPicks">
 			<h1>Our top picks</h1>
 
