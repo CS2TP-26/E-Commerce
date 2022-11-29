@@ -391,7 +391,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="sub-label" for="image">Image: </label>
-                                            <input class="sub-input" type="file" accept="image/*" class="form-control" name="prod_img" id="prod_img" placeholder="Enter Image URL">
+                                            <input class="sub-input" type="text" class="form-control" name="image" id="image" placeholder="Enter Image URL">
                                         </div>
 
                                         <div class="form-group">
@@ -412,32 +412,14 @@
                                 if (isset($_POST['add'])) {
                                     $name = $_POST['name'];
                                     $description = $_POST['description'];
-                                    // $image = $_POST['image'];
+                                    $image = $_POST['image'];
                                     $cost = $_POST['cost'];
                                     $stock = $_POST['stock'];
                                     
                                     // get the image 
-                                    $image = $_FILES['prod_img']['name'];
-                                    $target = "../Assets/".basename($image);
-                                    move_uploaded_file($_FILES['prod_img']['tmp_name'], $target);
-
-                                    
-
-                                    
-
-                                   
-
-                                    // $target_dir = "../Assets/Watches/";
-                                    // $target_file = $target_dir . basename($_FILES["image"]["name"]);
-                                    echo $target;
-                                
-                                    // move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-
-                                    $img_url  = $target . $_FILES["image"]["name"];
-
                                     
                                     if ($uploadOk == 1) {
-                                        $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$img_url', '$cost', '$stock')";
+                                        $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$image', '$cost', '$stock')";
                                         $result = $db->query($sql);
                                         if ($result) {
                                 ?>
