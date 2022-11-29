@@ -209,7 +209,7 @@ body {
 }
 
 .edit-img {
-    width: 200px;
+    width: 100px;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
