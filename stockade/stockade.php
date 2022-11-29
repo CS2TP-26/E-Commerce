@@ -416,6 +416,8 @@
                                     $cost = $_POST['cost'];
                                     $stock = $_POST['stock'];
 
+                                    echo $image;
+
                                     // call the image upload function
                                     $img_url = uploadImage($image);
 
@@ -477,7 +479,6 @@ function uploadImage($image)
     }
     $target_file = $target_dir . basename($image["name"]);
     $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
     // Check if image file is a actual image or fake image
     if (isset($_POST["submit"])) {
         $check = getimagesize($image["tmp_name"]);
@@ -539,6 +540,12 @@ function uploadImage($image)
             <div class="alert alert-danger" role="alert">
                 <?php echo "ERROR 2: Sorry, your file was not uploaded."; ?>
                 <!-- display the image -->
+            
+                <?php 
+                $img_url = "http://20.254.55.178/Assets/Watches/" . basename($image["name"]); 
+                
+                    echo $img_url;
+                ?>
                 <img src="<?php echo $target_file; ?>" alt="">
             </div>
         <?php
