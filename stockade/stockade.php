@@ -472,7 +472,7 @@
 
                                     // get the image 
 
-                                    $sql = "INSERT INTO `products` (`name`, `description`, `image`, `img1`,` img2`, `img3`, `price`, `stock`) VALUES ('$name', '$description', '$image', '$img1', '$img2', '$img3', '$cost', '$stock')";
+                                    $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`, `img1`,` img2`, `img3`) VALUES ('$name', '$description', '$image', '$cost', '$stock', '$img1', '$img2', '$img3')";
                                     $result = $db->query($sql);
                                     if ($result) {
                                 ?>
@@ -484,7 +484,7 @@
                                     ?>
                                         <div class="alert alert-danger" role="alert">
                                             Error! Product Not Added!
-                                            <?php echo $db->error; ?>
+                                            <?php echo "<br>" . $db->error; ?>
                                         </div>
                             <?php
                                     }
