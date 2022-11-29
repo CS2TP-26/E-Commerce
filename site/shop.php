@@ -28,14 +28,43 @@
 	</div>
 	<div class="products">
 		<h1>Shop All Watches</h1>
+
+		<!-- connect to database -->
+		<?php
+			require_once '../connection.php';
+			$db = connect();
+			$sql = "SELECT * FROM `products`";
+			if($result->num_rows > 0){
+				while($row = $result->fetch_assoc()){
+					$product_id = $row['product_ID'];
+		?>
+		<div class="product">
+			<img src="<?php echo $row['image'];?>" width="500" height="500" alt=""/>
+			<h2><?php echo $row['name'];?></h2>
+			<p><?php echo $row['price'];?></p>
+			<button type="submit" formaction="product.php">View Product</button>
+		</div>
+
+		<?php
+				}
+			}
+		?>
 	</div>
 	<div class="topPicks">
+	<h1>Our top picks</h1>
+
 	</div>
 	<div class="preOwned">
+	<h1>Our limited Pre-Owned Watches</h1>
+
 	</div>
 	<div class="creditBanner">
+		<h1>Spread the cost with up to 4 years interest free credit* Subject to T&Cs</h1>
+		<p>Shop watches from £14.07 per month*. 0% finance is available on all purchases over £99.</p>
 	</div>
 	<div class="highlights">
+		
+
 	</div>
 	<div class="shopBottomNav">
     	<img src="img/logo no bg-01.png" width="200" height="200" alt=""/> 
