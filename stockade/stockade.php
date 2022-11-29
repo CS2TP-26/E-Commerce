@@ -460,7 +460,7 @@
 // create an image upload function
 function uploadImage($image)
 {
-    $target_dir = "Assets/Watches/";
+    $target_dir = "../Assets/Watches/";
     $target_file = $target_dir . basename($image["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
