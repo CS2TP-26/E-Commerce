@@ -415,18 +415,23 @@
                                     // $image = $_POST['image'];
                                     $cost = $_POST['cost'];
                                     $stock = $_POST['stock'];
+                                    
+                                    // get the image 
+                                    $image = $_FILES['image']['name'];
+                                    $target = "../images/".basename($image);
+                                    move_uploaded_file($_FILES['image']['tmp_name'], $target);
 
                                     
 
                                    
 
-                                    $target_dir = "../Assets/Watches/";
-                                    $target_file = $target_dir . basename($_FILES["image"]["name"]);
-                                    echo $target_file;
+                                    // $target_dir = "../Assets/Watches/";
+                                    // $target_file = $target_dir . basename($_FILES["image"]["name"]);
+                                    echo $target;
                                 
-                                    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+                                    // move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-                                    $img_url  = $target_dir . $_FILES["image"]["name"];
+                                    $img_url  = $target . $_FILES["image"]["name"];
 
                                     
                                     if ($uploadOk == 1) {
