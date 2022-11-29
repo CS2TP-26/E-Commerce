@@ -400,9 +400,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary" name="add">Add</button>
             </form>
-            <!-- <button class="btn btn-primary" onclick="window.location.reload()">Refresh</button> -->
-            <!-- <label class="alert">Refresh the page so you can see cost update</label> -->
-            <!-- <br> -->
+           
             <button class="btn btn-primary" type="button"><a href="stockade.php">Back</a></button>
         </div>
         <?php

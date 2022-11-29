@@ -4,8 +4,6 @@ body {
     overflow-x: hidden;
 }
 
-
-
 ::-webkit-scrollbar {
     width: 10px;
     background: rgb(61, 61, 61);
@@ -163,9 +161,9 @@ body {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
-    color: #3a3b3c;
+    color: #686868;
     /* background color */
-    background-color: #3a3b3c;
+    background-color: #686868;
 }
 
 .true {
