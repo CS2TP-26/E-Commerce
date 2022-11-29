@@ -532,6 +532,8 @@ function uploadImage($image)
             ?>
             <div class="alert alert-danger" role="alert">
                 <?php echo "ERROR 2: Sorry, your file was not uploaded."; ?>
+                <!-- display the image -->
+                <img src="<?php echo $target_file; ?>" alt="">
             </div>
         <?php
         }
