@@ -38,9 +38,9 @@
 		while ($row = $result->fetch_assoc()) {
 		?>
 			<div class="product">
-				<img src="<?php echo $row['image']; ?>" width="500" height="500" alt="" />
+				<img src="<?php echo $row['image']; ?>" width="200" height="200" alt="" />
 				<h2><?php echo $row['name']; ?></h2>
-				<p><?php echo $row['price']; ?></p>
+				<p><?php echo "£" . $row['price']; ?></p>
 				<button type="submit" formaction="product.php">View Product</button>
 			</div>
 		<?php
@@ -55,7 +55,7 @@
 
 		</div>
 		<div class="creditBanner">
-			<h1>Spread the cost with up to 4 years interest free credit* Subject to T&Cs</h1>
+			<h2>Spread the cost with up to 4 years interest free credit* Subject to T&Cs</h2>
 			<p>Shop watches from £14.07 per month*. 0% finance is available on all purchases over £99.</p>
 		</div>
 		<div class="highlights">
