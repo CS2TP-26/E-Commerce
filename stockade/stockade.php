@@ -480,24 +480,22 @@ function uploadImage($image)
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $uploadOk = 1;
     // Check if image file is a actual image or fake image
-    if (isset($_POST["submit"])) {
-        $check = getimagesize($image["tmp_name"]);
-        if ($check !== false) {
-            ?>
-            <div class="alert alert-success" role="alert">
-                <?php echo "File is an image - " . $check["mime"] . "."; ?>
-            </div>
-            <?php
-            
-            $uploadOk = 1;
-        } else {
-            ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo "File is not an image."; ?>
-            </div>
-            <?php
-            $uploadOk = 0;
-        }
+    $check = getimagesize($image["tmp_name"]);
+    if ($check !== false) {
+        ?>
+        <div class="alert alert-success" role="alert">
+            <?php echo "File is an image - " . $check["mime"] . "."; ?>
+        </div>
+        <?php
+        
+        $uploadOk = 1;
+    } else {
+        ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo "File is not an image."; ?>
+        </div>
+        <?php
+        $uploadOk = 0;
     }
     // Check if file already exists
     if (file_exists($target_file)) {
