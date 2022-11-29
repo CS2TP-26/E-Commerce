@@ -420,6 +420,7 @@
                                 ?>
                                             <div class="alert alert-success" role="alert">
                                                 Product Added!
+                                                <!-- <a href="../Assets/Watches/">Back</a> -->
                                             </div>
                                         <?php
                                         } else {
@@ -460,7 +461,14 @@
 // create an image upload function
 function uploadImage($image)
 {
+
     $target_dir = "../Assets/Watches/";
+
+    // check if target dir is valid
+
+    if (!is_dir($target_dir)) {
+        mkdir($target_dir, 0777, true);
+    }
     $target_file = $target_dir . basename($image["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
