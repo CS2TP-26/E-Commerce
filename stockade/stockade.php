@@ -428,7 +428,6 @@
                                     $img_url  = $target_dir . $_FILES["image"]["name"];
 
                                     
-                                    if ($uploadOk == 1) {
                                         $sql = "INSERT INTO `products` (`name`, `description`, `image`, `price`, `stock`) VALUES ('$name', '$description', '$img_url', '$cost', '$stock')";
                                         $result = $db->query($sql);
                                         if ($result) {
@@ -445,7 +444,6 @@
                                             </div>
                             <?php
                                         }
-                                    }
                                 }
                             } else {
                                 header("Location: stockade.php");
