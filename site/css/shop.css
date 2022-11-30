@@ -1,22 +1,28 @@
 /* make the products be displayed in rows */
-
+.products_section .products_row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem;
     padding-top: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }
 
 .product {
-    width: 20%;
+    width: 250px;
     margin-bottom: 2em;
-    /* border: 1px solid #fff; */
     padding: 1em;
 }
 
 .product img {
-    width: 75%;
+    width: 100%;
     height: auto;
 }
 
