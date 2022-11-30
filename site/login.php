@@ -174,19 +174,6 @@ if (isset($_POST['Register'])) {
 			<a class="shopLink" href="shop.php">Shop</a>
 			<a class="aboutLink" href="about.php">About</a>
 			<a class="contactLink" href="contact.php">Contact</a>
-			<?php
-			if(!isset($_SESSION['id'])){?>
-			<form>
-				<button type="submit" formaction="login.php">Login</button>
-			</form>
-			<?php
-				}else{?>
-			<form>
-				<button type="submit" formaction="logout.php">Logout</button>
-			</form>
-			<?php
-				}
-			?>
 			<div class="social">
 				<p>Follow Us:</p>
 				<div class="facebook">
