@@ -13,9 +13,21 @@
 		<a href="index.php">
 			<img src="img/text only no bg-01.png" width="397" height="227" alt=""/>
 		</a>
+		<?php
+			// if there is no login session show this else
+			if(!isset($_SESSION['id'])){?>
 		<form>
 			<button type="submit" formaction="login.php">Login</button>
 		</form>
+		<?php
+			// if there is a login session show this
+			}else{?>
+		<form>
+			<button type="submit" formaction="logout.php">Logout</button>
+		</form>
+		<?php
+			}
+		?>
 		<a href="basket.php">Basket</a>
  		<a href="contact.php">Contact Us</a>
 		<a href="about.php">About Us</a>
@@ -74,9 +86,22 @@
 		<a class="shopLink" href="shop.php">Shop</a>
 		<a class="aboutLink" href="about.php">About</a>
 		<a class="contactLink" href="contact.php">Contact</a>
+
+		<?php
+			// if there is no login session show this else
+			if(!isset($_SESSION['id'])){?>
 		<form>
 			<button type="submit" formaction="login.php">Login</button>
 		</form>
+		<?php
+			// if there is a login session show this
+			}else{?>
+		<form>
+			<button type="submit" formaction="logout.php">Logout</button>
+		</form>
+		<?php
+			}
+		?>
 		<div class="social">
 			<p>Follow Us:</p>
 			<div class="facebook">

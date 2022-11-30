@@ -19,36 +19,39 @@ Maison De Versa
 <!-- make a red bold h3 tag -->
 <h3 style="color: red; font-weight: bold;">First= backend, second = front end</h3>
 <br>
-<a href="pages/index.php">Main index page</a> ❌ ✅ Zeeshan - Anish
+<a href="site/index.php">Main index page</a> ❌ ✅ Zeeshan - Anish
 <br>
-<a href="pages/login.php">Login</a> ✅ ❌ Zeeshan - Anish
+<a href="site/login.php">Login</a> ✅ ❌ Zeeshan - Anish
 <br>
-<a href="pages/registration.php">registration</a> ✅ ❌Zeeshan - Anish
+<a href="site/Basket.php">Basket</a> ✅ ❌ Jac - Anish
 <br>
-<a href="pages/Basket.php">Basket</a> ✅ ❌ Jac - Anish
-<br>
-<a href="pages/checkout.php">Checkout</a> 💼 ❌Jac - Anish
+<a href="site/checkout.php">Checkout</a> 💼 ❌Jac - Anish
 <br>
 <!-- <a href="pages/.php">Quries / Support</a> ❌ ❌Zeeshan - Anish -->
 <!-- <br> -->
-<a href="pages/.php">About</a> 💼  Anish
+<a href="site/.php">About</a> 💼  Anish
 <br>
-<a href="pages/products.php">Watches - Different sub catergories</a> ❌ ❌ Zeeshan - Anish <br>
+<a href="site/shop.php">Watches - Different sub catergories</a> ❌ ❌ Zeeshan - Anish <br>
 each watch has it's own page, with a link to the basket, and a link to the checkout
 
 <br>
 <a href="stockade/index.php">Admin Panel / stockade</a> 💼 ❌ Zeeshan - Anish
 <br><br><br>
 <br>
-<a href="pages/logout.php">Log out of sesssion here!!!</a> 
+<a href="site/logout.php">Log out of sesssion here!!!</a> 
+
+
+Redirecting to login.php in 5 seconds...
+<!-- take to the index of the site in 5 seconds -->
+<meta http-equiv="refresh" content="5;url=../site/index.php" />
+
 
 
 <?php
 
 
 
-    // require_once 'php_scripts/visitor_counter.php';
-    // $visitors = getVisitors();
+
 ?>
 
 

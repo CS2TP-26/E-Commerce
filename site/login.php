@@ -16,9 +16,9 @@
 		<a href="index.php">
 			<img src="img/text only no bg-01.png" width="397" height="227" alt="" />
 		</a>
-		<form>
+		<!-- <form>
 			<button type="submit" formaction="login.php">Login</button>
-		</form>
+		</form> -->
 		<a href="basket.php">Basket</a>
 		<a href="contact.php">Contact Us</a>
 		<a href="about.php">About Us</a>
