@@ -87,7 +87,7 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 					foreach ($_SESSION["basket"] as $product) {
 					?>
 						<td>
-							<img src='<?php echo $product["image"]; ?>' width="50" height="40" />
+							<img src='<?php echo $product["image"]; ?>' width="75" height="65" />
 						</td>
 						<td><?php echo $product["name"]; ?><br />
 							<form method='post' action=''>
