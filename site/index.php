@@ -65,10 +65,10 @@
 	<div class="findOutMore">
   		<h1>Find Out More</h1>
 			<div class="pics">
-    			<img src="img/placeholder hero.jpg" width="173" height="76" alt=""/>
-				<img src="img/placeholder hero.jpg" width="173" height="76" alt=""/>
-				<img src="img/placeholder hero.jpg" width="173" height="76" alt=""/>
-				<img src="img/placeholder hero.jpg" width="173" height="76" alt=""/>
+    			<img src="img/placeholder_hero.jpg" width="173" height="76" alt=""/>
+				<img src="img/placeholder_hero.jpg" width="173" height="76" alt=""/>
+				<img src="img/placeholder_hero.jpg" width="173" height="76" alt=""/>
+				<img src="img/placeholder_hero.jpg" width="173" height="76" alt=""/>
 			</div>
   	<div class="aboutButton">
 				<form>
