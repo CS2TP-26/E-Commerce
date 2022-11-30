@@ -52,6 +52,16 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 		<a href="about.php">About Us</a>
 		<a href="shop.php">Shop</a>
 	</div>
+	<?php
+
+	// this statement is to check if the session is empty or not & makes sure that there are no duplicates in the basket
+	if (!empty($_SESSION["basket"])) {
+		$basket = $_SESSION["basket"];
+		$basket = array_unique($basket, SORT_REGULAR);
+		$_SESSION["basket"] = $basket;
+		$basket_count = count(array_keys($_SESSION["basket"]));
+	}
+	?>
 
 
 
