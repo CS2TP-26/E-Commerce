@@ -1,15 +1,26 @@
 
 /* changes the nav location locally */
 .shopBottomNav {
-    top: 2000px;
+    top: 2100px;
+    bottom: 0;
 }
+
+/* if width is bigger than */
+@media screen and (min-width: 768px) {
+    .shopBottomNav {
+        bottom: 0;
+    }
+}
+
+
+
 
 
 .main{
     position: absolute;
     background: #83958C;
     width: 100%;
-    height: 100%;
+    height: 2000px;
     top: 60px;
     display: flex;
     flex-direction: row;
@@ -22,7 +33,7 @@
 .left{
     position: relative;
     width: 70%;
-    height: 200%;
+    height: 2100px;
     background: #83958C;
     float: left;
         
@@ -32,7 +43,7 @@
 .price{
     position: relative;
     width: 30%;
-    height: 200%;
+    height: 2000px;
     background: #6B756B;
     padding: 20px;
     float: right;
@@ -51,7 +62,8 @@
     position: relative;
     background: #686868;
     width: 100%;
-    height: 50%;
+    height: 30%;
+    /* height: 50%; */
 }
 
 

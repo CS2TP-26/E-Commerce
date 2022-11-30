@@ -81,7 +81,7 @@
 				</div>
 
 				<div class="bottom">
-					<h1>Product Infomation ></h1>
+					<h1>Product Infomation</h1>
 					<p><?php echo $row['description']; ?></p>
 				</div>
 
@@ -93,7 +93,7 @@
 			</div>
 
 			<div class="recomended">
-				<h1>Recomended</h1>
+				<h1>Recommended</h1>
 				<div class="products">
 				<?php
 				$i = 1;
