@@ -1,0 +1,159 @@
+body {
+    background-color: #F2F2F2;
+}
+
+
+.panel {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    margin-bottom: 20px;
+    width: 80%;
+    height: 50%;
+    top: 25%;
+    position: absolute;
+    display: flex;
+
+}
+
+.login {
+    float: left;
+    width: 50%;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    height: 100%;
+
+}
+
+.login h1 {
+    font-size: 1.8em;
+    font-weight: 300;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    
+
+}
+
+.login form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 300;
+    font-family: 'Montserrat';
+
+
+
+}
+
+.login button {
+    background-color: #158355;
+    border: 1px solid #158355;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+    width: 84%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
+}
+
+.register {
+    float: right;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    width: 50%;
+    height: 100%;
+    
+}
+
+.register h1 {
+    font-size: 1.8em;
+    font-weight: 300;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+
+.register form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register input[type="text"],
+.register input[type="password"] {
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 300;
+    font-family: 'Montserrat';
+
+}
+
+.register button {
+    background-color: #158355;
+    border: 1px solid #158355;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+    width: 84%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
+
+
+}
+
+.errorMsg{
+    color: red;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-left: 10%;
+}
+
+.successMsg{
+    color: green;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-left: 10%;
+}

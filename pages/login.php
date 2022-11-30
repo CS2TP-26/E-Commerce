@@ -75,27 +75,15 @@
             $_SESSION['id'] = $id;
             $_SESSION['creation'] = $creation;
 
-
             if($acc_type == 'staff'){
                 header("Location: ../stockade/ControlPanel.php");
             }else{
                 header("Location: ../index.php");
             }
-            
         }else{
             $error = "Invalid username or password";
         }
-
-
     }
-
-
-
-
-
-
-
-
 ?>
 
 
