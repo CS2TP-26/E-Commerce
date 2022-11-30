@@ -9,18 +9,17 @@
 </head>
 
 <body>
+	<?php session_start(); ?>
 	<div class="topnav">
 		<a href="index.php">
 			<img src="img/text only no bg-01.png" width="397" height="227" alt=""/>
 		</a>
 		<?php
-			// if there is no login session show this else
 			if(!isset($_SESSION['id'])){?>
 		<form>
 			<button type="submit" formaction="login.php">Login</button>
 		</form>
 		<?php
-			// if there is a login session show this
 			}else{?>
 		<form>
 			<button type="submit" formaction="logout.php">Logout</button>
