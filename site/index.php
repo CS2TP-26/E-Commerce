@@ -32,7 +32,7 @@
 		<a href="about.php">About Us</a>
 		<a href="shop.php">Shop</a>
     </div>
-	<div class="hero" style="background-image: url("../img/placeholder_hero.jpg");">
+	<div class="hero">
 		
 		<img class="logo" src="img/logo no bg-01.png" width="835" height="835" alt=""/>
 	</div>
