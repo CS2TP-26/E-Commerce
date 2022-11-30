@@ -53,12 +53,12 @@
 		<p class="review4">Looking for Christmas presents and came across this site, what a wonderful find! The choice was extensive, the prices fantastic and the service speedy and professional. Best of all, no delivery charges. Have already used it twice and will use it again. Cannot recommend highly enough! – 2nd November 2022</p>
 	</div>
 	<div class="feature1">
-    	<img src="img/placeholder hero.jpg" width="750px" height="440px" alt=""/> 
+    	<img src="img/placeholder_hero.jpg" width="750px" height="440px" alt=""/> 
 		<h4>Featured Watch 1</h4>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.</p>
 	</div>
 	<div class="feature2">
-		<img src="img/placeholder hero.jpg" width="750px" height="440px" alt=""/> 
+		<img src="img/placeholder_hero.jpg" width="750px" height="440px" alt=""/> 
 		<h4>Featured Watch 2</h4>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.</p>
 	</div>
