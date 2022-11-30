@@ -162,6 +162,43 @@ if (isset($_POST['Register'])) {
         </div>
     </div>
 
+
+
+    <div class="shopBottomNav">
+			<img src="img/logo no bg-01.png" width="200" height="200" alt="" />
+			<hr>
+			</hr>
+			<div class="copyright">
+				<p>© Mason De Versa LTD, 2022</p>
+			</div>
+			<a class="shopLink" href="shop.php">Shop</a>
+			<a class="aboutLink" href="about.php">About</a>
+			<a class="contactLink" href="contact.php">Contact</a>
+			<div class="social">
+				<p>Follow Us:</p>
+				<div class="facebook">
+					<a href="https://www.facebook.com/" target="_blank">
+						<i class='bx bxl-facebook  bx-sm'></i>
+					</a>
+				</div>
+				<div class="twitter">
+					<a href="https://www.twitter.com/" target="_blank">
+						<i class='bx bxl-twitter bx-sm'></i>
+					</a>
+				</div>
+				<div class="tiktok">
+					<a href="https://www.tiktok.com/" target="_blank">
+						<i class='bx bxl-tiktok bx-sm'></i>
+					</a>
+				</div>
+				<div class="instagram">
+					<a href="https://www.instagram.com/" target="_blank">
+						<i class='bx bxl-instagram bx-sm'></i>
+					</a>
+				</div>
+			</div>
+		</div>  
+
     
 	
 

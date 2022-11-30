@@ -1,7 +1,6 @@
 body {
-    background-color: #F2F2F2;
+    background-color: #6b756b;
 }
-
 
 .panel {
     background-color: #fff;
@@ -14,16 +13,14 @@ body {
     top: 25%;
     position: absolute;
     display: flex;
-
 }
 
 .login {
     float: left;
     width: 50%;
-    background-color: #fff;
+    background-color: #DADDDC;
     border-right: 1px solid #ccc;
     height: 100%;
-
 }
 
 .login h1 {
@@ -34,8 +31,6 @@ body {
     font-size: 2em;
     font-weight: 500;
     font-family: 'Montserrat';
-    
-
 }
 
 .login form {
@@ -43,7 +38,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .login input[type="text"],
@@ -56,9 +50,6 @@ body {
     font-size: 1.2em;
     font-weight: 300;
     font-family: 'Montserrat';
-
-
-
 }
 
 .login button {
@@ -82,11 +73,10 @@ body {
 
 .register {
     float: right;
-    background-color: #fff;
+    background-color: #DADDDC;
     border-right: 1px solid #ccc;
     width: 50%;
     height: 100%;
-    
 }
 
 .register h1 {
@@ -116,7 +106,6 @@ body {
     font-size: 1.2em;
     font-weight: 300;
     font-family: 'Montserrat';
-
 }
 
 .register button {
@@ -136,11 +125,9 @@ body {
     padding: 10px;
     font-size: 1.2em;
     font-family: 'Montserrat';
-
-
 }
 
-.errorMsg{
+.errorMsg {
     color: red;
     font-size: 1.2em;
     font-weight: 700;
@@ -149,7 +136,7 @@ body {
     margin-left: 10%;
 }
 
-.successMsg{
+.successMsg {
     color: green;
     font-size: 1.2em;
     font-weight: 700;
