@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<link rel='stylesheet' type='text/css' href='css/styles.css' />
+	<link rel='stylesheet' type='text/css' href='css/main.css' />
 	<!-- <link rel='stylesheet' type='text/css' href='shop.css' /> -->
 
 	<link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
