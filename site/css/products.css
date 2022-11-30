@@ -3,6 +3,7 @@
 .shopBottomNav {
     top: 2100px;
     bottom: 0;
+    /* display: block; */
 }
 
 /* if width is bigger than */
