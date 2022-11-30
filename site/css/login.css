@@ -3,7 +3,7 @@ body {
 }
 
 .panel {
-    background-color: #DADDDC;
+    background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
@@ -11,6 +11,8 @@ body {
     width: 80%;
     height: 50%;
     top: 25%;
+    position: absolute;
+    display: flex;
 }
 
 .login {
