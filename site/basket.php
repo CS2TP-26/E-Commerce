@@ -96,18 +96,7 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 								<button type='submit' class='remove'>Remove Item</button>
 							</form>
 						</td>
-						<td>
-							<form method='post' action=''>
-								<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
-								<input type='hidden' name='action' value="change" />
-							</form>
-						</td>
-						<td>
-							<form method='post' action=''>
-								<input type='hidden' name='id' value="<?php echo "£" . $product["price"]; ?>" />
-								<input type='hidden' name='action' value="change" />
-							</form>
-						</td>		
+							<td><?php echo "£" . $product["price"]; ?></td>
 						</tr>
 					<?php
 						$total_price += ($product["price"] * $product["quantity"]);
