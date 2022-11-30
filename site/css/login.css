@@ -1,5 +1,5 @@
 body {
-    background-color: #6b756b;
+    background-color: #DADDDC;
 }
 
 .panel {
@@ -13,6 +13,8 @@ body {
     top: 25%;
     position: absolute;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login {
