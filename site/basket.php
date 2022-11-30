@@ -102,7 +102,7 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 								<input type='hidden' name='action' value="change" />
 							</form>
 						</td>
-							<td><?php echo "£" . $product["price"]; ?></td>
+								<td><?php echo "£" . $product["price"]; ?></td>
 						</tr>
 					<?php
 						$total_price += ($product["price"] * $product["quantity"]);
