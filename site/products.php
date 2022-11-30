@@ -158,10 +158,12 @@
 				<button class="add_basket" type="button"><a href="products.php?id=<?php echo $row['id'] . "&add=" . $row['id'];  ?>">Add to Basket </a></button>
 			</form>
 			<div class="status">
-				<?php echo $status; ?>
+				<?php echo $status . "test"; ?>
 			</div>
+
+
+
 			<?php
-			 // if add form is submitted
 			 if (isset($_GET['add'])) {
 				$id = $prod_id;
 				require_once('../connection.php');
@@ -195,8 +197,6 @@
 					$_SESSION["basket"] = $basketArray;
 					$status = "Watch added to your basket!";
 				} else {
-
-					// if the product is already in the basket dont add it again
 					$array_keys = array_keys($_SESSION["basket"]);
 					if (in_array($id, $array_keys)) {
 						$status = "Watch already added to your basket!";
