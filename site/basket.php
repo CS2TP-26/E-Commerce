@@ -67,124 +67,121 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 
 
 
-    <div class="panel">
+	<div class="panel">
 		<div class="basket">
 			<?php
 
-				if (isset($_SESSION["basket"])) {
+			if (isset($_SESSION["basket"])) {
 				$total_price = 0;
 			?>
 				<table>
 					<thead>
 						<tr>
-						<th>Image</th>
-						<th>Name </th>
-						<th>Price (£) </th>
+							<th>Image</th>
+							<th>Name </th>
+							<th>Price (£) </th>
 						</tr>
 					</thead>
 					<tbody>
-					<?php
-					foreach ($_SESSION["basket"] as $product) {
-					?>
-						<td>
-							<img src='<?php echo $product["image"]; ?>' width="75" height="65" />
-						</td>
-						<td><?php echo $product["name"]; ?><br />
-							<form method='post' action=''>
-								<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
-								<input type='hidden' name='action' value="remove" />
-								<button type='submit' class='remove'>Remove Item</button>
-							</form>
-						</td>
+						<?php
+						foreach ($_SESSION["basket"] as $product) {
+						?>
+							<td>
+								<img src='<?php echo $product["image"]; ?>' width="75" height="65" />
+							</td>
+							<td><?php echo $product["name"]; ?><br />
+								<form method='post' action=''>
+									<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
+									<input type='hidden' name='action' value="remove" />
+									<button type='submit' class='remove'>Remove Item</button>
+								</form>
+							</td>
 							<td><?php echo "£" . $product["price"]; ?></td>
+							</tr>
+						<?php
+							$total_price += ($product["price"] * $product["quantity"]);
+						}
+						?>
+						<tr>
+							<td colspan="5" align="right">
+								<strong>TOTAL: <?php echo "£" . $total_price; ?></strong>
+							</td>
 						</tr>
-					<?php
-						$total_price += ($product["price"] * $product["quantity"]);
-					}
-					?>
-					<tr>
-						<td colspan="5" align="right">
-							<strong>TOTAL: <?php echo "£" . $total_price; ?></strong>
-						</td>
-					</tr>
 					</tbody>
 				</table>
 			<?php
-		} else {
-		echo "<h3>Your basket is empty!</h3>";
-		}
+			} else {
+				echo "<h3>Your basket is empty!</h3>";
+			}
 			?>
-        </div>
-		<div style="clear:both;"></div>
-
-			<div class="message_box" style="margin:10px 0px;">
-			</div>
-
-
-			<h3><?php echo $status; ?></h3>
 
 
 			<?php
 			if (isset($_SESSION["basket"])) {
-				
+
 			?>
 				<!-- button to go to checkout page -->
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<button class="btn btn-primary" type="button"><a href="checkout.php">Checkout </a></button>
-						</div>
-					</div>
+				<div class="checkout_">
+					<button class="btn btn-primary checkout" type="button"><a href="checkout.php">Checkout </a></button>
 				</div>
-
 			<?php
 			}
 
 
 			?>
+		</div>
+		<div style="clear:both;"></div>
+
+		<div class="message_box" style="margin:10px 0px;"></div>
+
+
+		<h3><?php echo $status; ?></h3>
 
 
 
-    </div>
 
 
 
-    <div class="shopBottomNav">
-			<img src="img/logo no bg-01.png" width="200" height="200" alt="" />
-			<hr>
-			</hr>
-			<div class="copyright">
-				<p>© Mason De Versa LTD, 2022</p>
+	</div>
+
+
+
+	<div class="shopBottomNav">
+		<img src="img/logo no bg-01.png" width="200" height="200" alt="" />
+		<hr>
+		</hr>
+		<div class="copyright">
+			<p>© Mason De Versa LTD, 2022</p>
+		</div>
+		<a class="shopLink" href="shop.php">Shop</a>
+		<a class="aboutLink" href="about.php">About</a>
+		<a class="contactLink" href="contact.php">Contact</a>
+		<div class="social">
+			<p>Follow Us:</p>
+			<div class="facebook">
+				<a href="https://www.facebook.com/" target="_blank">
+					<i class='bx bxl-facebook  bx-sm'></i>
+				</a>
 			</div>
-			<a class="shopLink" href="shop.php">Shop</a>
-			<a class="aboutLink" href="about.php">About</a>
-			<a class="contactLink" href="contact.php">Contact</a>
-			<div class="social">
-				<p>Follow Us:</p>
-				<div class="facebook">
-					<a href="https://www.facebook.com/" target="_blank">
-						<i class='bx bxl-facebook  bx-sm'></i>
-					</a>
-				</div>
-				<div class="twitter">
-					<a href="https://www.twitter.com/" target="_blank">
-						<i class='bx bxl-twitter bx-sm'></i>
-					</a>
-				</div>
-				<div class="tiktok">
-					<a href="https://www.tiktok.com/" target="_blank">
-						<i class='bx bxl-tiktok bx-sm'></i>
-					</a>
-				</div>
-				<div class="instagram">
-					<a href="https://www.instagram.com/" target="_blank">
-						<i class='bx bxl-instagram bx-sm'></i>
-					</a>
-				</div>
+			<div class="twitter">
+				<a href="https://www.twitter.com/" target="_blank">
+					<i class='bx bxl-twitter bx-sm'></i>
+				</a>
 			</div>
-		</div>  
+			<div class="tiktok">
+				<a href="https://www.tiktok.com/" target="_blank">
+					<i class='bx bxl-tiktok bx-sm'></i>
+				</a>
+			</div>
+			<div class="instagram">
+				<a href="https://www.instagram.com/" target="_blank">
+					<i class='bx bxl-instagram bx-sm'></i>
+				</a>
+			</div>
+		</div>
+	</div>
 
-    
-	
+
+
 
 </html>
