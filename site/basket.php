@@ -102,7 +102,6 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 							<th>Name </th>
 							<th>Price (£) </th>
 							<th>Remove</th>
-
 						</tr>
 					</thead>
 					<tbody>
@@ -119,18 +118,15 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 						}
 						?>
 
-						<td><?php echo $product["name"]; ?><br />
+						<td><?php echo $product["name"]; ?></td>
+						<td>
 							<form method='post' action=''>
 								<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
 								<input type='hidden' name='action' value="remove" />
 								<button type='submit' class='remove'>Remove Item</button>
 							</form>
 						</td>
-						<tr>
-							<td colspan="5" align="right">
-								<strong>TOTAL: <?php echo "£" . $total_price; ?></strong>
-							</td>
-						</tr>
+						
 					</tbody>
 				</table>
 			<?php
