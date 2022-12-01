@@ -23,6 +23,7 @@ body {
 
 table {
     border-collapse: collapse;
+    padding-right: 100px;
 }
 
 th,
