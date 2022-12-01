@@ -74,6 +74,11 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 				</tr>
 			</tbody>
 		</table>
+
+
+
+
+
 	<?php
 	} else {
 		echo "<h3>Your basket is empty!</h3>";
@@ -81,28 +86,24 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 	?>
 </div>
 
+<?php
+if (isset($_SESSION["basket"])) {
+
+?>
+	<!-- button to go to checkout page -->
+	<div class="checkout_">
+		<button class="btn btn-primary checkout" type="button"><a href="checkout.php">Checkout </a></button>
+	</div>
+<?php
+}
+
+
+?>
+
+
 <div style="clear:both;"></div>
 
-<div class="message_box" style="margin:10px 0px;">
-</div>
+<div class="message_box" style="margin:10px 0px;"></div>
 
 
 <h3><?php echo $status; ?></h3>
-
-
-<?php
-if (isset($_SESSION["basket"])) {
-	
-?>
-	<!-- button to go to checkout page -->
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<button class="btn btn-primary" type="button"><a href="checkout.php">Checkout </a></button>
-			</div>
-		</div>
-	</div>
-
-<?php
-}
-?>

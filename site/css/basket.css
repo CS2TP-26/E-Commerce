@@ -15,24 +15,26 @@ body {
     left: 10%;
     position: absolute;
     display: flex;
-
 }
 
 table {
     border-collapse: collapse;
-  }
-  
-  th, td {
-    border: 1px #1F8355;;
+}
+
+th,
+td {
+    border: 1px #1F8355;
+    ;
     padding: 8px;
     text-align: center;
-	vertical-align: middle;
-  }
+    vertical-align: middle;
+}
 
-  thead th {
+thead th {
     width: 30%;
-  }
-  .remove{
+}
+
+.remove {
     height: 40px;
     width: 130px;
     font-family: 'Montserrat';
@@ -52,7 +54,8 @@ table {
     float: left;
     border: none;
 }
-.container{
+
+.container {
     height: 40px;
     width: 130px;
     font-family: 'Montserrat';
@@ -71,4 +74,36 @@ table {
     border-radius: 6px;
     float: left;
     border: none;
+}
+
+.checkout_ button {
+    height: 40px;
+    width: 130px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 18px;
+    align-items: left;
+    text-align: center;
+    letter-spacing: -0.015em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background: #1F8355;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout_ button a {
+    color: #ffffff;
+    text-decoration: none;
 }
