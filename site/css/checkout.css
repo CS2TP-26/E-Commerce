@@ -2,6 +2,21 @@ body {
     background-color: #6b756b;
 }
 
+.panel {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    margin-bottom: 20px;
+    width: 80%;
+    height: 50%;
+    top: 25%;
+    left: 10%;
+    position: absolute;
+    display: flex;
+
+}
+
 .basket {
     float: right;
     background-color: #DADDDC;
