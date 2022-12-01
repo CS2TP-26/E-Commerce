@@ -61,6 +61,7 @@
 
     <div class="middle">
         <h1>My Orders</h1>
+        <br>
 
         <?php
         session_start();
@@ -68,7 +69,8 @@
         echo $id;
         require_once '../connection.php';
         $db = connect();
-        $sql = "SELECT * FROM `orders` WHERE 'user_ID' = " . $_SESSION['id'];
+        $sql = "SELECT * FROM `orders` WHERE `user_ID` = '" . $_SESSION['id'] . "'";
+
         $result = $db->query($sql);
         // echo result;
         echo $result;
