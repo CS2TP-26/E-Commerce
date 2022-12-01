@@ -227,7 +227,7 @@ p {
     left: 0px;
     top: 2000px;
     background: #DADDDC;
-    bottom: 0px;
+    /* bottom: 0px; */
 }
 
 .bottomNav img {
