@@ -131,10 +131,11 @@
 
 
 
-        <h1 class="p_orders">Previous Orders</h1>
         <br>
 
         <table class="table">
+            <h1 class="p_orders">Previous Orders</h1>
+
             <thead>
                 <tr>
                     <th>MPN</th>

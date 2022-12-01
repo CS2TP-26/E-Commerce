@@ -120,6 +120,6 @@ body {
 }
 
 .p_orders {
-    margin-left: 10%;
-    margin-right: 10%;
+    /* make this below first table  */
+    margin-top: 100px;
 }
