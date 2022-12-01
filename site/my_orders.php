@@ -141,7 +141,7 @@
             $result = $db->query($sql);
             if ($result) {
                 echo "<script>alert('Order Cancelled');</script>";
-                echo "<script>window.location.href='my_orders.php';</script>";
+                // echo "<script>window.location.href='my_orders.php';</script>";
             } else {
                 echo "<script>alert('Error');</script>";
             }
