@@ -167,7 +167,7 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 
 
 
-	<div class="bottomNav">
+	<div class="shopBottomNav">
 		<img src="img/logo no bg-01.png" width="200" height="200" alt="" />
 		<hr>
 		</hr>
