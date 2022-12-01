@@ -132,13 +132,13 @@ if (isset($_POST['checkout'])) {
 		<form action="checkout.php" method="post">
 			<input type="text" name="Firstname" placeholder="First Name" required="required" />
 			<input type="text" name="Lastname" placeholder="Last Name" required="required" />
-			<input type="text" name="Cardname" placeholder="Name on card" required="required" />
-			<input type="text" name="Cardnumber" placeholder="Card number" required="required" />
-			<input type="text" name="Securitynumber" placeholder="Security number" required="required" />
 			<input type="text" name="Addressline1" placeholder="Address line 1" required="required" />
 			<input type="text" name="Addressline2" placeholder="Address line 2" required="required" />
 			<input type="text" name="City" placeholder="City" required="required" />
 			<input type="text" name="Postcode" placeholder="Postcode" required="required" />
+			<input type="text" name="Cardname" placeholder="Name on card" required="required" />
+			<input type="text" name="Cardnumber" placeholder="Card number" required="required" />
+			<input type="text" name="Securitynumber" placeholder="Security number" required="required" />
 			<button type="submit" name="Checkout" class="btn btn-primary btn-block btn-large">Checkout</button>
 		</form>
 	</div>
