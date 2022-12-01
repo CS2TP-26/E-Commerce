@@ -106,10 +106,11 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<?php
-							foreach ($_SESSION["basket"] as $product) {
-							?>
+						<?php
+						foreach ($_SESSION["basket"] as $product) {
+						?>
+							<tr>
+
 								<td>
 									<img src='<?php echo $product["image"]; ?>' width="75" height="65" />
 								</td>
@@ -125,12 +126,13 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 										<button type='submit' class='remove'>Remove Item</button>
 									</form>
 								</td>
+							</tr>
 
-							<?php
-								$total_price += ($product["price"] * $product["quantity"]);
-							}
-							?>
-						</tr>
+
+						<?php
+							$total_price += ($product["price"] * $product["quantity"]);
+						}
+						?>
 
 
 					</tbody>
