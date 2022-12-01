@@ -70,17 +70,11 @@
         require_once '../connection.php';
         $db = connect();
         $sql = "SELECT * FROM `orders` WHERE `user_ID` = '" . $_SESSION['id'] . "'";
-
         $result = $db->query($sql);
-        // echo result;
-        echo $result;
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $product_id = $row['product_ID'];
-
         ?>
-                <!-- a table that shows all of the quries -->
-
                 <tbody>
                     <tr>
                         <td><?php echo $row['ID']; ?></td>
