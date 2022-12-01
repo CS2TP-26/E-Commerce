@@ -127,6 +127,71 @@
             ?>
         </table>
 
+
+
+
+
+        <h1>Previous Orders</h1>
+        <br>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>MPN</th>
+                    <th>COST (£)</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+
+            <?php
+            session_start();
+            $id = $_SESSION['id'];
+            require_once '../connection.php';
+            $db = connect();
+            $sql = "SELECT * FROM `orders` WHERE `user_ID` = '" . $_SESSION['id'] . "'";
+            $result = $db->query($sql);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $product_id = $row['product_ID'];
+                    // only show pending products
+                    // IF ITS = COMPLETE OR Complete or complete
+                    if ($row['status'] == "Complete" || $row['status'] == "complete" || $row['status'] == "COMPLETE") {
+            ?>
+                        <tbody>
+                            <tr>
+                                <td><?php
+                                    $sql3 = "SELECT * FROM `products` WHERE `id` = '" . $product_id . "'";
+                                    $result3 = $db->query($sql3);
+                                    if ($result3->num_rows > 0) {
+                                        while ($row3 = $result3->fetch_assoc()) {
+
+                                            echo $row3['MDN'];
+                                        }
+                                    }
+
+                                    ?></td>
+
+                                <td><?php
+                                    $sql3 = "SELECT * FROM `products` WHERE `id` = '" . $product_id . "'";
+                                    $result3 = $db->query($sql3);
+                                    if ($result3->num_rows > 0) {
+                                        while ($row3 = $result3->fetch_assoc()) {
+
+                                            echo $row3['price'];
+                                        }
+                                    }
+
+                                    ?></td>
+                                <td><?php echo $row['status']; ?></td>
+                            </tr>
+                        </tbody>
+            <?php
+                    }
+                }
+            }
+            ?>
+        </table>
+
     </div>
 
 
