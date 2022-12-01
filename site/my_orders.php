@@ -59,6 +59,10 @@
         <a href="shop.php">Shop</a>
     </div>
 
+    <div class="middle">
+        
+    </div>
+
 
 
 
@@ -76,14 +80,7 @@
         <a class="shopLink" href="shop.php">Shop</a>
         <a class="aboutLink" href="about.php">About</a>
         <a class="contactLink" href="contact.php">Contact</a>
-        <?php
-        if (isset($_SESSION['id'])) { ?>
-        <a class="contactLink" href="my_orders.php">Contact</a>
-
-            
-        <?php
-        }
-        ?>
+        
 
 
 

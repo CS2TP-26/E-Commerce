@@ -12,11 +12,6 @@ body {
     top: 60px;
 }
 
-.topnav {
-    position: fixed;
-    width: 100%;
-}
-
 .bottomNav {
     top: 2058px;
     bottom: 0;
