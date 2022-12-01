@@ -78,8 +78,8 @@ thead th {
     float: left;
     background-color: #DADDDC;
     border-right: 1px solid #ccc;
-    width: 49%;
-    height: 1000px;
+    width: 49.9%;
+    height: 960px;
     margin-top: 60px;
 }
 
@@ -87,7 +87,7 @@ thead th {
     float: right;
     background-color: #DADDDC;
     border-right: 1px solid #ccc;
-    width: 49%;
-    height: 1000px;
-    margin-top: 60px;
+    width: 49.9%;
+    height: 960px;
+    margin-top: 45px;
 }
