@@ -36,7 +36,8 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 	<link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<meta charset="utf-8">
-	<title>Mason De Versa - Shop</title>
+    <link rel="icon" href="Assets/icon.png">
+	<title>Mason De Versa - Basket</title>
 </head>
 
 <body>

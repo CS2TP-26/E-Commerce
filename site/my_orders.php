@@ -11,7 +11,9 @@
     <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="utf-8">
-    <title>Mason De Versa - Shop</title>
+    <link rel="icon" href="Assets/icon.png">
+
+    <title>Mason De Versa - My Orders</title>
 </head>
 
 <body>
@@ -19,10 +21,10 @@
         <a href="index.php">
             <img src="img/text only no bg-01.png" width="397" height="227" alt="" />
         </a>
-        
 
-        <?php		
-		session_start();
+
+        <?php
+        session_start();
         if (!isset($_SESSION['id'])) { ?>
             <form>
                 <button type="submit" formaction="login.php">Login</button>
@@ -57,7 +59,7 @@
         <!-- <br> -->
 
         <table class="table">
-        <h1 class="h1_orders">My Orders</h1>
+            <h1 class="h1_orders">My Orders</h1>
 
             <thead>
                 <tr>
@@ -114,7 +116,7 @@
                                 <td>
                                     <form action="my_orders.php" method="post">
                                         <input type="hidden" name="order_id" value="<?php echo $order_id; ?>">
-                                        <button class="btn btn-primary" name="cancel"type="submit">Cancel Order</button>
+                                        <button class="btn btn-primary" name="cancel" type="submit">Cancel Order</button>
                                     </form>
                                 </td>
                             </tr>
@@ -140,8 +142,6 @@
             } else {
                 echo "<script>alert('Error');</script>";
             }
-            
-            
         }
 
 
