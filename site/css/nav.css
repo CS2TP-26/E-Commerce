@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 html,
 body {
     padding: 0;
@@ -76,7 +75,6 @@ body {
     color: #1F8355;
 }
 
-
 .btn {
     display: flex;
     justify-content: center;
@@ -147,8 +145,6 @@ p {
     line-height: 30px;
     letter-spacing: -0.015em;
 }
-
-
 
 .findOutMore {
     position: absolute;
@@ -231,6 +227,7 @@ p {
     left: 0px;
     top: 2000px;
     background: #DADDDC;
+    bottom: 0px;
 }
 
 .bottomNav img {
@@ -372,7 +369,6 @@ p {
     top: 335px;
     right: 90px;
 }
-
 
 .shopBottomNav {
     position: absolute;
