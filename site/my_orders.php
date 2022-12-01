@@ -60,10 +60,11 @@
     </div>
 
     <div class="middle">
-        <h1 class="h1_orders">My Orders</h1>
-        <br>
+        <!-- <br> -->
 
         <table class="table">
+        <h1 class="h1_orders">My Orders</h1>
+
             <thead>
                 <tr>
                     <th>MPN</th>
