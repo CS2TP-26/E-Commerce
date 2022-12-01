@@ -24,6 +24,7 @@ body {
 table {
     border-collapse: collapse;
     padding-right: 100px;
+    margin-right: 100px;
 }
 
 th,
