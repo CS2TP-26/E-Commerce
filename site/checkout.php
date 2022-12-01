@@ -43,7 +43,7 @@ if (isset($_POST['checkout'])) {
 
     <head>
 	    <link rel='stylesheet' type='text/css' href='css/main.css' />
-	    <link rel='stylesheet' type='text/css' href='css/products.css' />
+	    <link rel='stylesheet' type='text/css' href='css/checkout.css' />
 
 	    <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
 	    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -134,7 +134,7 @@ if (isset($_POST['checkout'])) {
 
 
 
-    <div class="shopBottomNav">
+        <div class="shopBottomNav">
 			<img src="img/logo no bg-01.png" width="200" height="200" alt="" />
 			<hr>
 			</hr>
