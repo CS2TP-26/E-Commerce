@@ -5,7 +5,7 @@
 	<link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
 	 <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<meta charset="utf-8">
-	<title>Mason De Versa - Home</title>
+	<title>Maison De Versa - Home</title>
 </head>
 
 <body>
@@ -63,13 +63,13 @@
 					<button type="submit" formaction="about.php">About Us</button>
 				</form>
 			</div>
-		<p>Mason De Versa makes sourcing and buying luxury time pieces easy and convenient to find out more click the button below. </p>
+		<p>Maison De Versa makes sourcing and buying luxury time pieces easy and convenient to find out more click the button below. </p>
 	</div>
 	<div class="bottomNav">
     	<img src="img/logo no bg-01.png" width="200" height="200" alt=""/> 
 		<hr></hr>
 		<div class="copyright">
-			<p>© Mason De Versa LTD, 2022</p>
+			<p>© Maison De Versa LTD, 2022</p>
 		</div>
 		<a class="shopLink" href="shop.php">Shop</a>
 		<a class="aboutLink" href="about.php">About</a>
