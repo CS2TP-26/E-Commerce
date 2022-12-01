@@ -30,9 +30,6 @@ if (isset($_POST['checkout'])) {
     }
     unset($_SESSION['basket']);
     echo "result: " . $result;
-
-
-    // header('Location: my_orders.php'); 
     }
 
 

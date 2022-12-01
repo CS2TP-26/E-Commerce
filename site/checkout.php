@@ -57,29 +57,29 @@ if (isset($_POST['checkout'])) {
 		<a href="index.php">
 			<img src="img/text only no bg-01.png" width="397" height="227" alt="" />
 		</a>
-		<?php		
+		<?php
 		session_start();
-        if (!isset($_SESSION['id'])) { ?>
-            <form>
-                <button type="submit" formaction="login.php">Login</button>
-            </form>
-        <?php
-        } else { ?>
-            <form>
-                <button type="submit" formaction="logout.php">Logout</button>
-            </form>
-        <?php
-        }
-        ?>
+		if (!isset($_SESSION['id'])) { ?>
+			<form>
+				<button type="submit" formaction="login.php">Login</button>
+			</form>
+		<?php
+		} else { ?>
+			<form>
+				<button type="submit" formaction="logout.php">Logout</button>
+			</form>
+		<?php
+		}
+		?>
 
-        <?php
-        if (isset($_SESSION['id'])) { ?>
-            <form>
-                <button type="submit" formaction="my_orders.php">My Orders</button>
-            </form>
-        <?php
-        }
-        ?>
+		<?php
+		if (isset($_SESSION['id'])) { ?>
+			<form>
+				<button type="submit" formaction="my_orders.php">My Orders</button>
+			</form>
+		<?php
+		}
+		?>
 		<a href="basket.php">Basket</a>
 		<a href="contact.php">Contact Us</a>
 		<a href="about.php">About Us</a>
@@ -164,6 +164,49 @@ if (isset($_POST['checkout'])) {
 	</div>
 
 
+	<?php
+	if (isset($_POST['Checkout'])) {
+		// get the form data
+		$firstname = $_POST['Firstname'];
+		$lastname = $_POST['Lastname'];
+		$addressline1 = $_POST['Addressline1'];
+		$addressline2 = $_POST['Addressline2'];
+		$city = $_POST['City'];
+		$postcode = $_POST['Postcode'];
+		$cardname = $_POST['Cardname'];
+		$cardnumber = $_POST['Cardnumber'];
+		$securitynumber = $_POST['Securitynumber'];
+
+		// NONE OF THE ABOVE DATA IS STORED!
+
+		require_once '../connection.php';
+		$db = connect();
+
+
+
+		$user_id = $_SESSION['id'];
+		$basket = $_SESSION['basket'];
+		$basket_length = count($basket);
+		$status = "Pending";
+
+		if ($basket_length = 0) {
+			echo "Your basket is empty";
+		} else {
+			foreach ($_SESSION["basket"] as $product) {
+				$date = date('Y-m-d H:i:s');
+				$product_id = $product['id'];
+				$sql = "INSERT INTO `orders` (`user_ID`, `product_ID`, `status`, `time`) VALUES ('$user_id', '$product_id', '$status', '$date')";
+				$result = $db->query($sql);
+				echo "result: " . $result;
+			}
+			unset($_SESSION['basket']);
+			echo "result: " . $result;
+		}
+	}
+
+	?>
+
+
 
 
 
@@ -187,20 +230,20 @@ if (isset($_POST['checkout'])) {
 		<a class="aboutLink" href="about.php">About</a>
 		<a class="contactLink" href="contact.php">Contact</a>
 
-		<?php		
+		<?php
 		session_start();
-        if (!isset($_SESSION['id'])) { ?>
-            <form>
-                <button type="submit" formaction="login.php">Login</button>
-            </form>
-        <?php
-        } else { ?>
-            <form>
-                <button type="submit" formaction="logout.php">Logout</button>
-            </form>
-        <?php
-        }
-        ?>
+		if (!isset($_SESSION['id'])) { ?>
+			<form>
+				<button type="submit" formaction="login.php">Login</button>
+			</form>
+		<?php
+		} else { ?>
+			<form>
+				<button type="submit" formaction="logout.php">Logout</button>
+			</form>
+		<?php
+		}
+		?>
 
 
 		<div class="social">
