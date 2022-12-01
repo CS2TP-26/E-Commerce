@@ -121,7 +121,7 @@
                                         <input type="hidden" name="order_id" value="<?php echo $row['id']; ?>">
                                         <button class="btn btn-primary" name="cancel"type="submit">Cancel Order</button>
                                     </form>
-                                    <?php echo $row['status']; ?>
+                                    <?php echo $row['id']; ?>
                                 </td>
                             </tr>
                         </tbody>
