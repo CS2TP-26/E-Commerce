@@ -76,6 +76,14 @@
         <a class="shopLink" href="shop.php">Shop</a>
         <a class="aboutLink" href="about.php">About</a>
         <a class="contactLink" href="contact.php">Contact</a>
+        <?php
+        if (isset($_SESSION['id'])) { ?>
+        <a class="contactLink" href="my_orders.php">Contact</a>
+
+            
+        <?php
+        }
+        ?>
 
 
 
@@ -93,14 +101,7 @@
         <?php
         }
         ?>
-        <?php
-        if (isset($_SESSION['id'])) { ?>
-            <form>
-                <button type="submit" formaction="my_orders.php">My Orders</button>
-            </form>
-        <?php
-        }
-        ?>
+        
 
 
 
