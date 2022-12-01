@@ -121,6 +121,7 @@
                                         <input type="hidden" name="order_id" value="<?php echo $row['id']; ?>">
                                         <button class="btn btn-primary" name="cancel"type="submit">Cancel Order</button>
                                     </form>
+                                    <?php echo $row['status']; ?>
                                 </td>
                             </tr>
                         </tbody>
@@ -135,7 +136,7 @@
         <?php
         if (isset($_POST['cancel'])) {
             $order_id = $_POST['order_id'];
-            $sql = "UPDATE `orders` SET `status` = 'Cancelled' WHERE `ID` = '" . $order_id . "'";
+            $sql = "UPDATE `orders` SET `status` = 'Cancelled' WHERE `id` = '" . $order_id . "'";
             // $sql = "UPDATE `orders` SET `status` = 'Cancelled' WHERE `ID` = '".$_GET['status']."'";
 
             $result = $db->query($sql);
