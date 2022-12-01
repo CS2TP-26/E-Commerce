@@ -45,11 +45,15 @@
         <h1>My Orders</h1>
 
         <?php
+        session_start();
+        $id = $_SESSION['id'];
+        echo $id;
         require_once '../connection.php';
         $db = connect();
-        $sql = "SELECT * FROM orders WHERE 'user_ID' = " . $_SESSION['id'];
-        // $sql = "SELECT * FROM `orders`";
+        $sql = "SELECT * FROM `orders` WHERE 'user_ID' = " . $_SESSION['id'];
         $result = $db->query($sql);
+        // echo result;
+        echo $result;
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $product_id = $row['product_ID'];
@@ -110,7 +114,7 @@
 
 
 
-    <div class="shopBottomNav">
+    <div class="bottomNav">
         <img src="img/logo no bg-01.png" width="200" height="200" alt="" />
         <hr>
         </hr>
