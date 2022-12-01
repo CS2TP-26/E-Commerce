@@ -18,7 +18,7 @@ body {
 }
 
 .basket {
-    float: left;
+    float: right;
     background-color: #DADDDC;
     border-right: 1px solid #ccc;
     width: 50%;
