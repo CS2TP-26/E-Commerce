@@ -3,7 +3,7 @@ body {
 }
 
 .basket {
-    float: right;
+    /* float: right; */
     background-color: #DADDDC;
     border-right: 1px solid #ccc;
     width: 50%;
@@ -79,8 +79,8 @@ thead th {
     background-color: #DADDDC;
     border-right: 1px solid #ccc;
     width: 49%;
-    height: 100%;
-    top: 60px;
+    height: 1000px;
+    top: 200px;
 }
 
 .checkout {
@@ -88,6 +88,6 @@ thead th {
     background-color: #DADDDC;
     border-right: 1px solid #ccc;
     width: 49%;
-    height: 100%;
-    top: 60px;
+    height: 1000px;
+    top: 200px;
 }
