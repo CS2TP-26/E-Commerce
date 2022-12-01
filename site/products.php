@@ -60,13 +60,14 @@
 				$sql = "SELECT * FROM products WHERE id = " . $prod_id;
 				$result = $db->query($sql);
 				$row = $result->fetch_assoc();
+				
 
 				$description = $row['description'];
 				$image = $row['image'];
 				$img1 = $row['img1'];
 				$img2 = $row['img2'];
 				$img3 = $row['img3'];
-
+				
 
 
 				?>
@@ -157,8 +158,31 @@
 			<form>
 				<button class="add_basket" type="button"><a href="products.php?id=<?php echo $row['id'] . "&add=" . $row['id'];  ?>">Add to Basket </a></button>
 			</form>
+			<br>
+			<br>
+			<br>
+
 			<div class="status">
-				<?php echo $status . "test"; ?>
+				<?php 
+			 	if (isset($_GET['add'])) {
+				
+				echo $name . "<br>" . "has been added to your basket!";
+
+				?>
+
+				<form>
+					<button type="submit" class="add_basket" formaction="basket.php">View Basket</button>
+				</form>
+				<br>
+				<form>
+					<button type="submit" class="add_basket" formaction="shop.php">Continue Shopping...</button>
+				</form>
+
+
+				<?php
+
+				}
+				?>
 			</div>
 
 
@@ -166,6 +190,7 @@
 			<?php
 			 if (isset($_GET['add'])) {
 				$id = $prod_id;
+				$status = "Added to basket";
 				require_once('../connection.php');
 				$db = connect();
 				$sql =  "SELECT * FROM `products` WHERE `id`='$id'";
