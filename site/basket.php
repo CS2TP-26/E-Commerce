@@ -111,6 +111,8 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 							<td>
 								<img src='<?php echo $product["image"]; ?>' width="75" height="65" />
 							</td>
+							<td><?php echo $product["name"]; ?></td>
+
 							<td><?php echo "£" . $product["price"]; ?></td>
 							</tr>
 						<?php
@@ -118,7 +120,6 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 						}
 						?>
 
-						<td><?php echo $product["name"]; ?></td>
 						<td>
 							<form method='post' action=''>
 								<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
