@@ -117,7 +117,10 @@
                                 <td><?php echo $row['status']; ?></td>
 
                                 <td>
-                                    <button class="btn btn-primary" type="button"><a href="orders.php?edit=<?php echo $row['ID']; ?>">More Info </a></button>
+                                    <form action="my_orders.php" method="post">
+                                        <input type="hidden" name="order_id" value="<?php echo $row['id']; ?>">
+                                        <button class="btn btn-primary" type="submit"><a href="orders.php?edit=<?php echo $row['ID']; ?>">Cancel </a></button>
+                                    </form>
                                 </td>
                             </tr>
                         </tbody>
