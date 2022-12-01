@@ -13,9 +13,29 @@
 		<a href="index.php">
 			<img src="img/text only no bg-01.png" width="397" height="227" alt=""/>
 		</a>
-		<form>
-			<button type="submit" formaction="login.php">Login</button>
-		</form>
+		<?php		
+		session_start();
+        if (!isset($_SESSION['id'])) { ?>
+            <form>
+                <button type="submit" formaction="login.php">Login</button>
+            </form>
+        <?php
+        } else { ?>
+            <form>
+                <button type="submit" formaction="logout.php">Logout</button>
+            </form>
+        <?php
+        }
+        ?>
+
+        <?php
+        if (isset($_SESSION['id'])) { ?>
+            <form>
+                <button type="submit" formaction="my_orders.php">My Orders</button>
+            </form>
+        <?php
+        }
+        ?>
 		<a href="basket.php">Basket</a>
  		<a href="contact.php">Contact Us</a>
 		<a href="about.php">About Us</a>
@@ -74,9 +94,20 @@
 		<a class="shopLink" href="shop.php">Shop</a>
 		<a class="aboutLink" href="about.php">About</a>
 		<a class="contactLink" href="contact.php">Contact</a>
-		<form>
-			<button type="submit" formaction="login.php">Login</button>
-		</form>
+		<?php		
+		session_start();
+        if (!isset($_SESSION['id'])) { ?>
+            <form>
+                <button type="submit" formaction="login.php">Login</button>
+            </form>
+        <?php
+        } else { ?>
+            <form>
+                <button type="submit" formaction="logout.php">Logout</button>
+            </form>
+        <?php
+        }
+        ?>
 		<div class="social">
 			<p>Follow Us:</p>
 			<div class="facebook">
