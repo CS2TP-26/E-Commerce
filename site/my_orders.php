@@ -88,7 +88,7 @@
                 while ($row = $result->fetch_assoc()) {
                     $product_id = $row['product_ID'];
                     // only show pending products
-                    if ($row['status'] == "pending") {
+                    if ($row['status'] == "Pending") {
 
             ?>
                         <tbody>
