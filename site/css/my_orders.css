@@ -10,6 +10,9 @@ body {
     bottom: 400;
     left: 0px;
     top: 60px;
+    left: 10%;
+    position: absolute;
+    display: flex;
 }
 
 .bottomNav {
