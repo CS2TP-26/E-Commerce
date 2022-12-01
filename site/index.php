@@ -53,7 +53,7 @@
 	<div class="findOutMore">
   		<h1>Find Out More</h1>
 			<div class="pics">
-    			<img src="img/placeholder hero.jpg" width="173" height="76" alt=""/>
+    			<img src="img/placeholder_hero.jpg" width="173" height="76" alt=""/>
 				<img src="img/About_pic_1.jpg" width="173" height="76" alt=""/>
 				<img src="img/About_pic_2.jpg" width="173" height="76" alt=""/>
 				<img src="img/About_pic_3.jpg" width="173" height="76" alt=""/>
