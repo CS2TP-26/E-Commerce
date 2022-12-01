@@ -119,12 +119,9 @@
 
                                 <td>
                                     <form action="my_orders.php" method="post">
-                                        <!-- get order ID -->
-
                                         <input type="hidden" name="order_id" value="<?php echo $order_id; ?>">
                                         <button class="btn btn-primary" name="cancel"type="submit">Cancel Order</button>
                                     </form>
-                                    <?php echo $order_id ?>
                                 </td>
                             </tr>
                         </tbody>
@@ -145,7 +142,7 @@
             $result = $db->query($sql);
             if ($result) {
                 echo "<script>alert('Order Cancelled');</script>";
-                // echo "<script>window.location.href='my_orders.php';</script>";
+                echo "<script>window.location.href='my_orders.php';</script>";
             } else {
                 echo "<script>alert('Error');</script>";
             }
