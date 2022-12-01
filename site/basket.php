@@ -114,7 +114,6 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 							<td><?php echo $product["name"]; ?></td>
 
 							<td><?php echo "£" . $product["price"]; ?></td>
-							</tr>
 						<?php
 							$total_price += ($product["price"] * $product["quantity"]);
 						}
@@ -127,7 +126,9 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 								<button type='submit' class='remove'>Remove Item</button>
 							</form>
 						</td>
-						
+						</tr>
+
+
 					</tbody>
 				</table>
 			<?php
