@@ -108,7 +108,7 @@ if (isset($_POST['checkout'])) {
 				</table>
                 <div class='Basket'>
                     <form>
-			            <button type="submit" formaction="basket.php">Login</button>
+			            <button type="submit" formaction="basket.php">Return to basket</button>
 		            </form> 
                 </div>
                 <button type="submit" name="Checkout" class="btn btn-primary btn-block btn-large">Return to basket</button>
