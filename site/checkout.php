@@ -51,6 +51,23 @@ if (isset($_POST['checkout'])) {
 	    <title>Mason De Versa - Shop</title>
     </head>
 
+    <body>
+	<?php session_start(); ?>
+
+	<div class="topnav">
+		<a href="index.php">
+			<img src="img/text only no bg-01.png" width="397" height="227" alt="" />
+		</a>
+		<!-- <form>
+			<button type="submit" formaction="login.php">Login</button>
+		</form> -->
+		<a href="basket.php">Basket</a>
+		<a href="contact.php">Contact Us</a>
+		<a href="about.php">About Us</a>
+		<a href="shop.php">Shop</a>
+	</div>
+
+
     <div class="panel">
         <div class="basket">
 			<?php
