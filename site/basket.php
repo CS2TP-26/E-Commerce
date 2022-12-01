@@ -29,6 +29,8 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 <head>
 	<link rel='stylesheet' type='text/css' href='css/nav.css' />
 	<link rel='stylesheet' type='text/css' href='css/basket.css' />
+	<link rel='stylesheet' type='text/css' href='css/scroll.css' />
+
 
 
 	<link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>

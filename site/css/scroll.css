@@ -1,0 +1,41 @@
+/* make the scroll bar look fancy */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #158355;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #158355;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #158355;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track:active {
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #F5F5F5;
+}
+
+::-webkit-resizer {
+    background-color: #F5F5F5;
+}
