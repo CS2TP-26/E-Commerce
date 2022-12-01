@@ -95,6 +95,7 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 			if (isset($_SESSION["basket"])) {
 				$total_price = 0;
 			?>
+			<br><br><br><br>
 				<table>
 					<thead>
 						<tr>
