@@ -95,7 +95,7 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 			if (isset($_SESSION["basket"])) {
 				$total_price = 0;
 			?>
-			<br><br><br><br>
+				<br><br><br><br>
 				<table>
 					<thead>
 						<tr>
@@ -139,21 +139,7 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 			?>
 
 
-			<?php
-			if (isset($_SESSION["basket"])) {
 
-			?>
-				<!-- button to go to checkout page -->
-				<div class="checkout_">
-					<strong>TOTAL: <?php echo "£" . $total_price; ?></strong>
-
-					<button class="btn btn-primary checkout" type="button"><a href="checkout.php">Checkout </a></button>
-				</div>
-			<?php
-			}
-
-
-			?>
 		</div>
 		<div style="clear:both;"></div>
 
@@ -164,7 +150,21 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 
 
 
+		<?php
+		if (isset($_SESSION["basket"])) {
 
+		?>
+			<!-- button to go to checkout page -->
+			<div class="checkout_">
+				<strong>TOTAL: <?php echo "£" . $total_price; ?></strong>
+
+				<button class="btn btn-primary checkout" type="button"><a href="checkout.php">Checkout </a></button>
+			</div>
+		<?php
+		}
+
+
+		?>
 
 
 	</div>
