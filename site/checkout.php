@@ -106,6 +106,12 @@ if (isset($_POST['checkout'])) {
 						</tr>
 					</tbody>
 				</table>
+                <div class='Basket'>
+                    <form>
+			            <button type="submit" formaction="basket.php">Login</button>
+		            </form> 
+                </div>
+                <button type="submit" name="Checkout" class="btn btn-primary btn-block btn-large">Return to basket</button>
 			<?php
 			} else {
 				echo "<h3>Your basket is empty!</h3>";
