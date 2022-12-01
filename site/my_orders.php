@@ -40,6 +40,70 @@
         <a href="shop.php">Shop</a>
     </div>
 
+    <div class="middle">
+        <h1>My Orders</h1>
+
+        <?php
+        require_once '../connection.php';
+        $db = connect();
+        $sql = "SELECT * FROM orders WHERE 'user_ID' = " . $_SESSION['id'];
+        // $sql = "SELECT * FROM `orders`";
+        $result = $db->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $product_id = $row['product_ID'];
+
+        ?>
+                <!-- a table that shows all of the quries -->
+
+                <tbody>
+                    <tr>
+                        <td><?php echo $row['ID']; ?></td>
+                        <td><?php echo $row['user_ID']; ?></td>
+                        <td><?php echo $row['product_ID']; ?></td>
+
+                        <td><?php
+                            $sql3 = "SELECT * FROM `products` WHERE `id` = '" . $product_id . "'";
+                            $result3 = $db->query($sql3);
+                            if ($result3->num_rows > 0) {
+                                while ($row3 = $result3->fetch_assoc()) {
+
+                                    echo $row3['MDN'];
+                                }
+                            }
+
+                            ?></td>
+
+                        <td><?php
+                            $sql3 = "SELECT * FROM `products` WHERE `id` = '" . $product_id . "'";
+                            $result3 = $db->query($sql3);
+                            if ($result3->num_rows > 0) {
+                                while ($row3 = $result3->fetch_assoc()) {
+
+                                    echo $row3['price'];
+                                }
+                            }
+
+                            ?></td>
+                        <td><?php echo $row['status']; ?></td>
+
+                        <td>
+                            <button class="btn btn-primary" type="button"><a href="orders.php?edit=<?php echo $row['ID']; ?>">More Info </a></button>
+                        </td>
+                    </tr>
+                </tbody>
+
+        <?php
+            }
+        }
+
+
+
+        ?>
+
+
+    </div>
+
 
 
 
