@@ -91,3 +91,22 @@ thead th {
     height: 960px;
     margin-top: 40px;
 }
+
+.basket_back {
+    background-color: #158355;
+    border: 1px solid #158355;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+    width: 84%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
+}
