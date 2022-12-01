@@ -45,29 +45,29 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 		<a href="index.php">
 			<img src="img/text only no bg-01.png" width="397" height="227" alt="" />
 		</a>
-		<?php		
+		<?php
 		session_start();
-        if (!isset($_SESSION['id'])) { ?>
-            <form>
-                <button type="submit" formaction="login.php">Login</button>
-            </form>
-        <?php
-        } else { ?>
-            <form>
-                <button type="submit" formaction="logout.php">Logout</button>
-            </form>
-        <?php
-        }
-        ?>
+		if (!isset($_SESSION['id'])) { ?>
+			<form>
+				<button type="submit" formaction="login.php">Login</button>
+			</form>
+		<?php
+		} else { ?>
+			<form>
+				<button type="submit" formaction="logout.php">Logout</button>
+			</form>
+		<?php
+		}
+		?>
 
-        <?php
-        if (isset($_SESSION['id'])) { ?>
-            <form>
-                <button type="submit" formaction="my_orders.php">My Orders</button>
-            </form>
-        <?php
-        }
-        ?>
+		<?php
+		if (isset($_SESSION['id'])) { ?>
+			<form>
+				<button type="submit" formaction="my_orders.php">My Orders</button>
+			</form>
+		<?php
+		}
+		?>
 		<a href="basket.php">Basket</a>
 		<a href="contact.php">Contact Us</a>
 		<a href="about.php">About Us</a>
@@ -101,6 +101,8 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 							<th>Image</th>
 							<th>Name </th>
 							<th>Price (£) </th>
+							<th>Remove</th>
+
 						</tr>
 					</thead>
 					<tbody>
@@ -110,19 +112,20 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 							<td>
 								<img src='<?php echo $product["image"]; ?>' width="75" height="65" />
 							</td>
-							<td><?php echo $product["name"]; ?><br />
-								<form method='post' action=''>
-									<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
-									<input type='hidden' name='action' value="remove" />
-									<button type='submit' class='remove'>Remove Item</button>
-								</form>
-							</td>
 							<td><?php echo "£" . $product["price"]; ?></td>
 							</tr>
 						<?php
 							$total_price += ($product["price"] * $product["quantity"]);
 						}
 						?>
+
+						<td><?php echo $product["name"]; ?><br />
+							<form method='post' action=''>
+								<input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
+								<input type='hidden' name='action' value="remove" />
+								<button type='submit' class='remove'>Remove Item</button>
+							</form>
+						</td>
 						<tr>
 							<td colspan="5" align="right">
 								<strong>TOTAL: <?php echo "£" . $total_price; ?></strong>
@@ -143,6 +146,8 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 			?>
 				<!-- button to go to checkout page -->
 				<div class="checkout_">
+					<strong>TOTAL: <?php echo "£" . $total_price; ?></strong>
+
 					<button class="btn btn-primary checkout" type="button"><a href="checkout.php">Checkout </a></button>
 				</div>
 			<?php
@@ -178,20 +183,20 @@ if (isset($_POST['action']) && $_POST['action'] == "remove") {
 		<a class="aboutLink" href="about.php">About</a>
 		<a class="contactLink" href="contact.php">Contact</a>
 
-		<?php		
+		<?php
 		session_start();
-        if (!isset($_SESSION['id'])) { ?>
-            <form>
-                <button type="submit" formaction="login.php">Login</button>
-            </form>
-        <?php
-        } else { ?>
-            <form>
-                <button type="submit" formaction="logout.php">Logout</button>
-            </form>
-        <?php
-        }
-        ?>
+		if (!isset($_SESSION['id'])) { ?>
+			<form>
+				<button type="submit" formaction="login.php">Login</button>
+			</form>
+		<?php
+		} else { ?>
+			<form>
+				<button type="submit" formaction="logout.php">Logout</button>
+			</form>
+		<?php
+		}
+		?>
 
 		<div class="social">
 			<p>Follow Us:</p>
