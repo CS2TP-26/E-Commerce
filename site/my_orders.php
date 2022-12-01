@@ -66,9 +66,6 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>USER ID</th>
-                    <th>PRODUCT ID</th>
                     <th>MPN</th>
                     <th>COST (£)</th>
                     <th>STATUS</th>
@@ -93,10 +90,6 @@
             ?>
                         <tbody>
                             <tr>
-                                <td><?php echo $row['ID']; ?></td>
-                                <td><?php echo $row['user_ID']; ?></td>
-                                <td><?php echo $row['product_ID']; ?></td>
-
                                 <td><?php
                                     $sql3 = "SELECT * FROM `products` WHERE `id` = '" . $product_id . "'";
                                     $result3 = $db->query($sql3);
