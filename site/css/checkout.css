@@ -33,7 +33,7 @@ table {
   }
 
   .checkout {
-    float: right;
+    position: relative;
     background-color: #DADDDC;
     border-right: 1px solid #ccc;
     width: 50%;
