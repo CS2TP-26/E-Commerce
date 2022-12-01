@@ -110,3 +110,10 @@ thead th {
     font-size: 1.2em;
     font-family: 'Montserrat';
 }
+
+.te {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

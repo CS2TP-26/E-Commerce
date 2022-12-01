@@ -106,10 +106,15 @@ if (isset($_POST['checkout'])) {
 						</tr>
 					</tbody>
 				</table>
-				<form>
-					<button type="submit" class="basket_back" formaction="basket.php">Return to basket</button>
-				</form>
-				<!-- <button type="submit" name="Checkout" class="btn btn-primary btn-block btn-large">Return to basket</button> -->
+
+
+				<div class="te">
+
+					<form>
+						<button type="submit" class="basket_back" formaction="basket.php">Return to basket</button>
+					</form>
+					<!-- <button type="submit" name="Checkout" class="btn btn-primary btn-block btn-large">Return to basket</button> -->
+				</div>
 
 
 			<?php
