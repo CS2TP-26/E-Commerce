@@ -202,6 +202,13 @@ if (isset($_POST['checkout'])) {
 			unset($_SESSION['basket']);
 			echo "result: " . $result;
 		}
+
+		if ($result) {
+			echo "<script>alert('Order Placed Successfully');</script>";
+			echo "<script>window.location.href='my_orders.php';</script>";
+		} else {
+			echo "<script>alert('Error');</script>";
+		}
 	}
 
 	?>
