@@ -106,6 +106,8 @@ if (isset($_POST['checkout'])) {
 						</tr>
 					</tbody>
 				</table>
+
+				
 			<?php
 			} else {
 				echo "<h3>Your basket is empty!</h3>";
