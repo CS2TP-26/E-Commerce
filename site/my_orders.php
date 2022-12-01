@@ -131,7 +131,7 @@
 
 
 
-        <h1>Previous Orders</h1>
+        <h1 class="p_orders">Previous Orders</h1>
         <br>
 
         <table class="table">
