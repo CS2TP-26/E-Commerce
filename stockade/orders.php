@@ -160,10 +160,11 @@
         <th>ID</th>
         <th>USER ID</th>
         <th>PRODUCT ID</th>
-        <th>Cost (£)</th>
+        <th>MPN</th>
+        <th>COST (£)</th>
         <!-- <th>Current Stock</th> -->
-        <th>Status</th>
-        <th>Edit</th>
+        <th>STATUS</th>
+        <th>EDIT</th>
 
     </tr>
 </thead>
@@ -185,11 +186,25 @@ if($result->num_rows > 0){
                         <td><?php echo $row['ID'];?></td>
                         <td><?php echo $row['user_ID'];?></td>
                         <td><?php echo $row['product_ID'];?></td>
+
                         <td><?php 
                         $sql3 = "SELECT * FROM `products` WHERE `id` = '".$product_id."'";
                         $result3 = $db->query($sql3);
                         if($result3->num_rows > 0){
                             while($row3 = $result3->fetch_assoc()){
+                                
+                                echo $row3['MDN'];
+                            }
+                        }
+                        
+                        ?></td>
+
+                        <td><?php 
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$product_id."'";
+                        $result3 = $db->query($sql3);
+                        if($result3->num_rows > 0){
+                            while($row3 = $result3->fetch_assoc()){
+                                
                                 echo $row3['price'];
                             }
                         }
@@ -284,6 +299,21 @@ if($result->num_rows > 0){
                         <td><?php 
                         $product_id = $row['product_ID'];
                         echo $row['product_ID'];
+                        ?></td>
+                        <td><i class='bx bx-lock icon'></i></td>
+                    </tr>
+
+                    <tr>
+                        <th>MPN:</th>
+                        <td><?php 
+                        $sql3 = "SELECT * FROM `products` WHERE `id` = '".$product_id."'";
+                        $result3 = $db->query($sql3);
+                        if($result3->num_rows > 0){
+                            while($row3 = $result3->fetch_assoc()){
+                                echo $row3['MDN'];
+                            }
+                        }
+                        
                         ?></td>
                         <td><i class='bx bx-lock icon'></i></td>
                     </tr>

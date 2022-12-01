@@ -236,6 +236,11 @@
                                                     <td><i class='bx bx-lock icon'></i></td>
                                                 </tr>
                                                 <tr>
+                                                    <th>MPN:</th>
+                                                    <td><?php echo $row['MDN']; ?></td>
+                                                    <td><i class='bx bx-lock icon'></i></td>
+                                                </tr>
+                                                <tr>
                                                     <th>name:</th>
                                                     <td><?php echo $row['name']; ?></td>
                                                     <td><i class='bx bx-lock icon'></i></td>
