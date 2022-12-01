@@ -20,7 +20,7 @@ body {
     bottom: 0;
 }
 
-.middle h1 {
+.middle .h1_orders {
     position: absolute;
     width: 100%;
     height: 100px;

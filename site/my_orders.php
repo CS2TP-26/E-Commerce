@@ -60,7 +60,7 @@
     </div>
 
     <div class="middle">
-        <h1>My Orders</h1>
+        <h1 class="h1_orders">My Orders</h1>
         <br>
 
         <table class="table">
