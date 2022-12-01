@@ -36,7 +36,7 @@ body {
     color: #000;
 }
 
-.middle {
+.table {
     width: 100%;
     margin-bottom: 20px;
     border-collapse: collapse;
@@ -51,20 +51,16 @@ body {
     padding-top: 10px;
 }
 
-.middle table {
-    /* add  */
-}
-
-.middle thead {
+.table thead {
     background-color: #f5f5f5;
     border-bottom: 1px solid #fff;
 }
 
-.middle thead tr {
+.table thead tr {
     border-bottom: 1px solid #fff;
 }
 
-.middle thead tr th {
+.table thead tr th {
     padding: 10px;
     font-weight: 600;
     text-transform: uppercase;
@@ -72,28 +68,28 @@ body {
     color: #000;
 }
 
-.middle tbody {
+.table tbody {
     border-bottom: 1px solid #fff;
 }
 
-.middle tbody tr {
+.table tbody tr {
     border-bottom: 1px solid #fff;
     padding: 10px;
 }
 
-.middle tbody tr td {
+.table tbody tr td {
     /* padding: 10px; */
     color: #fff;
     padding-left: 10px;
 }
 
-.middle tbody tr td:first-child {
+.table tbody tr td:first-child {
     /* color: #000; */
     /* inrease font size */
     font-size: 20px;
 }
 
-.middle tbody tr th {
+.table tbody tr th {
     padding: 10px;
     font-weight: 600;
     text-transform: uppercase;
