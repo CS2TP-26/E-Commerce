@@ -4,7 +4,7 @@
 <head>
     <link rel='stylesheet' type='text/css' href='css/nav.css' />
     <link rel='stylesheet' type='text/css' href='css/my_orders.css' />
-	<link rel='stylesheet' type='text/css' href='css/scroll.css' />
+    <link rel='stylesheet' type='text/css' href='css/scroll.css' />
 
 
 
@@ -24,6 +24,17 @@
         <!-- <form>
 			<button type="submit" formaction="login.php">Login</button>
 		</form> -->
+
+
+        <?php
+        if (!isset($_SESSION['id'])) { ?>
+            <form>
+                <button type="submit" formaction="my_orders.php">My Orders</button>
+            </form>
+        <?php
+        }
+        ?>
+
         <?php
         if (!isset($_SESSION['id'])) { ?>
             <form>
@@ -37,6 +48,9 @@
         <?php
         }
         ?>
+
+        
+          
         <a href="basket.php">Basket</a>
         <a href="contact.php">Contact Us</a>
         <a href="about.php">About Us</a>
@@ -126,6 +140,17 @@
         <a class="shopLink" href="shop.php">Shop</a>
         <a class="aboutLink" href="about.php">About</a>
         <a class="contactLink" href="contact.php">Contact</a>
+
+        <?php
+        if (!isset($_SESSION['id'])) { ?>
+            <form>
+                <button type="submit" formaction="my_orders.php">My Orders</button>
+            </form>
+        <?php
+        }
+        ?>
+
+
         <?php
         if (!isset($_SESSION['id'])) { ?>
             <form>
@@ -139,6 +164,8 @@
         <?php
         }
         ?>
+
+
 
         <div class="social">
             <p>Follow Us:</p>

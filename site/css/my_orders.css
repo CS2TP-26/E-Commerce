@@ -4,7 +4,6 @@ body {
 
 .middle {
     background: #83958C;
-
     position: absolute;
     width: 100%;
     height: 2000px;
@@ -13,20 +12,12 @@ body {
     top: 60px;
 }
 
-.topnav{
-     /* make footer always stay at the bottom of the screen */
+.topnav {
     position: fixed;
     width: 100%;
-
-    
-
-
 }
 
-
-.bottomNav{
+.bottomNav {
     top: 2058px;
     bottom: 0;
-
-
 }
