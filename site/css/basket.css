@@ -52,7 +52,7 @@ table {
     float: left;
     border: none;
 }
-.col-md-12{
+.row{
     height: 40px;
     width: 130px;
     font-family: 'Montserrat';
