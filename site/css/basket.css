@@ -17,6 +17,10 @@ body {
     display: flex;
 }
 
+.basket {
+    width: 75%;
+}
+
 table {
     border-collapse: collapse;
 }
