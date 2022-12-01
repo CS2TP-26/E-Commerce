@@ -27,7 +27,7 @@
 
 
         <?php
-        if (!isset($_SESSION['id'])) { ?>
+        if (isset($_SESSION['id'])) { ?>
             <form>
                 <button type="submit" formaction="my_orders.php">My Orders</button>
             </form>
@@ -142,7 +142,7 @@
         <a class="contactLink" href="contact.php">Contact</a>
 
         <?php
-        if (!isset($_SESSION['id'])) { ?>
+        if (isset($_SESSION['id'])) { ?>
             <form>
                 <button type="submit" formaction="my_orders.php">My Orders</button>
             </form>
