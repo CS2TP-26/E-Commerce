@@ -70,7 +70,7 @@
                     <th>MPN</th>
                     <th>COST (£)</th>
                     <th>STATUS</th>
-                    <th>EDIT</th>
+                    <th>Cancelate Order</th>
 
                 </tr>
             </thead>
@@ -119,7 +119,7 @@
                                 <td>
                                     <form action="my_orders.php" method="post">
                                         <input type="hidden" name="order_id" value="<?php echo $row['id']; ?>">
-                                        <button class="btn btn-primary" type="submit"><a href="orders.php?edit=<?php echo $row['ID']; ?>">Cancel </a></button>
+                                        <button class="btn btn-primary" type="submit">Cancel Order</button>
                                     </form>
                                 </td>
                             </tr>
