@@ -119,7 +119,7 @@
                                 <td>
                                     <form action="my_orders.php" method="post">
                                         <input type="hidden" name="order_id" value="<?php echo $row['id']; ?>">
-                                        <button class="btn btn-primary" type="submit">Cancel Order</button>
+                                        <button class="btn btn-primary" name="cancel"type="submit">Cancel Order</button>
                                     </form>
                                 </td>
                             </tr>
@@ -130,6 +130,26 @@
             }
             ?>
         </table>
+
+        <!-- If the cancel order button is clicked  -->
+        <?php
+        if (isset($_POST['cancel'])) {
+            $order_id = $_POST['order_id'];
+            $sql = "UPDATE `orders` SET `status` = 'Cancelled' WHERE `id` = '" . $order_id . "'";
+            $result = $db->query($sql);
+            if ($result) {
+                echo "<script>alert('Order Cancelled');</script>";
+                echo "<script>window.location.href='my_orders.php';</script>";
+            } else {
+                echo "<script>alert('Error');</script>";
+            }
+            
+            
+        }
+
+
+
+        ?>
 
 
 
