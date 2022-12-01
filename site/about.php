@@ -2,7 +2,7 @@
 <html>
 <head>
 <head>
-	<link rel='stylesheet' type='text/css' href='../css/styles_about.css' />
+	<link rel='stylesheet' type='text/css' href='css/styles_about.css' />
 	<link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
 	 <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<meta charset="utf-8">
