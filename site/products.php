@@ -173,7 +173,6 @@
 				<form>
 					<button type="submit" class="add_basket" formaction="basket.php">View Basket</button>
 				</form>
-				<br>
 				<form>
 					<button type="submit" class="add_basket" formaction="shop.php">Continue Shopping...</button>
 				</form>
