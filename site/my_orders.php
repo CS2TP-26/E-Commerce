@@ -85,6 +85,7 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $product_id = $row['product_ID'];
+                    $order_id = $row['ID'];
                     // only show pending products
                     if ($row['status'] == "Pending") {
 
@@ -118,10 +119,12 @@
 
                                 <td>
                                     <form action="my_orders.php" method="post">
-                                        <input type="hidden" name="order_id" value="<?php echo $row['id']; ?>">
+                                        <!-- get order ID -->
+
+                                        <input type="hidden" name="order_id" value="<?php echo $order_id; ?>">
                                         <button class="btn btn-primary" name="cancel"type="submit">Cancel Order</button>
                                     </form>
-                                    <?php echo $row['id']; ?>
+                                    <?php echo $order_id ?>
                                 </td>
                             </tr>
                         </tbody>
